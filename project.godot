@@ -11,13 +11,27 @@ config_version=5
 [application]
 
 config/name="1-bit-game-jam"
+run/main_scene="uid://bqrgww0c2d84m"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+config/icon="res://assets/sprites/misc_placeholder/icon.svg"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "gray",
+"res://assets/": "green",
+"res://src/": "gray",
+"res://src/hud/": "green",
+"res://src/main/": "orange"
+}
 
 [physics]
 
@@ -28,3 +42,4 @@ window/stretch/aspect="expand"
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

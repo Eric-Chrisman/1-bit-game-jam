@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://ciyeyolgx6g6y"]
+
+[node name="TitleScreen" type="Control" unique_id=686917227]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=698678384]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1065365963]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1047115549]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1931603935]
+layout_mode = 2
+theme_override_font_sizes/font_size = 54
+text = "Sample Title"
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/Label" unique_id=1567799392]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Start" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1118663348]
+layout_mode = 2
+text = "Start"
+
+[node name="Options" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1785755433]
+layout_mode = 2
+text = "Options
+"
+
+[node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=926067353]
+layout_mode = 2
+text = "Quit"
