@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lafkj2ps830g"
-path.s3tc="res://.godot/imported/icon.svg-dc7b5ef95d2e74a39362c75db09101fb.s3tc.ctex"
+uid="uid://cp7u2qhhoco7f"
+path="res://.godot/imported/texture_11.png-adbcf5ecb324f118d2eee3a9e61a2061.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/misc_placeholder/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-dc7b5ef95d2e74a39362c75db09101fb.s3tc.ctex"]
+source_file="res://assets/sprites/misc_placeholder/map dev_textures/PNG/Purple/texture_11.png"
+dest_files=["res://.godot/imported/texture_11.png-adbcf5ecb324f118d2eee3a9e61a2061.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -24,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -38,7 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
+detect_3d/compress_to=1

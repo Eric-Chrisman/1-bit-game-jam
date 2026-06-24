@@ -3,34 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://5xpqwljrssdp" path="res://src/hud/options_menu/Options.tscn" id="1_3eh75"]
 [ext_resource type="Script" uid="uid://clfwvbfauwd1k" path="res://src/main/main.gd" id="1_ab7mr"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_ll62f"]
-radius = 50.0
-height = 100.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ll62f"]
-radius = 50.01
-
 [node name="Main" type="Node" unique_id=1887580302]
 script = ExtResource("1_ab7mr")
 
 [node name="Game_Systems" type="Node" parent="." unique_id=1537546366]
 
-[node name="Game_World" type="Node2D" parent="." unique_id=1753565114]
-
-[node name="Map" type="Node2D" parent="Game_World" unique_id=1340584062]
-
-[node name="Entities" type="Node2D" parent="Game_World" unique_id=1582093129]
-
-[node name="Area2D" type="Area2D" parent="Game_World/Entities" unique_id=87821726]
-position = Vector2(240, 172)
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Game_World/Entities/Area2D" unique_id=278908904]
-mesh = SubResource("SphereMesh_ll62f")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Game_World/Entities/Area2D" unique_id=1202631079]
-shape = SubResource("CircleShape2D_ll62f")
-
-[node name="Player" type="Node2D" parent="Game_World" unique_id=51338524]
+[node name="Game_World" type="Node3D" parent="Game_Systems" unique_id=1008465927]
 
 [node name="Title_Layer" type="CanvasLayer" parent="." unique_id=111069876]
 
@@ -101,6 +79,5 @@ visible = false
 
 [node name="Options_Menu" parent="Options_Layer" unique_id=676573629 instance=ExtResource("1_3eh75")]
 
-[connection signal="input_event" from="Game_World/Entities/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="pressed" from="Title_Layer/TitleScreen/PanelContainer/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Title_Layer/TitleScreen/PanelContainer/MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

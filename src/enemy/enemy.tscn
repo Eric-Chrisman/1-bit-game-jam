@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cchtqcjgjkai4"]
+
+[ext_resource type="Script" uid="uid://k727epb3044y" path="res://src/enemy/enemy.gd" id="1_6j2al"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vod3a"]
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ll62f"]
+material = SubResource("StandardMaterial3D_vod3a")
+height = 0.5
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_27teu"]
+height = 0.5
+
+[node name="Enemy" type="CharacterBody3D" unique_id=18225702]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_6j2al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1521050279]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_ll62f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=640587325]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_27teu")

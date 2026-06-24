@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bvwqckb2s63w4"]
+
+[ext_resource type="PackedScene" uid="uid://4lenhu1t7xpe" path="res://src/player/player.tscn" id="1_rvqeh"]
+[ext_resource type="Texture2D" uid="uid://b4qom1jirb7rt" path="res://assets/sprites/misc_placeholder/map dev_textures/PNG/Dark/texture_01.png" id="1_vod3a"]
+[ext_resource type="PackedScene" uid="uid://cchtqcjgjkai4" path="res://src/enemy/enemy.tscn" id="3_15b3w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvqeh"]
+shading_mode = 0
+albedo_color = Color(0.7607843, 0.73333335, 0.7058824, 1)
+albedo_texture = ExtResource("1_vod3a")
+uv1_triplanar = true
+
+[node name="Map" type="Node3D" unique_id=525126436]
+
+[node name="Map_Layer" type="Node3D" parent="." unique_id=921402751]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Map_Layer" unique_id=373091209]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D" unique_id=240592017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5, -2, 0)
+size = Vector3(130, 1, 129)
+material = SubResource("StandardMaterial3D_rvqeh")
+
+[node name="Entity_Layer" type="Node3D" parent="." unique_id=1930370115]
+
+[node name="Fore_Layer" type="Node3D" parent="Entity_Layer" unique_id=70501841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="Enemy" parent="Entity_Layer/Fore_Layer" unique_id=18225702 instance=ExtResource("3_15b3w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -8)
+
+[node name="Enemy2" parent="Entity_Layer/Fore_Layer" unique_id=1578228019 instance=ExtResource("3_15b3w")]
+
+[node name="Enemy3" parent="Entity_Layer/Fore_Layer" unique_id=278555861 instance=ExtResource("3_15b3w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 9)
+
+[node name="Middle_Layer" type="Node3D" parent="Entity_Layer" unique_id=1615466611]
+
+[node name="Enemy" parent="Entity_Layer/Middle_Layer" unique_id=2075016066 instance=ExtResource("3_15b3w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -12)
+
+[node name="Enemy2" parent="Entity_Layer/Middle_Layer" unique_id=101614041 instance=ExtResource("3_15b3w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -5)
+
+[node name="Enemy3" parent="Entity_Layer/Middle_Layer" unique_id=1038566269 instance=ExtResource("3_15b3w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 3.8705187)
+
+[node name="Player" parent="Entity_Layer/Middle_Layer" unique_id=433991171 instance=ExtResource("1_rvqeh")]
+
+[node name="Camera3D" type="Camera3D" parent="Entity_Layer/Middle_Layer/Player" unique_id=1186549426]
+transform = Transform3D(-4.1611774e-08, 0.3062023, -0.9519664, 1.3384525e-08, 0.9519664, 0.3062023, 1, 2.9329147e-15, -4.371139e-08, -11.1886215, 2.063511, 0)
+size = 4.941
+
+[node name="Background_Layer" type="Node3D" parent="Entity_Layer" unique_id=803328543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)
+
+[node name="Enemy" parent="Entity_Layer/Background_Layer" unique_id=1358907462 instance=ExtResource("3_15b3w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -5)
+
+[node name="Enemy2" parent="Entity_Layer/Background_Layer" unique_id=1911022013 instance=ExtResource("3_15b3w")]
+
+[node name="Enemy3" parent="Entity_Layer/Background_Layer" unique_id=160765295 instance=ExtResource("3_15b3w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 15)

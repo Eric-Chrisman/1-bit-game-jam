@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://4lenhu1t7xpe"]
+
+[ext_resource type="Script" uid="uid://3t3127k18ba0" path="res://src/player/player.gd" id="1_4anbu"]
+[ext_resource type="Script" uid="uid://c2m8isbh0i4a2" path="res://src/player/aim_laser.gd" id="2_rxibo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyqds"]
+shading_mode = 0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ll62f"]
+material = SubResource("StandardMaterial3D_xyqds")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rxibo"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ll62f"]
+material = SubResource("StandardMaterial3D_xyqds")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.1
+
+[node name="Player" type="CharacterBody3D" unique_id=433991171]
+script = ExtResource("1_4anbu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1535986574]
+mesh = SubResource("CapsuleMesh_ll62f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=947188778]
+shape = SubResource("CapsuleShape3D_rxibo")
+
+[node name="AimLaser" type="RayCast3D" parent="." unique_id=1627616505]
+transform = Transform3D(1, 0, 0, 0, -0.31730467, -0.94832367, 0, 0.94832367, -0.31730467, 0, 0, 0)
+target_position = Vector3(0, 100, 0)
+script = ExtResource("2_rxibo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AimLaser" unique_id=100896352]
+mesh = SubResource("CylinderMesh_ll62f")
