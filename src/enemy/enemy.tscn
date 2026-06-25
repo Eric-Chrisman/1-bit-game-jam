@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://k727epb3044y" path="res://src/enemy/enemy.gd" id="1_6j2al"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vod3a"]
-shading_mode = 0
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ll62f"]
 material = SubResource("StandardMaterial3D_vod3a")
@@ -19,6 +18,7 @@ script = ExtResource("1_6j2al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1521050279]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+cast_shadow = 0
 mesh = SubResource("CylinderMesh_ll62f")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=640587325]

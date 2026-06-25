@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://tj0gy8oqeaqt" path="res://src/player/Gun.gd" id="4_244u8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyqds"]
-shading_mode = 0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ll62f"]
 material = SubResource("StandardMaterial3D_xyqds")
@@ -29,6 +28,7 @@ collision_layer = 0
 script = ExtResource("1_4anbu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1535986574]
+cast_shadow = 0
 mesh = SubResource("CapsuleMesh_ll62f")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=947188778]
@@ -45,6 +45,7 @@ script = ExtResource("3_mf2ua")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LaserPointer/y_pivot/AimLaser" unique_id=100896352]
 transform = Transform3D(-1, 8.940697e-08, 0, -8.940697e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+cast_shadow = 0
 mesh = SubResource("CylinderMesh_ll62f")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="LaserPointer/y_pivot/AimLaser" unique_id=358949110]
@@ -57,12 +58,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3767536, 0)
 visible = false
 mesh = SubResource("SphereMesh_ll62f")
 
-[node name="Pistol" type="Node" parent="." unique_id=2105251180]
+[node name="Inventory" type="Node" parent="." unique_id=365159166]
+
+[node name="Pistol" type="Node" parent="Inventory" unique_id=2105251180]
 script = ExtResource("4_244u8")
 
-[node name="Timer" type="Timer" parent="Pistol" unique_id=474509577]
+[node name="Timer" type="Timer" parent="Inventory/Pistol" unique_id=474509577]
 
-[node name="Shotgun" type="Node" parent="." unique_id=1360314592]
+[node name="Shotgun" type="Node" parent="Inventory" unique_id=1360314592]
 script = ExtResource("4_244u8")
 
-[node name="Timer" type="Timer" parent="Shotgun" unique_id=1551657866]
+[node name="Timer" type="Timer" parent="Inventory/Shotgun" unique_id=1551657866]
