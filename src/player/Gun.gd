@@ -1,4 +1,11 @@
 extends Node
+class_name Gun
+
+enum FIRE_MODES {
+	FULL_AUTO = 0,
+	SEMI_FULL_AUTO = 1,
+	SEMI_AUTO = 2
+}
 
 @export var MAX_AMMO_CAP: int = 100
 @export var MAX_MAG_SIZE: int = 6
@@ -6,8 +13,12 @@ extends Node
 @export var BULLET_SCENE: PackedScene
 @export var LOADS_WHOLE_MAG: bool = true
 @export var LOADS_PER_RELOAD: int = 1
-@export var RELOAD_TIME: int = 1
+@export var RELOAD_TIME: float = 1
 @export var AMMO_COST_PER_SHOT: int = 1
+@export var RANDOM_SPREAD_ANGLE: int = 0
+@export var FIRE_COOLDOWN: float = 1
+@export var FIRE_MODE: FIRE_MODES = FIRE_MODES.SEMI_AUTO
+@export var MODEL: Mesh
 
 @onready var reload_timer: Timer = $Timer
 

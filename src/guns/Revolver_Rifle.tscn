@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b10aqt8pm6swo"]
+
+[ext_resource type="Script" uid="uid://tj0gy8oqeaqt" path="res://src/player/Gun.gd" id="1_q3ngf"]
+
+[node name="RevolverRifie" type="Node" unique_id=1348184292]
+script = ExtResource("1_q3ngf")
+metadata/_custom_type_script = "uid://tj0gy8oqeaqt"

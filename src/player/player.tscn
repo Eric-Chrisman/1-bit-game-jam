@@ -57,7 +57,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3767536, 0)
 visible = false
 mesh = SubResource("SphereMesh_ll62f")
 
-[node name="Node" type="Node" parent="." unique_id=2105251180]
+[node name="Pistol" type="Node" parent="." unique_id=2105251180]
 script = ExtResource("4_244u8")
 
-[node name="Timer" type="Timer" parent="Node" unique_id=474509577]
+[node name="Timer" type="Timer" parent="Pistol" unique_id=474509577]
+
+[node name="Shotgun" type="Node" parent="." unique_id=1360314592]
+script = ExtResource("4_244u8")
+
+[node name="Timer" type="Timer" parent="Shotgun" unique_id=1551657866]
