@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://3t3127k18ba0" path="res://src/player/player.gd" id="1_4anbu"]
 [ext_resource type="Script" uid="uid://c2m8isbh0i4a2" path="res://src/player/aim_laser.gd" id="2_rxibo"]
 [ext_resource type="Script" uid="uid://cg6d8b4iuxulb" path="res://src/player/laser.gd" id="3_mf2ua"]
+[ext_resource type="Script" uid="uid://tj0gy8oqeaqt" path="res://src/player/Gun.gd" id="4_244u8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyqds"]
 shading_mode = 0
@@ -24,6 +25,7 @@ size = Vector3(1, 2.0576172, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_ll62f"]
 
 [node name="Player" type="CharacterBody3D" unique_id=433991171]
+collision_layer = 0
 script = ExtResource("1_4anbu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1535986574]
@@ -54,3 +56,8 @@ mesh = SubResource("BoxMesh_ll62f")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3767536, 0)
 visible = false
 mesh = SubResource("SphereMesh_ll62f")
+
+[node name="Node" type="Node" parent="." unique_id=2105251180]
+script = ExtResource("4_244u8")
+
+[node name="Timer" type="Timer" parent="Node" unique_id=474509577]

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://4lenhu1t7xpe" path="res://src/player/player.tscn" id="1_rvqeh"]
 [ext_resource type="Texture2D" uid="uid://b4qom1jirb7rt" path="res://assets/sprites/misc_placeholder/map dev_textures/PNG/Dark/texture_01.png" id="1_vod3a"]
 [ext_resource type="PackedScene" uid="uid://cchtqcjgjkai4" path="res://src/enemy/enemy.tscn" id="3_15b3w"]
+[ext_resource type="Shader" uid="uid://btdjq403kta0j" path="res://src/test_env/map.gdshader" id="4_wugxv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvqeh"]
 shading_mode = 0
@@ -12,6 +13,10 @@ uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ll62f"]
 shading_mode = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_15b3w"]
+shader = ExtResource("4_wugxv")
+shader_parameter/gamma = 2.2
 
 [node name="Map" type="Node3D" unique_id=525126436]
 
@@ -63,23 +68,23 @@ size = Vector3(3, 1, 3)
 material = SubResource("StandardMaterial3D_ll62f")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=1179900207]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.956482, -1.0552995, -6.1635895)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.956482, -1.5136611, -6.1635895)
 size = Vector3(0.91296387, 0.081, 4.4859314)
 material = SubResource("StandardMaterial3D_ll62f")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=78574177]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.527578, -1.0552995, -0.11182594)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.527578, -1.5136611, -0.11182594)
 size = Vector3(0.91296387, 0.081, 4.4859314)
 material = SubResource("StandardMaterial3D_ll62f")
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=331844925]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.527578, -1.0552995, 15.748589)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.527578, -1.5136611, 15.748589)
 layers = 16
 size = Vector3(0.91296387, 0.081, 19.137009)
 material = SubResource("StandardMaterial3D_ll62f")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=2130832568]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.956482, -1.0552995, 11.62735)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.956482, -1.5136611, 11.62735)
 size = Vector3(0.91296387, 0.081, 8.06781)
 material = SubResource("StandardMaterial3D_ll62f")
 
@@ -127,3 +132,13 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 
 [node name="Enemy3" parent="Entity_Layer/Background_Layer" unique_id=160765295 instance=ExtResource("3_15b3w")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 15)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=491009088]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1233657004]
+material = SubResource("ShaderMaterial_15b3w")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
