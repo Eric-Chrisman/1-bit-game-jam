@@ -10,17 +10,78 @@ albedo_color = Color(0.7607843, 0.73333335, 0.7058824, 1)
 albedo_texture = ExtResource("1_vod3a")
 uv1_triplanar = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ll62f"]
+shading_mode = 0
+
 [node name="Map" type="Node3D" unique_id=525126436]
 
 [node name="Map_Layer" type="Node3D" parent="." unique_id=921402751]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="Map_Layer" unique_id=373091209]
+visible = false
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D" unique_id=240592017]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5, -2, 0)
 size = Vector3(130, 1, 129)
 material = SubResource("StandardMaterial3D_rvqeh")
+
+[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="Map_Layer" unique_id=1024149804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.037746, 0, 0)
+use_collision = true
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=1499811958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 1.5)
+size = Vector3(3, 7, 12)
+material = SubResource("StandardMaterial3D_ll62f")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=1331166122]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, 1.5)
+size = Vector3(3, 7, 12)
+material = SubResource("StandardMaterial3D_ll62f")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=351907649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, -1)
+operation = 2
+size = Vector3(3, 1, 3)
+material = SubResource("StandardMaterial3D_ll62f")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=1888220342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, 4)
+operation = 2
+size = Vector3(3, 1, 3)
+material = SubResource("StandardMaterial3D_ll62f")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=1251677853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 4)
+size = Vector3(3, 1, 3)
+material = SubResource("StandardMaterial3D_ll62f")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=38259933]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -1)
+size = Vector3(3, 1, 3)
+material = SubResource("StandardMaterial3D_ll62f")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=1179900207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.956482, -1.0552995, -6.1635895)
+size = Vector3(0.91296387, 0.081, 4.4859314)
+material = SubResource("StandardMaterial3D_ll62f")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=78574177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.527578, -1.0552995, -0.11182594)
+size = Vector3(0.91296387, 0.081, 4.4859314)
+material = SubResource("StandardMaterial3D_ll62f")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=331844925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.527578, -1.0552995, 15.748589)
+layers = 16
+size = Vector3(0.91296387, 0.081, 19.137009)
+material = SubResource("StandardMaterial3D_ll62f")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D2" unique_id=2130832568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.956482, -1.0552995, 11.62735)
+size = Vector3(0.91296387, 0.081, 8.06781)
+material = SubResource("StandardMaterial3D_ll62f")
 
 [node name="Entity_Layer" type="Node3D" parent="." unique_id=1930370115]
 
@@ -56,9 +117,13 @@ size = 4.941
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)
 
 [node name="Enemy" parent="Entity_Layer/Background_Layer" unique_id=1358907462 instance=ExtResource("3_15b3w")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.1091404, 4, -1)
+
+[node name="Enemy4" parent="Entity_Layer/Background_Layer" unique_id=2099842423 instance=ExtResource("3_15b3w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.1091404, 4, 4.3618894)
 
 [node name="Enemy2" parent="Entity_Layer/Background_Layer" unique_id=1911022013 instance=ExtResource("3_15b3w")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -7.944497)
 
 [node name="Enemy3" parent="Entity_Layer/Background_Layer" unique_id=160765295 instance=ExtResource("3_15b3w")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 15)

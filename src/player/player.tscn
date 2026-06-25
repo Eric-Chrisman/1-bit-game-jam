@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3t3127k18ba0" path="res://src/player/player.gd" id="1_4anbu"]
 [ext_resource type="Script" uid="uid://c2m8isbh0i4a2" path="res://src/player/aim_laser.gd" id="2_rxibo"]
+[ext_resource type="Script" uid="uid://cg6d8b4iuxulb" path="res://src/player/laser.gd" id="3_mf2ua"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyqds"]
 shading_mode = 0
@@ -17,6 +18,11 @@ top_radius = 0.1
 bottom_radius = 0.1
 height = 0.1
 
+[sub_resource type="BoxMesh" id="BoxMesh_ll62f"]
+size = Vector3(1, 2.0576172, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ll62f"]
+
 [node name="Player" type="CharacterBody3D" unique_id=433991171]
 script = ExtResource("1_4anbu")
 
@@ -26,10 +32,25 @@ mesh = SubResource("CapsuleMesh_ll62f")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=947188778]
 shape = SubResource("CapsuleShape3D_rxibo")
 
-[node name="AimLaser" type="RayCast3D" parent="." unique_id=1627616505]
-transform = Transform3D(1, 0, 0, 0, -0.31730467, -0.94832367, 0, 0.94832367, -0.31730467, 0, 0, 0)
-target_position = Vector3(0, 100, 0)
+[node name="LaserPointer" type="Node3D" parent="." unique_id=2014633532]
 script = ExtResource("2_rxibo")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AimLaser" unique_id=100896352]
+[node name="y_pivot" type="Node3D" parent="LaserPointer" unique_id=933967696]
+
+[node name="AimLaser" type="RayCast3D" parent="LaserPointer/y_pivot" unique_id=1627616505]
+target_position = Vector3(0, 100, 0)
+script = ExtResource("3_mf2ua")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LaserPointer/y_pivot/AimLaser" unique_id=100896352]
+transform = Transform3D(-1, 8.940697e-08, 0, -8.940697e-08, -1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("CylinderMesh_ll62f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="LaserPointer/y_pivot/AimLaser" unique_id=358949110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5288086, 0)
+visible = false
+mesh = SubResource("BoxMesh_ll62f")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="LaserPointer/y_pivot/AimLaser" unique_id=941089609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3767536, 0)
+visible = false
+mesh = SubResource("SphereMesh_ll62f")
