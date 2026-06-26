@@ -12,6 +12,5 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 	visible = false
 	$Timer.start()
 
-
 func _on_timer_timeout() -> void:
 	visible = true

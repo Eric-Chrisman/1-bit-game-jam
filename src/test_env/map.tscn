@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://ntmdt1p6n4v" path="res://Building4.glb" id="1_wugxv"]
 [ext_resource type="PackedScene" uid="uid://cchtqcjgjkai4" path="res://src/enemy/enemy.tscn" id="3_15b3w"]
 [ext_resource type="Shader" uid="uid://btdjq403kta0j" path="res://src/test_env/map.gdshader" id="4_wugxv"]
-[ext_resource type="PackedScene" uid="uid://b81wn2j0mwsyw" path="res://TheStranger.glb" id="5_76pdy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wugxv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -19,11 +18,11 @@ sky = SubResource("Sky_76pdy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvqeh"]
 shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yt76s"]
 transparency = 1
-albedo_color = Color(1, 1, 1, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ll62f"]
 
@@ -40,8 +39,8 @@ shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
 shader_parameter/dither_repeat = 1.0
 shader_parameter/dither_strength = 1.0
 shader_parameter/min_dither_brightness = 0.1
-shader_parameter/color_a = Color(1, 1, 1, 1)
-shader_parameter/color_b = Color(0, 0, 0, 1)
+shader_parameter/color_a = Color(0, 0, 0, 1)
+shader_parameter/color_b = Color(1, 1, 1, 1)
 shader_parameter/bayer_mode = 4
 
 [sub_resource type="QuadMesh" id="QuadMesh_ll62f"]
@@ -55,8 +54,8 @@ size = Vector2(1000, 1000)
 environment = SubResource("Environment_46quy")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=447898996]
-transform = Transform3D(-0.0054641785, 0.014569372, -0.99987894, -0.009153034, 0.9998513, 0.014618987, 0.99994326, 0.009231805, -0.005330011, -19.594341, 5.949046, 0)
-light_energy = 0.025
+transform = Transform3D(-0.0081235645, 0.336173, -0.9417652, -0.006902388, 0.941755, 0.33622888, 0.99994326, 0.009231805, -0.0053300103, -19.594341, 5.949046, 0)
+light_energy = 8.31
 shadow_enabled = true
 sky_mode = 1
 
@@ -173,7 +172,7 @@ mesh = SubResource("QuadMesh_ll62f")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)
 
 [node name="Enemy" parent="Entity_Layer/Background_Layer" unique_id=1358907462 instance=ExtResource("3_15b3w")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.1091404, 4, -1)
+transform = Transform3D(0.9180681, 0, 0.39642265, 0, 1, 0, -0.39642265, 0, 0.9180681, -0.48009682, 5.558768, -0.4132406)
 
 [node name="Enemy4" parent="Entity_Layer/Background_Layer" unique_id=2099842423 instance=ExtResource("3_15b3w")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.1091404, 4, 4.3618894)
@@ -184,5 +183,5 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 [node name="Enemy3" parent="Entity_Layer/Background_Layer" unique_id=160765295 instance=ExtResource("3_15b3w")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 15)
 
-[node name="TheStranger" parent="." unique_id=1735064456 instance=ExtResource("5_76pdy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0766418, -1.5, -3.1364522)
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1139368440]
+transform = Transform3D(-0.023937752, -0.99212396, -0.12295105, 0.18959981, -0.12525964, 0.97383875, -0.9815696, 1.4833111e-08, 0.19110496, 15.424866, 5.111072, 0)
