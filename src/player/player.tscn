@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://3t3127k18ba0" path="res://src/player/player.gd" id="1_4anbu"]
 [ext_resource type="Script" uid="uid://c2m8isbh0i4a2" path="res://src/player/aim_laser.gd" id="2_rxibo"]
 [ext_resource type="Script" uid="uid://cg6d8b4iuxulb" path="res://src/player/laser.gd" id="3_mf2ua"]
-[ext_resource type="Script" uid="uid://tj0gy8oqeaqt" path="res://src/player/Gun.gd" id="4_244u8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyqds"]
 
@@ -12,11 +11,13 @@ material = SubResource("StandardMaterial3D_xyqds")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rxibo"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_15b3w"]
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_ll62f"]
-material = SubResource("StandardMaterial3D_xyqds")
-top_radius = 0.1
-bottom_radius = 0.1
-height = 0.1
+material = SubResource("ShaderMaterial_15b3w")
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.45191017
 
 [sub_resource type="BoxMesh" id="BoxMesh_ll62f"]
 size = Vector3(1, 2.0576172, 1)
@@ -44,7 +45,7 @@ target_position = Vector3(0, 100, 0)
 script = ExtResource("3_mf2ua")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LaserPointer/y_pivot/AimLaser" unique_id=100896352]
-transform = Transform3D(-1, 8.940697e-08, 0, -8.940697e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-1, 8.940697e-08, 0, -8.940697e-08, -1, 0, 0, 0, 1, -1.5731604e-08, 0.17595504, 0)
 cast_shadow = 0
 mesh = SubResource("CylinderMesh_ll62f")
 
@@ -59,13 +60,3 @@ visible = false
 mesh = SubResource("SphereMesh_ll62f")
 
 [node name="Inventory" type="Node" parent="." unique_id=365159166]
-
-[node name="Pistol" type="Node" parent="Inventory" unique_id=2105251180]
-script = ExtResource("4_244u8")
-
-[node name="Timer" type="Timer" parent="Inventory/Pistol" unique_id=474509577]
-
-[node name="Shotgun" type="Node" parent="Inventory" unique_id=1360314592]
-script = ExtResource("4_244u8")
-
-[node name="Timer" type="Timer" parent="Inventory/Shotgun" unique_id=1551657866]

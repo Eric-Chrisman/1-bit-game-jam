@@ -12,15 +12,25 @@ height = 0.5
 height = 0.5
 
 [node name="Enemy" type="CharacterBody3D" unique_id=18225702]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 collision_layer = 16
 script = ExtResource("1_6j2al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1521050279]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
 cast_shadow = 0
 mesh = SubResource("CylinderMesh_ll62f")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=640587325]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
 shape = SubResource("CylinderShape3D_27teu")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=760616169]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1216125216]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_27teu")
+
+[node name="Timer" type="Timer" parent="." unique_id=405161148]
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

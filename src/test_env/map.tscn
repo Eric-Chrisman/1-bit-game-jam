@@ -19,6 +19,10 @@ sky = SubResource("Sky_76pdy")
 shading_mode = 0
 uv1_triplanar = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yt76s"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ll62f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xyqds"]
@@ -64,6 +68,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1658.7009, -2, -125.58887)
 cast_shadow = 0
 size = Vector3(3350.4019, 1, 3784.6504)
 material = SubResource("StandardMaterial3D_rvqeh")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D" unique_id=2132760935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1776.4591, 80.79993, -125.58887)
+cast_shadow = 0
+size = Vector3(3114.8855, 649.68823, 3784.6504)
+material = SubResource("StandardMaterial3D_yt76s")
 
 [node name="CSGCombiner3D2" type="CSGCombiner3D" parent="Map_Layer" unique_id=1024149804]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.037746, 0, 0)

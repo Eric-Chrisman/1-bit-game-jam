@@ -16,3 +16,5 @@ func place_circle():
 		randi_range(100, viewport_rect.x),
 		randi_range(100, viewport_rect.y)
 	)
+
+		

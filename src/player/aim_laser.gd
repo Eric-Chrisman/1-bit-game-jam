@@ -10,7 +10,7 @@ enum AIM_TYPES {
 
 func _process(delta: float) -> void:
 	var mouse_pos = get_viewport().get_mouse_position()
-	var ray_length = 1000
+	var ray_length = 100000
 	var camera = get_tree().root.get_camera_3d()
 	var from = camera.project_ray_origin(mouse_pos)
 	var to = from + camera.project_ray_normal(mouse_pos) * ray_length

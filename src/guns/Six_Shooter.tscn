@@ -5,3 +5,5 @@
 [node name="Six_Shooter" type="Node" unique_id=1479410111]
 script = ExtResource("1_167bm")
 metadata/_custom_type_script = "uid://tj0gy8oqeaqt"
+
+[node name="Timer" type="Timer" parent="." unique_id=1863908596]
