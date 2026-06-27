@@ -8,7 +8,7 @@ enum FIRE_MODES {
 }
 
 @export var MAX_AMMO_CAP: int = 100
-@export var MAX_MAG_SIZE: int = 6
+@export var MAX_MAG_SIZE: int = 60
 @export var BULLET_COUNT_PER_SHOT: int = 1
 @export var BULLET_SCENE: PackedScene
 @export var LOADS_WHOLE_MAG: bool = true
@@ -19,6 +19,7 @@ enum FIRE_MODES {
 @export var FIRE_COOLDOWN: float = 1
 @export var FIRE_MODE: FIRE_MODES = FIRE_MODES.SEMI_AUTO
 @export var MODEL: Mesh
+@export var WEAPON_SLOT: int = 1 # 1 for pistols, 2 for shotguns, 3 for rifles, 4 for specials
 
 @onready var reload_timer: Timer = $Timer
 
@@ -26,13 +27,14 @@ var current_ammo_reserve: int = MAX_AMMO_CAP
 var current_ammo_mag: int = MAX_MAG_SIZE
 
 func _ready() -> void:
-	reload_timer.timeout.connect(reloaded)
+	if reload_timer:
+		reload_timer.timeout.connect(reloaded)
 
 func shoot(orgin: Vector3, direction: Vector3) -> void:
 	if current_ammo_mag > 0 and BULLET_SCENE:
 		var bullet = BULLET_SCENE.instantiate()
 		bullet.position = orgin
-		# give it direction
+		bullet.set_direction(direction)
 		current_ammo_mag -= AMMO_COST_PER_SHOT
 		add_child(bullet)
 

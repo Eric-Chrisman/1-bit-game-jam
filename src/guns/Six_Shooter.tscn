@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://con1r6g6aiewn"]
-
-[ext_resource type="Script" uid="uid://tj0gy8oqeaqt" path="res://src/player/Gun.gd" id="1_167bm"]
-
-[node name="Six_Shooter" type="Node" unique_id=1479410111]
-script = ExtResource("1_167bm")
-metadata/_custom_type_script = "uid://tj0gy8oqeaqt"
-
-[node name="Timer" type="Timer" parent="." unique_id=1863908596]

@@ -16,3 +16,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 
 func kill_bullet() -> void:
 	queue_free()
+
+func set_direction(direction: Vector3):
+	velocity = direction.normalized() * bullet_speed

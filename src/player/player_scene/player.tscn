@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://4lenhu1t7xpe"]
+
+[ext_resource type="Script" uid="uid://3t3127k18ba0" path="res://src/player/player_scene/player.gd" id="1_4anbu"]
+[ext_resource type="PackedScene" uid="uid://b81wn2j0mwsyw" path="res://TheStranger.glb" id="2_244u8"]
+[ext_resource type="Script" uid="uid://c2m8isbh0i4a2" path="res://src/player/aimming/aim_laser.gd" id="2_rxibo"]
+[ext_resource type="Script" uid="uid://cg6d8b4iuxulb" path="res://src/player/aimming/laser.gd" id="3_mf2ua"]
+[ext_resource type="PackedScene" uid="uid://dvahtikg41v18" path="res://src/player/inventory/inventory.tscn" id="5_alqwc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rxibo"]
+height = 3.324707
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_15b3w"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ll62f"]
+material = SubResource("ShaderMaterial_15b3w")
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.45191017
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyqds"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ll62f"]
+material = SubResource("StandardMaterial3D_xyqds")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ll62f"]
+size = Vector3(0.8554077, 3.3083496, 1)
+
+[node name="Player" type="CharacterBody3D" unique_id=433991171]
+collision_layer = 0
+axis_lock_linear_x = true
+platform_floor_layers = 4278190080
+script = ExtResource("1_4anbu")
+
+[node name="TheStranger" parent="." unique_id=1271067395 instance=ExtResource("2_244u8")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=947188778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6882699, 0)
+shape = SubResource("CapsuleShape3D_rxibo")
+
+[node name="LaserPointer" type="Node3D" parent="." unique_id=2014633532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1580932, 0)
+script = ExtResource("2_rxibo")
+
+[node name="AimLaser" type="RayCast3D" parent="LaserPointer" unique_id=1627616505]
+target_position = Vector3(0, 10000, 0)
+collision_mask = 5
+script = ExtResource("3_mf2ua")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LaserPointer/AimLaser" unique_id=100896352]
+transform = Transform3D(-1, 8.940697e-08, 0, -8.940697e-08, -1, 0, 0, 0, 1, -1.5731604e-08, 0.17595504, 0)
+cast_shadow = 0
+mesh = SubResource("CylinderMesh_ll62f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LaserPointer" unique_id=2140973739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1580932, 0)
+top_level = true
+mesh = SubResource("SphereMesh_ll62f")
+
+[node name="Inventory" parent="." unique_id=1518562146 instance=ExtResource("5_alqwc")]
+
+[node name="hitbox" type="Area3D" parent="." unique_id=1448439275]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox" unique_id=620377483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01473999, 1.6314697, 0)
+shape = SubResource("BoxShape3D_ll62f")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=463206175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5427098, 1.8702631, 1.6448292)
