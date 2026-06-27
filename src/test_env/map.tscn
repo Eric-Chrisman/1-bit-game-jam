@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://it0fdx0kwmdj" path="res://Building8.glb" id="10_pls3j"]
 [ext_resource type="PackedScene" uid="uid://bryxa13oiw5mi" path="res://Building9.glb" id="11_wpc3k"]
 [ext_resource type="PackedScene" uid="uid://bgiwp0sxmbk6d" path="res://Building10.glb" id="12_73oy7"]
+[ext_resource type="PackedScene" uid="uid://cchtqcjgjkai4" path="res://src/enemy/enemy.tscn" id="14_qnd5k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wugxv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -171,3 +172,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -11.
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Entity_Layer/Camera3D" unique_id=1995119356]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2865295, 0, -1.2471018)
 mesh = SubResource("QuadMesh_ll62f")
+
+[node name="Enemy" parent="Entity_Layer" unique_id=18225702 instance=ExtResource("14_qnd5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8631, 0, 0)
