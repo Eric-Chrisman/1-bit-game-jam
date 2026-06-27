@@ -14,13 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://it0fdx0kwmdj" path="res://Building8.glb" id="10_pls3j"]
 [ext_resource type="PackedScene" uid="uid://bryxa13oiw5mi" path="res://Building9.glb" id="11_wpc3k"]
 [ext_resource type="PackedScene" uid="uid://bgiwp0sxmbk6d" path="res://Building10.glb" id="12_73oy7"]
-[ext_resource type="PackedScene" uid="uid://conmynjolvyl6" path="res://Porch5.glb" id="13_s71e3"]
 [ext_resource type="PackedScene" uid="uid://bbfgivtjgb71v" path="res://BuildingBoss.glb" id="13_unaef"]
-[ext_resource type="PackedScene" uid="uid://cojtmjeoeqk1m" path="res://Porch4.glb" id="14_ewqg7"]
-[ext_resource type="PackedScene" uid="uid://qvxj6pagd7p0" path="res://Porch3.glb" id="15_atkg2"]
-[ext_resource type="PackedScene" uid="uid://cyoc481k0kvdt" path="res://Porch1.glb" id="16_bvmgd"]
-[ext_resource type="PackedScene" uid="uid://dwmlql0xxmhr1" path="res://Porch2.glb" id="17_nmcll"]
-[ext_resource type="PackedScene" uid="uid://bnihfl73okcyp" path="res://Porch6.glb" id="18_ijm8b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wugxv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -82,9 +76,9 @@ sky_mode = 1
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D" unique_id=240592017]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1381.6178, -2, -125.58887)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1658.7009, -2, -125.58887)
 cast_shadow = 0
-size = Vector3(3904.568, 1, 3784.6504)
+size = Vector3(3350.4019, 1, 3784.6504)
 material = SubResource("StandardMaterial3D_rvqeh")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D" unique_id=2132760935]
@@ -244,3 +238,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.11
 
 [node name="Enemy3" parent="Entity_Layer/Background_Layer" unique_id=160765295 instance=ExtResource("3_15b3w")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 15)
+
+[node name="Building1" parent="." unique_id=956215675 instance=ExtResource("4_76pdy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.499247, -1.4746698, 64.29321)
+
+[node name="Building22" parent="." unique_id=1084650209 instance=ExtResource("5_76pdy")]
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 17.461843, -1.4852147, 252.33528)
