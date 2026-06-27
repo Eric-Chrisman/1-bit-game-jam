@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://con1r6g6aiewn"]
+
+[ext_resource type="Script" uid="uid://tj0gy8oqeaqt" path="res://src/player/weapons/Gun.gd" id="1_0qm44"]
+[ext_resource type="PackedScene" uid="uid://pomrcaw7ysu0" path="res://src/player/weapons/bullets/pistol_round/pistol_round.tscn" id="2_0qm44"]
+
+[node name="SixShooter" type="Node" unique_id=1479410111]
+script = ExtResource("1_0qm44")
+BULLET_SCENE = ExtResource("2_0qm44")
+metadata/_custom_type_script = "uid://tj0gy8oqeaqt"
+
+[node name="Timer" type="Timer" parent="." unique_id=1863908596]

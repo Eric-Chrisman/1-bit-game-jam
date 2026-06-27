@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dvahtikg41v18"]
+
+[ext_resource type="Script" uid="uid://ddjvs33wpfq2k" path="res://src/player/inventory/inventory.gd" id="1_2wnxu"]
+[ext_resource type="PackedScene" uid="uid://con1r6g6aiewn" path="res://src/player/weapons/guns/Six_Shooter.tscn" id="2_dy1qg"]
+[ext_resource type="PackedScene" uid="uid://dmgerx7lj2u6g" path="res://src/player/weapons/guns/Double_Barrel.tscn" id="3_xcy70"]
+[ext_resource type="PackedScene" uid="uid://boc6ju31m0b8t" path="res://src/player/weapons/guns/Gatlin_Gun.tscn" id="4_g27ux"]
+[ext_resource type="PackedScene" uid="uid://dd0x72afrsxn6" path="res://src/player/weapons/guns/Hand_Mortar.tscn" id="5_q6odh"]
+[ext_resource type="PackedScene" uid="uid://8y6s5crqlahc" path="res://src/player/weapons/guns/Lever_Action_Shotgun.tscn" id="6_ocwh1"]
+[ext_resource type="PackedScene" uid="uid://b10aqt8pm6swo" path="res://src/player/weapons/guns/Revolver_Rifle.tscn" id="7_tlelv"]
+
+[node name="Inventory" type="Node" unique_id=1518562146]
+script = ExtResource("1_2wnxu")
+metadata/_custom_type_script = "uid://ddjvs33wpfq2k"
+
+[node name="SixShooter" parent="." unique_id=1479410111 instance=ExtResource("2_dy1qg")]
+
+[node name="DoubleBarrel" parent="." unique_id=1112054157 instance=ExtResource("3_xcy70")]
+
+[node name="GatlinGun" parent="." unique_id=1160993500 instance=ExtResource("4_g27ux")]
+
+[node name="HandMortar" parent="." unique_id=289365123 instance=ExtResource("5_q6odh")]
+
+[node name="LeverActionShotgun" parent="." unique_id=611268805 instance=ExtResource("6_ocwh1")]
+
+[node name="RevolverRifle" parent="." unique_id=1348184292 instance=ExtResource("7_tlelv")]

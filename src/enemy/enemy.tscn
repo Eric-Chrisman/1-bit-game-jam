@@ -13,6 +13,7 @@ height = 0.5
 
 [node name="Enemy" type="CharacterBody3D" unique_id=18225702]
 collision_layer = 16
+platform_floor_layers = 4278190080
 script = ExtResource("1_6j2al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1521050279]

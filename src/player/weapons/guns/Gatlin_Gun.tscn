@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://boc6ju31m0b8t"]
+
+[ext_resource type="Script" uid="uid://tj0gy8oqeaqt" path="res://src/player/weapons/Gun.gd" id="1_uhjgm"]
+
+[node name="GatlinGun" type="Node" unique_id=1160993500]
+script = ExtResource("1_uhjgm")
+metadata/_custom_type_script = "uid://tj0gy8oqeaqt"

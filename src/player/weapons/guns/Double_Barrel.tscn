@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dmgerx7lj2u6g"]
+
+[ext_resource type="Script" uid="uid://tj0gy8oqeaqt" path="res://src/player/weapons/Gun.gd" id="1_fhnvm"]
+
+[node name="DoubleBarrel" type="Node" unique_id=1112054157]
+script = ExtResource("1_fhnvm")
+metadata/_custom_type_script = "uid://tj0gy8oqeaqt"
