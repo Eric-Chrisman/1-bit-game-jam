@@ -93,6 +93,8 @@ cast_shadow = 0
 size = Vector3(3114.8855, 649.68823, 3784.6504)
 material = SubResource("StandardMaterial3D_yt76s")
 
+<<<<<<< HEAD
+=======
 [node name="Building42" parent="Map_Layer/CSGCombiner3D" unique_id=807876976 instance=ExtResource("1_wugxv")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.794518, -1.4950548, 107.46602)
 
@@ -123,6 +125,7 @@ transform = Transform3D(-2.5912728e-08, 0.16925733, -0.9855716, 1.618961e-08, 0.
 [node name="BuildingBoss2" parent="Map_Layer/CSGCombiner3D" unique_id=1857949736 instance=ExtResource("13_unaef")]
 transform = Transform3D(-0.9855613, 0.16921785, -0.005844151, 0.1692803, 0.985486, -0.012680233, 0.0036136063, -0.013486451, -0.99990255, -6.493509, 0.9140029, 276.1819)
 
+>>>>>>> 5aca78a973fa6d19ef345eb41af3a414a2ed7085
 [node name="CSGCombiner3D2" type="CSGCombiner3D" parent="Map_Layer" unique_id=1024149804]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.037746, 0, 0)
 use_collision = true
