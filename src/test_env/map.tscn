@@ -14,7 +14,13 @@
 [ext_resource type="PackedScene" uid="uid://it0fdx0kwmdj" path="res://Building8.glb" id="10_pls3j"]
 [ext_resource type="PackedScene" uid="uid://bryxa13oiw5mi" path="res://Building9.glb" id="11_wpc3k"]
 [ext_resource type="PackedScene" uid="uid://bgiwp0sxmbk6d" path="res://Building10.glb" id="12_73oy7"]
+[ext_resource type="PackedScene" uid="uid://conmynjolvyl6" path="res://Porch5.glb" id="13_s71e3"]
 [ext_resource type="PackedScene" uid="uid://bbfgivtjgb71v" path="res://BuildingBoss.glb" id="13_unaef"]
+[ext_resource type="PackedScene" uid="uid://cojtmjeoeqk1m" path="res://Porch4.glb" id="14_ewqg7"]
+[ext_resource type="PackedScene" uid="uid://qvxj6pagd7p0" path="res://Porch3.glb" id="15_atkg2"]
+[ext_resource type="PackedScene" uid="uid://cyoc481k0kvdt" path="res://Porch1.glb" id="16_bvmgd"]
+[ext_resource type="PackedScene" uid="uid://dwmlql0xxmhr1" path="res://Porch2.glb" id="17_nmcll"]
+[ext_resource type="PackedScene" uid="uid://bnihfl73okcyp" path="res://Porch6.glb" id="18_ijm8b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wugxv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -76,9 +82,9 @@ sky_mode = 1
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D" unique_id=240592017]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1658.7009, -2, -125.58887)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1381.6178, -2, -125.58887)
 cast_shadow = 0
-size = Vector3(3350.4019, 1, 3784.6504)
+size = Vector3(3904.568, 1, 3784.6504)
 material = SubResource("StandardMaterial3D_rvqeh")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Map_Layer/CSGCombiner3D" unique_id=2132760935]
@@ -87,6 +93,8 @@ cast_shadow = 0
 size = Vector3(3114.8855, 649.68823, 3784.6504)
 material = SubResource("StandardMaterial3D_yt76s")
 
+<<<<<<< HEAD
+=======
 [node name="Building42" parent="Map_Layer/CSGCombiner3D" unique_id=807876976 instance=ExtResource("1_wugxv")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.794518, -1.4950548, 107.46602)
 
@@ -117,6 +125,7 @@ transform = Transform3D(-2.5912728e-08, 0.16925733, -0.9855716, 1.618961e-08, 0.
 [node name="BuildingBoss2" parent="Map_Layer/CSGCombiner3D" unique_id=1857949736 instance=ExtResource("13_unaef")]
 transform = Transform3D(-0.9855613, 0.16921785, -0.005844151, 0.1692803, 0.985486, -0.012680233, 0.0036136063, -0.013486451, -0.99990255, -6.493509, 0.9140029, 276.1819)
 
+>>>>>>> 5aca78a973fa6d19ef345eb41af3a414a2ed7085
 [node name="CSGCombiner3D2" type="CSGCombiner3D" parent="Map_Layer" unique_id=1024149804]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.037746, 0, 0)
 use_collision = true
@@ -159,6 +168,69 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.956482, -1.5136611, 11.62
 cast_shadow = 0
 size = Vector3(0.91296387, 0.081, 8.06781)
 material = SubResource("StandardMaterial3D_ll62f")
+
+[node name="Building1" parent="Map_Layer" unique_id=956215675 instance=ExtResource("4_76pdy")]
+transform = Transform3D(-4.371139e-08, 0, -0.99999994, -8.881784e-16, 0.99999994, 0, 1, 0, -4.371139e-08, 17.499247, -1.4746699, 64.29321)
+
+[node name="Building2" parent="Map_Layer" unique_id=1084650209 instance=ExtResource("5_76pdy")]
+transform = Transform3D(-4.3711385e-08, 0, -0.9999999, 0, 0.99999994, 1.4901161e-08, 0.99999994, 0, -4.3711385e-08, 17.461842, -1.4852142, 252.33528)
+
+[node name="Building3" parent="Map_Layer" unique_id=843739101 instance=ExtResource("4_46quy")]
+transform = Transform3D(-2.8279082e-08, -1.4901161e-08, -0.9999994, 1.1570112e-08, 0.9999994, -1.4901161e-08, 0.99999994, -1.1570108e-08, -2.8279104e-08, 17.699558, -1.4963679, 227.8978)
+
+[node name="Building4" parent="Map_Layer" unique_id=807876976 instance=ExtResource("1_wugxv")]
+transform = Transform3D(-4.371139e-08, 0, -0.99999994, -8.881784e-16, 0.99999994, 0, 1, 0, -4.371139e-08, 17.794518, -1.4950557, 107.46602)
+
+[node name="Building5" parent="Map_Layer" unique_id=370778029 instance=ExtResource("8_unaef")]
+transform = Transform3D(-2.8434442e-08, -1.4901161e-08, -0.9999997, 0.0017453395, 0.99999785, -1.4901161e-08, 0.99999815, -0.0017453394, -2.8279095e-08, 18.11197, -1.4988399, 85.66504)
+
+[node name="Building6" parent="Map_Layer" unique_id=333607838 instance=ExtResource("6_ihdvp")]
+transform = Transform3D(-2.863817e-08, -1.4901161e-08, -1.0000001, -0.001745317, 0.99999833, 2.9802322e-08, 0.99999833, 0.0017453164, -2.827909e-08, 18.357586, -1.4963703, 133.36536)
+
+[node name="Building7" parent="Map_Layer" unique_id=1851957263 instance=ExtResource("9_bvmgd")]
+transform = Transform3D(-2.910383e-08, 0, -1.0000001, -0.010471775, 0.9999451, 2.9802322e-08, 0.9999451, 0.0104717715, -2.827909e-08, 17.346119, -1.4963691, 203.99637)
+
+[node name="Building8" parent="Map_Layer" unique_id=552111463 instance=ExtResource("10_pls3j")]
+transform = Transform3D(-2.8288923e-08, 1.4901161e-08, -0.99999964, 0.0069812713, 0.9999755, 0, 0.9999755, -0.0069812704, -2.8279093e-08, 17.17112, -1.4963696, 180.30278)
+
+[node name="Building9" parent="Map_Layer" unique_id=1887519714 instance=ExtResource("11_wpc3k")]
+transform = Transform3D(-2.8288923e-08, -2.9802322e-08, -0.9999996, 0.0017453398, 0.9999984, -1.4901161e-08, 0.9999984, -0.0017453396, -2.8279095e-08, 15.723408, -1.4807396, 24.67865)
+
+[node name="Building10" parent="Map_Layer" unique_id=1273607346 instance=ExtResource("12_73oy7")]
+transform = Transform3D(-2.8279072e-08, 0, -0.9999997, 1.1570104e-08, 0.9999995, -1.4901161e-08, 0.9999999, -1.1570108e-08, -2.8279095e-08, 16.443262, -1.4567208, 44.90605)
+
+[node name="Building11" parent="Map_Layer" unique_id=1766654090 instance=ExtResource("2_qnd5k")]
+transform = Transform3D(-4.371139e-08, 1.4901161e-08, -0.9999999, -8.881784e-16, 0.9999999, 1.4901161e-08, 1, 0, -4.371139e-08, 16.828342, -1.4807415, 159.43477)
+
+[node name="BuildingBoss" parent="Map_Layer" unique_id=1857949736 instance=ExtResource("13_unaef")]
+transform = Transform3D(-0.9999935, -2.4437904e-05, -0.003613608, 2.43783e-05, 0.9999086, -0.013486448, 0.0036136063, -0.013486451, -0.99990255, -3.5749617, -1.49752, 276.1819)
+
+[node name="Porch1" parent="Map_Layer" unique_id=1932597233 instance=ExtResource("13_s71e3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.234241, -1.4963712, 45.422626)
+
+[node name="Porch2" parent="Map_Layer" unique_id=221758223 instance=ExtResource("14_ewqg7")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.610027, -1.4963726, 64.60478)
+
+[node name="Porch3" parent="Map_Layer" unique_id=490963787 instance=ExtResource("15_atkg2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.844536, -1.3723549, 85.823235)
+
+[node name="Porch4" parent="Map_Layer" unique_id=37885246 instance=ExtResource("16_bvmgd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.528229, -1.7393961, 107.95256)
+
+[node name="Porch5" parent="Map_Layer" unique_id=1782586298 instance=ExtResource("17_nmcll")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.719559, -1.4963707, 133.91306)
+
+[node name="Porch6" parent="Map_Layer" unique_id=1240186313 instance=ExtResource("18_ijm8b")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.191814, -1.4963697, 160.12044)
+
+[node name="Porch7" parent="Map_Layer" unique_id=2105405730 instance=ExtResource("17_nmcll")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.719559, -1.4963707, 204.1547)
+
+[node name="Porch8" parent="Map_Layer" unique_id=1579477071 instance=ExtResource("14_ewqg7")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.610027, -1.4963726, 180.26398)
+
+[node name="Porch9" parent="Map_Layer" unique_id=1835551486 instance=ExtResource("16_bvmgd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.528229, -1.7393961, 227.79092)
 
 [node name="Entity_Layer" type="Node3D" parent="." unique_id=1930370115]
 
@@ -206,9 +278,3 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.11
 
 [node name="Enemy3" parent="Entity_Layer/Background_Layer" unique_id=160765295 instance=ExtResource("3_15b3w")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 15)
-
-[node name="Building1" parent="." unique_id=956215675 instance=ExtResource("4_76pdy")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.499247, -1.4746698, 64.29321)
-
-[node name="Building22" parent="." unique_id=1084650209 instance=ExtResource("5_76pdy")]
-transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 17.461843, -1.4852147, 252.33528)
