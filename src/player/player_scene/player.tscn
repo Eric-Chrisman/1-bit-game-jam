@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://3t3127k18ba0" path="res://src/player/player_scene/player.gd" id="1_4anbu"]
 [ext_resource type="PackedScene" uid="uid://b81wn2j0mwsyw" path="res://TheStranger.glb" id="2_244u8"]
 [ext_resource type="Script" uid="uid://c2m8isbh0i4a2" path="res://src/player/aimming/aim_laser.gd" id="2_rxibo"]
+[ext_resource type="Script" uid="uid://bxlmdtxwb7q6g" path="res://the_stranger_animations.gd" id="3_0eq6l"]
 [ext_resource type="Script" uid="uid://cg6d8b4iuxulb" path="res://src/player/aimming/laser.gd" id="3_mf2ua"]
-[ext_resource type="PackedScene" uid="uid://dvahtikg41v18" path="res://src/player/inventory/inventory.tscn" id="5_alqwc"]
+[ext_resource type="PackedScene" uid="uid://dvahtikg41v18" path="res://src/player/inventory/Inventory.tscn" id="5_alqwc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rxibo"]
 height = 3.324707
@@ -31,9 +32,11 @@ collision_layer = 0
 axis_lock_linear_x = true
 platform_floor_layers = 4278190080
 script = ExtResource("1_4anbu")
+SPEED = 10.0
 
 [node name="TheStranger" parent="." unique_id=1271067395 instance=ExtResource("2_244u8")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+script = ExtResource("3_0eq6l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=947188778]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6882699, 0)
