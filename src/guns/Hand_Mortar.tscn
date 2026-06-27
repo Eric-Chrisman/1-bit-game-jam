@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://dd0x72afrsxn6"]
-
-[ext_resource type="Script" uid="uid://tj0gy8oqeaqt" path="res://src/player/Gun.gd" id="1_unthx"]
-
-[node name="HandMortar" type="Node" unique_id=289365123]
-script = ExtResource("1_unthx")
-metadata/_custom_type_script = "uid://tj0gy8oqeaqt"
