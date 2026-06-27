@@ -7,5 +7,3 @@
 script = ExtResource("1_0qm44")
 BULLET_SCENE = ExtResource("2_0qm44")
 metadata/_custom_type_script = "uid://tj0gy8oqeaqt"
-
-[node name="Timer" type="Timer" parent="." unique_id=1863908596]

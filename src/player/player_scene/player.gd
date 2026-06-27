@@ -19,4 +19,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("fire"):
-		inventory.fire_weapon(bullet_orgin.global_position, aimmer.get_direction())
+		if inventory.can_fire_weapon():
+			pass
+		#inventory.fire_weapon(bullet_orgin.global_position, aimmer.get_direction())

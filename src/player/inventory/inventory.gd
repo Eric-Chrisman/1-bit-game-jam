@@ -24,3 +24,6 @@ func weapon_switch_by_number(slot_id: int):
 func fire_weapon(orgin: Vector3, direction: Vector3) -> void:
 	if current_gun:
 		current_gun.shoot(orgin, direction)
+
+func can_fire_weapon() -> bool:
+	return current_gun.is_cooldown_complete()
