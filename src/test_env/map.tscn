@@ -51,7 +51,7 @@ shader_parameter/dither_repeat = 1.0
 shader_parameter/dither_strength = 1.0
 shader_parameter/min_dither_brightness = 0.1
 shader_parameter/color_a = Color(0, 0, 0, 1)
-shader_parameter/color_b = Color(1, 1, 1, 1)
+shader_parameter/color_b = Color(1, 0.6431373, 0.39607844, 1)
 shader_parameter/bayer_mode = 4
 
 [sub_resource type="QuadMesh" id="QuadMesh_ll62f"]
