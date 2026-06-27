@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bvwqckb2s63w4"]
 
+[ext_resource type="PackedScene" uid="uid://cyoc481k0kvdt" path="res://Porch1.glb" id="1_3gt14"]
 [ext_resource type="PackedScene" uid="uid://4lenhu1t7xpe" path="res://src/player/player_scene/player.tscn" id="1_rvqeh"]
 [ext_resource type="PackedScene" uid="uid://c5e5mpm0t44ci" path="res://Building4.glb" id="1_wugxv"]
 [ext_resource type="PackedScene" uid="uid://cjh2ikjg1aoat" path="res://Building11.glb" id="2_qnd5k"]
+[ext_resource type="PackedScene" uid="uid://conmynjolvyl6" path="res://Porch5.glb" id="2_yjtvu"]
 [ext_resource type="PackedScene" uid="uid://caokn6f0qu2p3" path="res://Building3.glb" id="4_46quy"]
 [ext_resource type="PackedScene" uid="uid://c5ftau37m1a5y" path="res://Building1.glb" id="4_76pdy"]
 [ext_resource type="Shader" uid="uid://btdjq403kta0j" path="res://src/test_env/map.gdshader" id="4_wugxv"]
@@ -13,6 +15,19 @@
 [ext_resource type="PackedScene" uid="uid://it0fdx0kwmdj" path="res://Building8.glb" id="10_pls3j"]
 [ext_resource type="PackedScene" uid="uid://bryxa13oiw5mi" path="res://Building9.glb" id="11_wpc3k"]
 [ext_resource type="PackedScene" uid="uid://bgiwp0sxmbk6d" path="res://Building10.glb" id="12_73oy7"]
+[ext_resource type="PackedScene" uid="uid://di3rafsbtju2l" path="res://Cover1.glb" id="16_pqn0b"]
+[ext_resource type="PackedScene" uid="uid://dgf27h5k4m7m7" path="res://Cover2.glb" id="17_2aiar"]
+[ext_resource type="PackedScene" uid="uid://co4sxcu1ra30g" path="res://Cover3.glb" id="18_b3v2o"]
+[ext_resource type="PackedScene" uid="uid://87l2qi352gm5" path="res://Cover4.glb" id="19_al1js"]
+[ext_resource type="PackedScene" uid="uid://cq5nsd7wsulut" path="res://Cover5.glb" id="20_52iws"]
+[ext_resource type="PackedScene" uid="uid://ds5ou7k2jtrq1" path="res://Cover6.glb" id="21_1tsbx"]
+[ext_resource type="PackedScene" uid="uid://cpkyosa4mao7a" path="res://Cover7.glb" id="22_y07t8"]
+[ext_resource type="PackedScene" uid="uid://dugvv4mf1peud" path="res://Cover8.glb" id="23_ts31i"]
+[ext_resource type="PackedScene" uid="uid://cojtmjeoeqk1m" path="res://Porch4.glb" id="24_o00e0"]
+[ext_resource type="PackedScene" uid="uid://qvxj6pagd7p0" path="res://Porch3.glb" id="25_lirjb"]
+[ext_resource type="PackedScene" uid="uid://dwmlql0xxmhr1" path="res://Porch2.glb" id="26_fs4ng"]
+[ext_resource type="PackedScene" uid="uid://bnihfl73okcyp" path="res://Porch6.glb" id="27_w42mo"]
+[ext_resource type="PackedScene" uid="uid://bbfgivtjgb71v" path="res://BuildingBoss.glb" id="28_yjtvu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wugxv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -84,6 +99,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1776.4591, 80.79993, -125.588
 cast_shadow = 0
 size = Vector3(3114.8855, 649.68823, 3784.6504)
 material = SubResource("StandardMaterial3D_yt76s")
+
+[node name="Porch12" parent="Map_Layer/CSGCombiner3D" unique_id=239635317 instance=ExtResource("1_3gt14")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -8.3871, -1.4963688, 86.07213)
+
+[node name="Porch52" parent="Map_Layer/CSGCombiner3D" unique_id=762556879 instance=ExtResource("2_yjtvu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.5926695, -1.4963707, 24.993635)
 
 [node name="CSGCombiner3D2" type="CSGCombiner3D" parent="Map_Layer" unique_id=1024149804]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.037746, 0, 0)
@@ -169,5 +190,89 @@ transform = Transform3D(-4.371139e-08, 1.4901161e-08, -0.9999999, -8.881784e-16,
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -11.244652, 2.23522, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Entity_Layer/Camera3D" unique_id=1995119356]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2865295, 0, -1.2471018)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.543274, 0, -1.2471027)
 mesh = SubResource("QuadMesh_ll62f")
+
+[node name="Cover12" parent="." unique_id=168389683 instance=ExtResource("16_pqn0b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9727058, -1.4766822, 67.78587)
+
+[node name="Cover22" parent="." unique_id=1717666227 instance=ExtResource("17_2aiar")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4757242, -1.4999247, 59.607113)
+
+[node name="Cover32" parent="." unique_id=301631529 instance=ExtResource("18_b3v2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.470685, -1.464879, 130.12062)
+
+[node name="Cover42" parent="." unique_id=1106538850 instance=ExtResource("19_al1js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.389514, -1.4414656, 48.40091)
+
+[node name="Cover52" parent="." unique_id=474364071 instance=ExtResource("20_52iws")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.8664818, -1.4999247, 21.06601)
+
+[node name="Cover62" parent="." unique_id=1567908496 instance=ExtResource("21_1tsbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7798128, -1.4999247, 110.74126)
+
+[node name="Cover72" parent="." unique_id=1596891761 instance=ExtResource("22_y07t8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.368713, -1.4766822, 103.66904)
+
+[node name="Cover82" parent="." unique_id=849594202 instance=ExtResource("23_ts31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.033958, -1.4772624, 138.84244)
+
+[node name="Porch42" parent="." unique_id=1311545545 instance=ExtResource("24_o00e0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.592895, -1.4963716, 44.401325)
+
+[node name="Porch32" parent="." unique_id=369596156 instance=ExtResource("25_lirjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.717642, -1.4963697, 64.3994)
+
+[node name="Porch22" parent="." unique_id=1722622168 instance=ExtResource("26_fs4ng")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.993088, -1.4963707, 107.79858)
+
+[node name="Porch12" parent="." unique_id=2018980914 instance=ExtResource("1_3gt14")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.138199, -1.4963707, 159.64363)
+
+[node name="Porch62" parent="." unique_id=922352693 instance=ExtResource("27_w42mo")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.210291, -1.4963707, 133.7445)
+
+[node name="Porch43" parent="." unique_id=84802331 instance=ExtResource("24_o00e0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.9780154, -1.4963707, 180.85152)
+
+[node name="Porch33" parent="." unique_id=69102991 instance=ExtResource("25_lirjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.119839, -1.4963726, 203.95467)
+
+[node name="Porch13" parent="." unique_id=340014782 instance=ExtResource("1_3gt14")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.215769, -1.4963726, 228.29669)
+
+[node name="Porch63" parent="." unique_id=960373814 instance=ExtResource("27_w42mo")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.255998, -1.4963707, 252.36578)
+
+[node name="BuildingBoss2" parent="." unique_id=1401602522 instance=ExtResource("28_yjtvu")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.750431, -1.4975166, 300.20367)
+
+[node name="Cover13" parent="." unique_id=2081843165 instance=ExtResource("16_pqn0b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.204154, -1.4414647, 200.8651)
+
+[node name="Cover23" parent="." unique_id=1961926306 instance=ExtResource("17_2aiar")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.204154, -1.4414647, 176.92587)
+
+[node name="Cover33" parent="." unique_id=41724618 instance=ExtResource("18_b3v2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.77492666, -1.4414647, 162.82407)
+
+[node name="Cover43" parent="." unique_id=1857091350 instance=ExtResource("19_al1js")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.831437, -1.4414647, 285.70105)
+
+[node name="Cover53" parent="." unique_id=1428719071 instance=ExtResource("20_52iws")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.2889166, -1.4414647, 285.73383)
+
+[node name="Cover63" parent="." unique_id=770246774 instance=ExtResource("21_1tsbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1347432, -1.4414647, 207.94849)
+
+[node name="Cover73" parent="." unique_id=2136261504 instance=ExtResource("22_y07t8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.204154, -1.4414647, 157.28468)
+
+[node name="Cover83" parent="." unique_id=1373592635 instance=ExtResource("23_ts31i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.568805, -1.4414647, 276.82794)
+
+[node name="Cover14" parent="." unique_id=406123598 instance=ExtResource("16_pqn0b")]
+transform = Transform3D(3.7855173e-08, 0.8660254, -0.50000006, 1, -4.371139e-08, 0, -2.1855696e-08, -0.50000006, -0.8660254, -4.446002, -0.1551212, 248.27554)
+
+[node name="Cover24" parent="." unique_id=1389124024 instance=ExtResource("17_2aiar")]
+transform = Transform3D(3.412673e-08, -0.78072864, -0.62487024, -1, -4.371139e-08, 0, -2.7313945e-08, 0.62487024, -0.78072864, 8.900082, 0.053479433, 223.30255)
