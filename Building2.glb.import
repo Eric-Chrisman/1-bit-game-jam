@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c5e5mpm0t44ci"
-path="res://.godot/imported/Building4.glb-d5dc5dfb8515a6b5539599f3cef43721.scn"
+uid="uid://ok8laqhp0yp6"
+path="res://.godot/imported/Building2.glb-9306b7285834be07d3113e2339e5bcae.scn"
 
 [deps]
 
-source_file="res://Building4.glb"
-dest_files=["res://.godot/imported/Building4.glb-d5dc5dfb8515a6b5539599f3cef43721.scn"]
+source_file="res://Building2.glb"
+dest_files=["res://.godot/imported/Building2.glb-9306b7285834be07d3113e2339e5bcae.scn"]
 
 [params]
 
@@ -41,7 +41,7 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"StrangerTexture": {
+"StrangerTexture.001": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://new_standard_material_3d.tres",
 "use_external/path": "uid://dy21r8oke2fi1"
