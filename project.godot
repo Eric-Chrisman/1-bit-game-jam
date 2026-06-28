@@ -32,6 +32,9 @@ folder_colors={
 "res://src/enemy/": "red",
 "res://src/hud/": "green",
 "res://src/main/": "orange",
+"res://src/map_objects/": "yellow",
+"res://src/map_objects/buildings/": "yellow",
+"res://src/map_objects/covers/": "yellow",
 "res://src/player/": "purple",
 "res://src/player/weapons/bullets/": "purple",
 "res://src/player/weapons/guns/": "purple"

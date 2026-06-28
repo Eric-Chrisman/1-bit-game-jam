@@ -9,7 +9,7 @@ enum ENEMY_STATES {
 
 @export var MAX_HEALTH: int = 1
 @export var SHOOT_FREQUENCY: float = 2
-@export var BULLET_BURST: int
+@export var BULLET_BURST: int = 1
 @export var BULLET_SCENE: PackedScene
 
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
