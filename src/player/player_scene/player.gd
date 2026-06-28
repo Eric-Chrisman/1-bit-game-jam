@@ -20,6 +20,7 @@ var dodge_dir: int = 0
 var queued_shot: bool = false
 
 func _physics_process(delta: float) -> void:
+	#print(State.find_key(state))
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
@@ -28,6 +29,8 @@ func _physics_process(delta: float) -> void:
 			_handle_free(delta)
 		State.SHOOTING:
 			_handle_shooting_input()
+		State.RELOADING:
+			_handle_reload_input()
 		State.DODGE_AIR, State.DODGE_LAG:
 			pass
 	
@@ -45,6 +48,27 @@ func _handle_free(_delta: float) -> void:
 	elif Input.is_action_just_pressed("fire"):
 		if inventory.can_fire_weapon():
 			_enter_shooting()
+	elif Input.is_action_just_pressed("reload") and inventory.bullets_left_in_reserve() > 0:
+			_enter_reload()
+	
+
+func _handle_reload_input() -> void:
+	if Input.is_action_just_pressed("fire"):
+		state = State.FREE
+		if inventory.can_fire_weapon():
+			_enter_shooting()
+	
+func _enter_reload() -> void:
+	velocity.z = move_toward(velocity.z, 0, SPEED)
+	state = State.RELOADING
+	model.reload()
+
+func continue_reload() -> void:
+	inventory.reload_weapon()
+	if inventory.current_gun.current_ammo_mag < inventory.current_gun.MAX_MAG_SIZE:
+		model.reload()
+	else:
+		state = State.FREE
 
 func _handle_shooting_input() -> void:
 	velocity.z = move_toward(velocity.z, 0, SPEED)
@@ -52,9 +76,10 @@ func _handle_shooting_input() -> void:
 		queued_shot = true
 
 func _enter_shooting() -> void:
-	state = State.SHOOTING
-	queued_shot = false
-	model.shoot(aimer.get_direction())
+	if inventory.can_fire_weapon():
+		state = State.SHOOTING
+		queued_shot = false
+		model.shoot(aimer.get_direction())
 
 func _enter_dodge(direction: int) -> void:
 	dodge_dir = direction

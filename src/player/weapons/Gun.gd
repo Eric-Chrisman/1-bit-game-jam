@@ -8,7 +8,7 @@ enum FIRE_MODES {
 }
 
 @export var MAX_AMMO_CAP: int = 100
-@export var MAX_MAG_SIZE: int = 60
+@export var MAX_MAG_SIZE: int = 6
 @export var BULLET_COUNT_PER_SHOT: int = 1
 @export var BULLET_SCENE: PackedScene
 @export var LOADS_WHOLE_MAG: bool = true
@@ -26,11 +26,11 @@ var current_ammo_reserve: int = MAX_AMMO_CAP
 var current_ammo_mag: int = MAX_MAG_SIZE
 
 func _ready() -> void:
-	reload_timer = Timer.new()
-	reload_timer.one_shot = true
-	reload_timer.wait_time = RELOAD_TIME
-	reload_timer.timeout.connect(reloaded)
-	add_child(reload_timer)
+	#reload_timer = Timer.new()
+	#reload_timer.one_shot = true
+	#reload_timer.wait_time = RELOAD_TIME
+	#reload_timer.timeout.connect(reloaded)
+	#add_child(reload_timer)
 
 	fire_cooldown_timer = Timer.new()
 	fire_cooldown_timer.one_shot = true
@@ -43,23 +43,25 @@ func shoot(orgin: Vector3, direction: Vector3) -> void:
 		bullet.position = orgin
 		bullet.set_direction(direction)
 		current_ammo_mag -= AMMO_COST_PER_SHOT
+		print("mag: ", current_ammo_mag, " reserve: ", current_ammo_reserve)
 		add_child(bullet)
 		bullet.set_team(true)
 
-func reload():
-	pass
+func reload_one_bullet():
+	if current_ammo_mag < MAX_MAG_SIZE:
+		current_ammo_mag += 1
 
 func interupt_reload():
 	pass
 
-func reloaded():
-	var empty_part_of_mag: int = MAX_MAG_SIZE - current_ammo_mag
-	var bullets_we_can_load: int = min(current_ammo_reserve, empty_part_of_mag)
-	if LOADS_WHOLE_MAG:
-		current_ammo_mag += bullets_we_can_load
-	else:
-		bullets_we_can_load = min(bullets_we_can_load, LOADS_PER_RELOAD)
-	current_ammo_reserve -= bullets_we_can_load
+#func reloaded():
+	#var empty_part_of_mag: int = MAX_MAG_SIZE - current_ammo_mag
+	#var bullets_we_can_load: int = min(current_ammo_reserve, empty_part_of_mag)
+	#if LOADS_WHOLE_MAG:
+		#current_ammo_mag += bullets_we_can_load
+	#else:
+		#bullets_we_can_load = min(bullets_we_can_load, LOADS_PER_RELOAD)
+	#current_ammo_reserve -= bullets_we_can_load
 
 func is_cooldown_complete():
 	return fire_cooldown_timer.is_stopped()
