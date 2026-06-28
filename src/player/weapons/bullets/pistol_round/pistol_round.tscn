@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://pomrcaw7ysu0"]
 
 [ext_resource type="Script" uid="uid://drjxlxptfgl4" path="res://src/player/weapons/bullets/pistol_round/pistol_round.gd" id="1_r55t0"]
+[ext_resource type="PackedScene" uid="uid://3pdwvreqkngy" path="res://BulletTrail.glb" id="2_a3cuk"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ll62f"]
 radius = 0.0677906
@@ -30,3 +31,5 @@ mesh = SubResource("SphereMesh_ll62f")
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -1.5026177, 0, 0)
 visible = false
 mesh = SubResource("CylinderMesh_xyqds")
+
+[node name="BulletTrail" parent="." unique_id=79764711 instance=ExtResource("2_a3cuk")]

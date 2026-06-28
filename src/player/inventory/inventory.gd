@@ -25,5 +25,12 @@ func fire_weapon(orgin: Vector3, direction: Vector3) -> void:
 	if current_gun:
 		current_gun.shoot(orgin, direction)
 
+func reload_weapon() -> void:
+	if current_gun:
+		current_gun.reload_one_bullet()
+
 func can_fire_weapon() -> bool:
-	return current_gun.is_cooldown_complete()
+	return current_gun.is_cooldown_complete() and current_gun.current_ammo_mag
+
+func bullets_left_in_reserve() -> int:
+	return current_gun.current_ammo_reserve
