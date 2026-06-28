@@ -53,7 +53,9 @@ func _handle_free(_delta: float) -> void:
 	
 
 func _handle_reload_input() -> void:
-	if Input.is_action_just_pressed("fire"):
+	if Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right") or Input.is_action_just_pressed("jump"):
+		state = State.FREE
+	elif Input.is_action_just_pressed("fire"):
 		state = State.FREE
 		if inventory.can_fire_weapon():
 			_enter_shooting()
