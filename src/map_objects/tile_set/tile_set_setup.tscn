@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://diwuo6i7tfmck"]
+
+[ext_resource type="PackedScene" uid="uid://c5ftau37m1a5y" path="res://assets/meshes/buildings/Building1.glb" id="1_8geqo"]
+[ext_resource type="PackedScene" uid="uid://ok8laqhp0yp6" path="res://assets/meshes/buildings/Building2.glb" id="2_kdlcv"]
+[ext_resource type="PackedScene" uid="uid://caokn6f0qu2p3" path="res://assets/meshes/buildings/Building3.glb" id="3_dxva5"]
+[ext_resource type="PackedScene" uid="uid://c5e5mpm0t44ci" path="res://assets/meshes/buildings/Building4.glb" id="4_ebili"]
+[ext_resource type="PackedScene" uid="uid://dtas0hgbj3rt1" path="res://assets/meshes/buildings/Building5.glb" id="5_5chf1"]
+[ext_resource type="PackedScene" uid="uid://1xjr03nm3ryi" path="res://assets/meshes/buildings/Building6.glb" id="6_px2ct"]
+[ext_resource type="PackedScene" uid="uid://bckder51qak01" path="res://assets/meshes/buildings/Building7.glb" id="7_0sn4c"]
+[ext_resource type="PackedScene" uid="uid://it0fdx0kwmdj" path="res://assets/meshes/buildings/Building8.glb" id="8_chocq"]
+[ext_resource type="PackedScene" uid="uid://bryxa13oiw5mi" path="res://assets/meshes/buildings/Building9.glb" id="9_3wslt"]
+[ext_resource type="PackedScene" uid="uid://bgiwp0sxmbk6d" path="res://assets/meshes/buildings/Building10.glb" id="10_x7rsr"]
+[ext_resource type="PackedScene" uid="uid://cjh2ikjg1aoat" path="res://assets/meshes/buildings/Building11.glb" id="11_yuijg"]
+[ext_resource type="PackedScene" uid="uid://bqhur6h0svj7h" path="res://assets/meshes/buildings/Building12.glb" id="12_ebjrc"]
+[ext_resource type="PackedScene" uid="uid://bbfgivtjgb71v" path="res://assets/meshes/buildings/BuildingBoss.glb" id="13_7ojdo"]
+[ext_resource type="PackedScene" uid="uid://cbg8fjg5jdlyj" path="res://assets/meshes/cover/Cover1.glb" id="14_x7rsr"]
+[ext_resource type="PackedScene" uid="uid://dor0lfln8c5o4" path="res://assets/meshes/cover/Cover2.glb" id="15_yuijg"]
+[ext_resource type="PackedScene" uid="uid://2xru5b2ulvrl" path="res://assets/meshes/cover/Cover3.glb" id="16_ebjrc"]
+[ext_resource type="PackedScene" uid="uid://ckxu2k7q5rjsl" path="res://assets/meshes/cover/Cover4.glb" id="17_7ojdo"]
+[ext_resource type="PackedScene" uid="uid://d1uxyl3uaiuvy" path="res://assets/meshes/cover/Cover5.glb" id="18_8hqjg"]
+[ext_resource type="PackedScene" uid="uid://7cd70xb4uk3d" path="res://assets/meshes/cover/Cover6 (1).glb" id="19_wrinw"]
+[ext_resource type="PackedScene" uid="uid://dk76ybgplh2me" path="res://assets/meshes/cover/Cover6.glb" id="20_mbnux"]
+[ext_resource type="PackedScene" uid="uid://im05agag1a45" path="res://assets/meshes/cover/Cover7.glb" id="21_lmrw1"]
+[ext_resource type="PackedScene" uid="uid://d0dgxoo8u8ifp" path="res://assets/meshes/cover/Cover8.glb" id="22_dckei"]
+
+[node name="Node3D" type="Node3D" unique_id=699544454]
+
+[node name="Building12" parent="." unique_id=1274108042 instance=ExtResource("1_8geqo")]
+visible = false
+
+[node name="Building22" parent="." unique_id=1404058285 instance=ExtResource("2_kdlcv")]
+visible = false
+
+[node name="Building32" parent="." unique_id=2108866499 instance=ExtResource("3_dxva5")]
+visible = false
+
+[node name="Building42" parent="." unique_id=784984314 instance=ExtResource("4_ebili")]
+visible = false
+
+[node name="Building52" parent="." unique_id=1731745930 instance=ExtResource("5_5chf1")]
+visible = false
+
+[node name="Building62" parent="." unique_id=865694977 instance=ExtResource("6_px2ct")]
+visible = false
+
+[node name="Building72" parent="." unique_id=597147884 instance=ExtResource("7_0sn4c")]
+visible = false
+
+[node name="Building82" parent="." unique_id=378958815 instance=ExtResource("8_chocq")]
+visible = false
+
+[node name="Building92" parent="." unique_id=749234427 instance=ExtResource("9_3wslt")]
+visible = false
+
+[node name="Building102" parent="." unique_id=314338976 instance=ExtResource("10_x7rsr")]
+visible = false
+
+[node name="Building112" parent="." unique_id=1815730638 instance=ExtResource("11_yuijg")]
+visible = false
+
+[node name="Building122" parent="." unique_id=1011832611 instance=ExtResource("12_ebjrc")]
+visible = false
+
+[node name="BuildingBoss2" parent="." unique_id=143753325 instance=ExtResource("13_7ojdo")]
+visible = false
+
+[node name="Cover12" parent="." unique_id=1286257694 instance=ExtResource("14_x7rsr")]
+visible = false
+
+[node name="Cover22" parent="." unique_id=1753798735 instance=ExtResource("15_yuijg")]
+visible = false
+
+[node name="Cover32" parent="." unique_id=1561430346 instance=ExtResource("16_ebjrc")]
+visible = false
+
+[node name="Cover42" parent="." unique_id=1609209403 instance=ExtResource("17_7ojdo")]
+visible = false
+
+[node name="Cover52" parent="." unique_id=1583077957 instance=ExtResource("18_8hqjg")]
+visible = false
+
+[node name="Cover6 (1)" parent="." unique_id=66849981 instance=ExtResource("19_wrinw")]
+visible = false
+
+[node name="Cover62" parent="." unique_id=1457510056 instance=ExtResource("20_mbnux")]
+visible = false
+
+[node name="Cover72" parent="." unique_id=18217902 instance=ExtResource("21_lmrw1")]
+visible = false
+
+[node name="Cover82" parent="." unique_id=210118005 instance=ExtResource("22_dckei")]
+visible = false

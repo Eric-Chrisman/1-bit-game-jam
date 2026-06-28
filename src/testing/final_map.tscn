@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://dngrw48tvnl34"]
+
+[ext_resource type="MeshLibrary" uid="uid://bn2r112kkx0kq" path="res://src/map_objects/tile_set/western.tres" id="1_l7dqn"]
+[ext_resource type="PackedScene" uid="uid://4lenhu1t7xpe" path="res://src/player/player_scene/player.tscn" id="12_17k0e"]
+[ext_resource type="Shader" uid="uid://btdjq403kta0j" path="res://assets/shader_defintions/dithering_bi_color.gdshader" id="13_4dqhq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wugxv"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_76pdy"]
+sky_material = SubResource("ProceduralSkyMaterial_wugxv")
+
+[sub_resource type="Environment" id="Environment_46quy"]
+background_mode = 2
+sky = SubResource("Sky_76pdy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvqeh"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yt76s"]
+transparency = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_utos0"]
+render_priority = 0
+shader = ExtResource("13_4dqhq")
+shader_parameter/depth_threshold = 0.05
+shader_parameter/reverse_depth_threshold = 0.25
+shader_parameter/normal_threshold = 0.6
+shader_parameter/darken_amount = 0.3
+shader_parameter/lighten_amount = 1.5
+shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
+shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
+shader_parameter/dither_repeat = 1.0
+shader_parameter/dither_strength = 1.0
+shader_parameter/min_dither_brightness = 0.1
+shader_parameter/color_a = Color(0, 0, 0, 1)
+shader_parameter/color_b = Color(1, 0.6431373, 0.39607844, 1)
+shader_parameter/bayer_mode = 4
+
+[sub_resource type="QuadMesh" id="QuadMesh_ll62f"]
+material = SubResource("ShaderMaterial_utos0")
+flip_faces = true
+size = Vector2(1000, 1000)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ll62f"]
+radius = 30.0
+height = 60.0
+
+[node name="Map" type="Node3D" unique_id=525126436]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=911973121]
+environment = SubResource("Environment_46quy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=447898996]
+transform = Transform3D(-0.0081235645, 0.336173, -0.9417652, -0.006902388, 0.941755, 0.33622888, 0.99994326, 0.009231805, -0.0053300103, -19.594341, 5.949046, 0)
+light_energy = 8.31
+shadow_enabled = true
+sky_mode = 1
+
+[node name="Map_Layer" type="Node3D" parent="." unique_id=921402751]
+
+[node name="world" type="CSGCombiner3D" parent="Map_Layer" unique_id=373091209]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map_Layer/world" unique_id=240592017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1658.7009, -2, -125.58887)
+cast_shadow = 0
+size = Vector3(3350.4019, 1, 3784.6504)
+material = SubResource("StandardMaterial3D_rvqeh")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map_Layer/world" unique_id=2132760935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1776.4591, 80.79993, -125.58887)
+cast_shadow = 0
+size = Vector3(3114.8855, 649.68823, 3784.6504)
+material = SubResource("StandardMaterial3D_yt76s")
+
+[node name="GridMap" type="GridMap" parent="Map_Layer" unique_id=1781902649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.09, 0)
+mesh_library = ExtResource("1_l7dqn")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(4, 65533, 15, 4, 7, 17, 4, 20, 14, 0, 65510, 4, 22, 65510, 1, 35, 65535, 1441803, 36, 65528, 1441808, 11, 65510, 1441812)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Entity_Layer" type="Node3D" parent="." unique_id=2017307884]
+
+[node name="Player" parent="Entity_Layer" unique_id=433991171 instance=ExtResource("12_17k0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0416452, -22.562454)
+
+[node name="Camera3D" type="Camera3D" parent="Entity_Layer/Player" unique_id=1935130898]
+transform = Transform3D(-4.2819295e-08, 0.20100006, -0.97959125, 8.7859915e-09, 0.97959125, 0.20100006, 1, 0, -4.371139e-08, -11.244652, 4.751248, 0)
+
+[node name="shader" type="MeshInstance3D" parent="Entity_Layer/Player/Camera3D" unique_id=1995119356]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, 0, 0, 1, 2.2865295, 2.3841858e-07, -1.2471008)
+mesh = SubResource("QuadMesh_ll62f")
+
+[node name="sun" type="MeshInstance3D" parent="Entity_Layer/Player/Camera3D" unique_id=864786745]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.5687883e-05, -2.23522, -358.89694)
+mesh = SubResource("SphereMesh_ll62f")
