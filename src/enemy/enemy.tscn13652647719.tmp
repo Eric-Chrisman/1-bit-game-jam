@@ -80,10 +80,12 @@ animations = [{
 }]
 
 [node name="Enemy" type="CharacterBody3D" unique_id=18225702 groups=["enemy"]]
-collision_layer = 0
+collision_layer = 16
 platform_floor_layers = 4278190080
 script = ExtResource("1_6j2al")
 BULLET_SCENE = ExtResource("2_xso4u")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=287361713]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=640587325]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62269, 0)
@@ -106,7 +108,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6647694, -0.10418224)
 shape = SubResource("BoxShape3D_xyqds")
 
 [node name="reload_timer" type="Timer" parent="." unique_id=405161148]
-one_shot = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=269151746 groups=["enemy"]]
 transform = Transform3D(-8.805239e-09, 0, -0.29999998, 0, 0.19606279, 0, 0.2014404, 0, -1.3113416e-08, 0, 2.0462677, 0.027405739)

@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 
 enum State {
 	FREE,
@@ -19,7 +20,6 @@ var dodge_dir: int = 0
 var queued_shot: bool = false
 
 func _physics_process(delta: float) -> void:
-	print(State.find_key(state))
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
@@ -83,3 +83,6 @@ func dodge_end() -> void:
 
 func is_dodge_immune() -> bool:
 	return state == State.DODGE_AIR
+
+func get_target() -> Marker3D:
+	return get_node("where_enemies_aim")

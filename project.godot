@@ -37,6 +37,11 @@ folder_colors={
 "res://src/player/weapons/guns/": "purple"
 }
 
+[global_group]
+
+enemy="use this group to change enemy color"
+player=""
+
 [input]
 
 move_left={

@@ -3913,7 +3913,7 @@ material = SubResource("StandardMaterial3D_xyqds")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ll62f"]
 size = Vector3(0.8554077, 3.3083496, 1)
 
-[node name="Player" type="CharacterBody3D" unique_id=433991171]
+[node name="Player" type="CharacterBody3D" unique_id=433991171 groups=["player"]]
 collision_layer = 0
 axis_lock_linear_x = true
 platform_floor_layers = 4278190080
@@ -4498,23 +4498,28 @@ target_position = Vector3(0, 10000, 0)
 collision_mask = 5
 script = ExtResource("3_mf2ua")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="LaserPointer/AimLaser" unique_id=100896352]
+[node name="laser_mesh" type="MeshInstance3D" parent="LaserPointer/AimLaser" unique_id=100896352]
 transform = Transform3D(-1, 8.940697e-08, 0, -8.940697e-08, -1, 0, 0, 0, 1, -1.5731604e-08, 0.17595504, 0)
 cast_shadow = 0
 mesh = SubResource("CylinderMesh_ll62f")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="LaserPointer" unique_id=2140973739]
+[node name="debug_dot" type="MeshInstance3D" parent="LaserPointer" unique_id=2140973739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1580932, 0)
 top_level = true
+visible = false
 mesh = SubResource("SphereMesh_ll62f")
 
 [node name="Inventory" parent="." unique_id=1518562146 instance=ExtResource("5_alqwc")]
 
 [node name="hitbox" type="Area3D" parent="." unique_id=1448439275]
+collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox" unique_id=620377483]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01473999, 1.6314697, 0)
 shape = SubResource("BoxShape3D_ll62f")
+
+[node name="where_enemies_aim" type="Marker3D" parent="." unique_id=948676677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7516254, 0)
 
 [connection signal="animation_changed" from="TheStranger/AnimationPlayer" to="." method="_on_animation_player_animation_changed"]
 [connection signal="animation_finished" from="TheStranger/AnimationPlayer" to="TheStranger" method="_on_animation_player_animation_finished"]

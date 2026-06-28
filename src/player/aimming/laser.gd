@@ -1,6 +1,6 @@
 extends RayCast3D
 
-@onready var beam_mesh: MeshInstance3D = $MeshInstance3D
+@onready var beam_mesh: MeshInstance3D = $laser_mesh
 
 func _process(delta: float) -> void:
 	force_raycast_update()

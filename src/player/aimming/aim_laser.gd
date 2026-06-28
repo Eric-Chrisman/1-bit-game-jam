@@ -7,7 +7,7 @@ enum AIM_TYPES {
 }
 
 @onready var laser: Node3D = $AimLaser
-@onready var dot: Node3D = $MeshInstance3D
+@onready var dot: Node3D = $debug_dot
 
 func _process(delta: float) -> void:
 	var mouse_pos = get_viewport().get_mouse_position()
