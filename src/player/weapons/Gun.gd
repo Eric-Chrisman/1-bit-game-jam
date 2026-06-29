@@ -20,6 +20,7 @@ enum FIRE_MODES {
 @export var FIRE_MODE: FIRE_MODES = FIRE_MODES.SEMI_AUTO
 @export var MODEL: Mesh
 @export var WEAPON_SLOT: int = 1
+
 var reload_timer: Timer
 var fire_cooldown_timer: Timer
 var current_ammo_reserve: int = MAX_AMMO_CAP

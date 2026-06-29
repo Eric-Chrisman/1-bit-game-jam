@@ -11,18 +11,25 @@ enum ENEMY_STATES {
 @export var SHOOT_FREQUENCY: float = 2
 @export var BULLET_BURST: int = 1
 @export var BULLET_SCENE: PackedScene
+@export var HURT_DURATION: float = 0.15  # How long to show the hurt frame
 
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 @onready var reload_timer: Timer = $reload_timer
-@onready var bullet_origin: Marker3D = $Marker3D
+@onready var bullet_origin_1: Marker3D = $Marker3D
+@onready var bullet_origin_2: Marker3D = $Marker3D2
+var current_gun_to_shoot: Marker3D
 
 var patrol_point: Marker3D
 var current_state: ENEMY_STATES = ENEMY_STATES.STARTING
 var current_health: int
 var target: Marker3D
 
+# Internal timer so we don't need an extra Timer node for hurt flash
+var _hurt_timer: float = 0.0
+
 func _ready() -> void:
-	current_health = MAX_HEALTH  # Fix: was using MAX_HEALTH before _ready, always 0 default
+	current_gun_to_shoot = bullet_origin_1
+	current_health = MAX_HEALTH
 	sprite.play("Walk", randf_range(0.8, 1.2))
 	reload_timer.wait_time = SHOOT_FREQUENCY
 	get_player_node()
@@ -35,9 +42,11 @@ func get_player_node() -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+
 	match current_state:
 		ENEMY_STATES.STARTING:
 			current_state = ENEMY_STATES.FIRE
+
 		ENEMY_STATES.FIRE:
 			if reload_timer.is_stopped():
 				if target:
@@ -45,6 +54,14 @@ func _physics_process(delta: float) -> void:
 					reload_timer.start(SHOOT_FREQUENCY * randf_range(0.8, 1.2))
 				else:
 					get_player_node()
+
+		ENEMY_STATES.HURT:
+			# Count down and return to FIRE once the hurt frame has shown long enough
+			_hurt_timer -= delta
+			if _hurt_timer <= 0.0:
+				current_state = ENEMY_STATES.FIRE
+				sprite.play("Walk")
+
 		ENEMY_STATES.DEAD:
 			pass
 
@@ -53,12 +70,15 @@ func _physics_process(delta: float) -> void:
 func shoot() -> void:
 	if not BULLET_SCENE:
 		return
-	print("BANG")
 	var new_bullet = BULLET_SCENE.instantiate()
 	get_parent().add_child(new_bullet)
-	new_bullet.global_position = bullet_origin.global_position
-	new_bullet.set_direction((target.global_position - bullet_origin.global_position).normalized())
+	new_bullet.global_position = current_gun_to_shoot.global_position
+	new_bullet.set_direction((target.global_position - current_gun_to_shoot.global_position).normalized())
 	new_bullet.set_team(false)
+	if bullet_origin_2 and bullet_origin_1 == current_gun_to_shoot:
+		current_gun_to_shoot = bullet_origin_2
+	else:
+		current_gun_to_shoot = bullet_origin_1
 
 func take_damage(amount: int = 1) -> void:
 	if current_state == ENEMY_STATES.DEAD:
@@ -69,6 +89,7 @@ func take_damage(amount: int = 1) -> void:
 	else:
 		current_state = ENEMY_STATES.HURT
 		sprite.play("Hurt")
+		_hurt_timer = HURT_DURATION  # Start the hurt display countdown
 
 func die() -> void:
 	current_state = ENEMY_STATES.DEAD
@@ -79,8 +100,5 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 
 func _on_animated_sprite_3d_animation_finished() -> void:
 	match current_state:
-		ENEMY_STATES.HURT:
-			current_state = ENEMY_STATES.FIRE
-			sprite.play("Walk")
 		ENEMY_STATES.DEAD:
-			pass
+			queue_free()

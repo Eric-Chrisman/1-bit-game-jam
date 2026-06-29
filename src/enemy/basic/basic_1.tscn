@@ -112,9 +112,8 @@ one_shot = true
 transform = Transform3D(-8.805239e-09, 0, -0.29999998, 0, 0.19606279, 0, 0.2014404, 0, -1.3113416e-08, 0, 2.0462677, 0.027405739)
 render_priority = 100
 sprite_frames = SubResource("SpriteFrames_ll62f")
-animation = &"Dying"
-frame = 2
-frame_progress = 1.0
+animation = &"Hurt"
+frame_progress = 0.21245979
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=149001587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0380597, -1.01808)

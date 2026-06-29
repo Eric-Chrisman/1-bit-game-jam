@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://diwuo6i7tfmck"]
 
-[ext_resource type="PackedScene" uid="uid://c5ftau37m1a5y" path="res://assets/meshes/buildings/Building1.glb" id="1_8geqo"]
 [ext_resource type="PackedScene" uid="uid://ok8laqhp0yp6" path="res://assets/meshes/buildings/Building2.glb" id="2_kdlcv"]
 [ext_resource type="PackedScene" uid="uid://caokn6f0qu2p3" path="res://assets/meshes/buildings/Building3.glb" id="3_dxva5"]
 [ext_resource type="PackedScene" uid="uid://c5e5mpm0t44ci" path="res://assets/meshes/buildings/Building4.glb" id="4_ebili"]
@@ -22,11 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://dk76ybgplh2me" path="res://assets/meshes/cover/Cover6.glb" id="20_mbnux"]
 [ext_resource type="PackedScene" uid="uid://im05agag1a45" path="res://assets/meshes/cover/Cover7.glb" id="21_lmrw1"]
 [ext_resource type="PackedScene" uid="uid://d0dgxoo8u8ifp" path="res://assets/meshes/cover/Cover8.glb" id="22_dckei"]
+[ext_resource type="PackedScene" uid="uid://bpxm10hejdvmo" path="res://src/map_objects/buildings/building_12.tscn" id="22_x7rsr"]
 
 [node name="Node3D" type="Node3D" unique_id=699544454]
-
-[node name="Building12" parent="." unique_id=1274108042 instance=ExtResource("1_8geqo")]
-visible = false
 
 [node name="Building22" parent="." unique_id=1404058285 instance=ExtResource("2_kdlcv")]
 visible = false
@@ -90,3 +87,5 @@ visible = false
 
 [node name="Cover82" parent="." unique_id=210118005 instance=ExtResource("22_dckei")]
 visible = false
+
+[node name="Building12" parent="." unique_id=1274108042 instance=ExtResource("22_x7rsr")]

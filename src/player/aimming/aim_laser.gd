@@ -9,6 +9,8 @@ enum AIM_TYPES {
 @onready var laser: Node3D = $AimLaser
 @onready var dot: Node3D = $debug_dot
 
+var target_point: Vector3 = Vector3.ZERO
+
 func _process(delta: float) -> void:
 	var mouse_pos = get_viewport().get_mouse_position()
 	var ray_length = 100000
@@ -24,10 +26,13 @@ func _process(delta: float) -> void:
 	var result = space.intersect_ray(ray_query)
 	
 	if result:
-		var target_point: Vector3 = result["position"]
+		target_point = result["position"]
 		dot.position = target_point
 		laser.look_at(target_point, Vector3.UP, false)
 		laser.rotation.x -= PI / 2
 
 func get_direction() -> Vector3:
 	return (dot.global_position - global_position).normalized()
+
+func get_target_position() -> Vector3:
+	return target_point

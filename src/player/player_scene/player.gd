@@ -30,7 +30,6 @@ func _physics_process(delta: float) -> void:
 			_handle_shooting_input()
 		State.DODGE_AIR, State.DODGE_LAG:
 			pass
-	
 	move_and_slide()
 
 func _handle_free(_delta: float) -> void:
@@ -63,7 +62,7 @@ func _enter_dodge(direction: int) -> void:
 	model.dodge()
 
 func shoot_bullet() -> void:
-	inventory.fire_weapon(bullet_origin.global_position, aimer.get_direction())
+	inventory.fire_weapon(bullet_origin.global_position, (aimer.get_target_position() - bullet_origin.global_position).normalized())
 
 func shoot_done() -> void:
 	if queued_shot and inventory.can_fire_weapon():
