@@ -27,7 +27,6 @@ var current_ammo_reserve: int = MAX_AMMO_CAP
 var current_ammo_mag: int = MAX_MAG_SIZE
 
 func _ready() -> void:
-	$MuzzleFlare.visible = false
 	#reload_timer = Timer.new()
 	#reload_timer.one_shot = true
 	#reload_timer.wait_time = RELOAD_TIME
@@ -49,9 +48,6 @@ func shoot(orgin: Vector3, direction: Vector3) -> void:
 		current_ammo_mag -= AMMO_COST_PER_SHOT
 		print("mag: ", current_ammo_mag, " reserve: ", current_ammo_reserve)
 		bullet.set_team(true)
-		
-		# Muzzle Flash
-		$MuzzleFlare.visible = true
 
 func reload_one_bullet():
 	if current_ammo_mag < MAX_MAG_SIZE:

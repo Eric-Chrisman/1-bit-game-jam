@@ -1,12 +1,24 @@
 extends Node3D
 
 @onready var animation_node: AnimationPlayer = $AnimationPlayer
+@onready var muzzle_flash: Node3D = $StrangerArmature/Skeleton3D/StrangerBoneHandIndexRoot_L/Pistol/MuzzleFlare
+@export var muzzle_flash_timeout: float = 0.1
 
+var muzzle_flash_timer: Timer
 var char: CharacterBody3D
+
 
 func _ready() -> void:
 	char = get_parent()
 	animation_node.play("Idle1")
+	
+	muzzle_flash.visible = false
+	muzzle_flash_timer = Timer.new()
+	add_child(muzzle_flash_timer)
+	muzzle_flash_timer.one_shot = true
+	muzzle_flash_timer.wait_time = muzzle_flash_timeout
+	muzzle_flash_timer.timeout.connect(muzzle_flash_end)
+	
 
 func _process(_delta: float) -> void:
 	match char.state:
@@ -41,7 +53,13 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 func shoot(direction: Vector3) -> void:
 	animation_node.stop()
 	rotation.y = atan2(direction.x, direction.z)
+	muzzle_flash.visible = true
+	muzzle_flash_timer.start()
 	animation_node.play("Shoot")
+
+func muzzle_flash_end() -> void:
+	print("Muzzle timer end")
+	muzzle_flash.visible = false
 
 func reload() -> void:
 	animation_node.stop()

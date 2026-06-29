@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://k727epb3044y" path="res://src/enemy/enemy.gd" id="1_6j2al"]
 [ext_resource type="Texture2D" uid="uid://dcyei7iy8l05k" path="res://assets/sprites/Enemy sprites/Enemy1 Sheet.png" id="2_ig63i"]
 [ext_resource type="PackedScene" uid="uid://pomrcaw7ysu0" path="res://src/player/weapons/bullets/pistol_round/pistol_round.tscn" id="2_xso4u"]
+[ext_resource type="PackedScene" uid="uid://tj74100fo4hc" path="res://MuzzleFlare.glb" id="4_ceb82"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h4y1u"]
 height = 3.2454224
@@ -83,7 +84,12 @@ animations = [{
 collision_layer = 0
 platform_floor_layers = 4278190080
 script = ExtResource("1_6j2al")
+MAX_HEALTH = null
+SHOOT_FREQUENCY = null
+BULLET_BURST = null
 BULLET_SCENE = ExtResource("2_xso4u")
+HURT_DURATION = null
+muzzle_flash_timeout = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=640587325]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62269, 0)
@@ -112,11 +118,13 @@ one_shot = true
 transform = Transform3D(-8.805239e-09, 0, -0.29999998, 0, 0.19606279, 0, 0.2014404, 0, -1.3113416e-08, 0, 2.0462677, 0.027405739)
 render_priority = 100
 sprite_frames = SubResource("SpriteFrames_ll62f")
-animation = &"Hurt"
-frame_progress = 0.21245979
+animation = &"Walk"
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=149001587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0380597, -1.01808)
+
+[node name="MuzzleFlare" parent="." unique_id=41405490 instance=ExtResource("4_ceb82")]
+transform = Transform3D(0.11150461, 0, 0.9937639, 0, 1, 0, -0.9937639, 0, 0.11150461, 0, 0, 0)
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="timeout" from="reload_timer" to="." method="_on_timer_timeout"]
