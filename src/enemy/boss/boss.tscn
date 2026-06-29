@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://pomrcaw7ysu0" path="res://src/player/weapons/bullets/pistol_round/pistol_round.tscn" id="2_araqa"]
 [ext_resource type="Texture2D" uid="uid://bmkmavlyato0e" path="res://assets/sprites/Enemy sprites/Boss_Sheet.png" id="3_d3pwp"]
 [ext_resource type="PackedScene" uid="uid://tj74100fo4hc" path="res://assets/meshes/guns/MuzzleFlare.glb" id="4_bngun"]
+[ext_resource type="PackedScene" uid="uid://cfglp2he3yebq" path="res://src/dynamic_sound_effects/bullet/bullet_sound.tscn" id="5_n8a2o"]
+[ext_resource type="PackedScene" uid="uid://dk7kiui1cvamo" path="res://src/dynamic_sound_effects/enemy_grunt_pain/enemy_grunts.tscn" id="6_6q12v"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h4y1u"]
 height = 3.2454224
@@ -17,53 +19,48 @@ size = Vector3(1, 2.1174316, 1.3197632)
 [sub_resource type="BoxShape3D" id="BoxShape3D_xyqds"]
 size = Vector3(1, 1.0214539, 0.75097656)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bngun"]
-atlas = ExtResource("3_d3pwp")
-region = Rect2(3400, 2200, 1700, 2200)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n8a2o"]
-atlas = ExtResource("3_d3pwp")
-region = Rect2(0, 4400, 1700, 2200)
+[sub_resource type="BoxShape3D" id="BoxShape3D_d3pwp"]
+size = Vector3(0.5029297, 3.2036133, 1.9453125)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6q12v"]
 atlas = ExtResource("3_d3pwp")
-region = Rect2(1700, 4400, 1700, 2200)
+region = Rect2(3400, 2200, 1700, 2200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dm75n"]
 atlas = ExtResource("3_d3pwp")
-region = Rect2(3400, 2200, 1700, 2200)
+region = Rect2(0, 4400, 1700, 2200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_730b4"]
 atlas = ExtResource("3_d3pwp")
-region = Rect2(3400, 0, 1700, 2200)
+region = Rect2(1700, 4400, 1700, 2200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_574yh"]
 atlas = ExtResource("3_d3pwp")
-region = Rect2(0, 2200, 1700, 2200)
+region = Rect2(3400, 2200, 1700, 2200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_463be"]
 atlas = ExtResource("3_d3pwp")
-region = Rect2(1700, 2200, 1700, 2200)
+region = Rect2(3400, 0, 1700, 2200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_56uj3"]
 atlas = ExtResource("3_d3pwp")
-region = Rect2(0, 0, 1700, 2200)
+region = Rect2(0, 2200, 1700, 2200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5d6n8"]
 atlas = ExtResource("3_d3pwp")
-region = Rect2(1700, 0, 1700, 2200)
+region = Rect2(1700, 2200, 1700, 2200)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ll62f"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_qmmkj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bngun")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n8a2o")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_6q12v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm75n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_730b4")
 }],
 "loop": 0,
 "name": &"Dying",
@@ -71,10 +68,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dm75n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dm75n")
+"texture": SubResource("AtlasTexture_574yh")
 }],
 "loop": 1,
 "name": &"Hurt",
@@ -82,19 +76,8 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_730b4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_574yh")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_463be")
-}],
-"loop": 1,
-"name": &"Shooting",
-"speed": 5.0
 }, {
-"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_56uj3")
 }, {
@@ -105,9 +88,6 @@ animations = [{
 "name": &"Walk",
 "speed": 3.0
 }]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_d3pwp"]
-size = Vector3(0.5029297, 3.2036133, 1.9453125)
 
 [node name="Enemy" type="CharacterBody3D" unique_id=18225702 groups=["enemy"]]
 collision_layer = 0
@@ -140,12 +120,6 @@ shape = SubResource("BoxShape3D_xyqds")
 [node name="reload_timer" type="Timer" parent="." unique_id=405161148]
 one_shot = true
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=269151746 groups=["enemy"]]
-transform = Transform3D(-8.805239e-09, 0, -0.29999998, 0, 0.19606279, 0, 0.2014404, 0, -1.3113416e-08, 0, 2.0462677, 0.027405739)
-render_priority = 100
-sprite_frames = SubResource("SpriteFrames_ll62f")
-animation = &"Dying"
-
 [node name="Marker3D" type="Marker3D" parent="." unique_id=149001587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7041519, 0.10051143)
 
@@ -160,6 +134,15 @@ shape = SubResource("BoxShape3D_d3pwp")
 [node name="MuzzleFlare2" parent="." unique_id=41405490 instance=ExtResource("4_bngun")]
 transform = Transform3D(1.6763806e-08, 0, -0.11999999, 0, 0.11999999, 0, 0.11999999, 0, 1.6763806e-08, -0.33350003, 1.750932, 0.09053004)
 
+[node name="BulletSound" parent="." unique_id=38960642 instance=ExtResource("5_n8a2o")]
+
+[node name="EnemyGrunts" parent="." unique_id=1273581956 instance=ExtResource("6_6q12v")]
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="." unique_id=875692232 groups=["enemy"]]
+transform = Transform3D(-8.805239e-09, 0, -0.29999998, 0, 0.19606279, 0, 0.2014404, 0, -1.3113416e-08, 0, 2.0462677, 0.027405739)
+render_priority = 100
+sprite_frames = SubResource("SpriteFrames_qmmkj")
+animation = &"Walk"
+
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="timeout" from="reload_timer" to="." method="_on_timer_timeout"]
-[connection signal="animation_finished" from="AnimatedSprite3D" to="." method="_on_animated_sprite_3d_animation_finished"]

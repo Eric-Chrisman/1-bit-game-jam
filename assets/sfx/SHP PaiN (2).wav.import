@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d0wrn1frsdk23"
+path="res://.godot/imported/SHP PaiN (2).wav-3d0230fc38b433060ca27a3f82439497.sample"
+
+[deps]
+
+source_file="res://assets/sfx/SHP PaiN (2).wav"
+dest_files=["res://.godot/imported/SHP PaiN (2).wav-3d0230fc38b433060ca27a3f82439497.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
