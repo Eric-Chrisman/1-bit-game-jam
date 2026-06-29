@@ -21,7 +21,8 @@ func kill_bullet() -> void:
 
 func set_direction(direction: Vector3) -> void:
 	velocity = direction.normalized() * bullet_speed
-	look_at(-direction)
+	look_at(global_position + velocity, Vector3.UP)
+	print("Parent: ", get_parent().get_class())
 	print("Direction: ", direction)
 	print("Forward:", -global_basis.z)
 
