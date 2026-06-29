@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://k727epb3044y" path="res://src/enemy/enemy.gd" id="1_7kwes"]
 [ext_resource type="PackedScene" uid="uid://pomrcaw7ysu0" path="res://src/player/weapons/bullets/pistol_round/pistol_round.tscn" id="2_6e6c4"]
 [ext_resource type="Texture2D" uid="uid://dhvtqwun5stlp" path="res://assets/sprites/Enemy sprites/Enemy4 Sheet.png" id="3_7kwes"]
+[ext_resource type="PackedScene" uid="uid://tj74100fo4hc" path="res://assets/meshes/guns/MuzzleFlare.glb" id="4_tbxhk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h4y1u"]
 height = 3.2454224
@@ -113,10 +114,14 @@ one_shot = true
 transform = Transform3D(-8.805239e-09, 0, -0.29999998, 0, 0.19606279, 0, 0.2014404, 0, -1.3113416e-08, 0, 2.0462677, 0.027405739)
 render_priority = 100
 sprite_frames = SubResource("SpriteFrames_ll62f")
-animation = &"Dying"
+animation = &"Walk"
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=149001587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0380597, -1.01808)
+
+[node name="MuzzleFlare2" parent="." unique_id=41405490 instance=ExtResource("4_tbxhk")]
+transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, -0.237544, 2.0404985, -0.86341786)
+visible = false
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="timeout" from="reload_timer" to="." method="_on_timer_timeout"]

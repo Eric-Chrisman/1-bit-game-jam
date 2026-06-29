@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://bxlmdtxwb7q6g" path="res://src/player/animation_handler/the_stranger_animations.gd" id="3_0eq6l"]
 [ext_resource type="Script" uid="uid://cg6d8b4iuxulb" path="res://src/player/aimming/laser.gd" id="3_mf2ua"]
 [ext_resource type="Material" uid="uid://dy21r8oke2fi1" path="res://assets/meshes/player/new_standard_material_3d.tres" id="3_psirh"]
-[ext_resource type="PackedScene" uid="uid://tj74100fo4hc" path="res://MuzzleFlare.glb" id="4_psirh"]
+[ext_resource type="PackedScene" uid="uid://tj74100fo4hc" path="res://assets/meshes/guns/MuzzleFlare.glb" id="4_psirh"]
 [ext_resource type="PackedScene" uid="uid://dvahtikg41v18" path="res://src/player/inventory/Inventory.tscn" id="5_alqwc"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_m2qhk"]

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://3pdwvreqkngy"
-path="res://.godot/imported/BulletTrail.glb-b5bf543afbbdcbbe2609ffe45fb1163f.scn"
+path="res://.godot/imported/BulletTrail.glb-44d36f2c03d720f6510710b08f1e538c.scn"
 
 [deps]
 
-source_file="res://BulletTrail.glb"
-dest_files=["res://.godot/imported/BulletTrail.glb-b5bf543afbbdcbbe2609ffe45fb1163f.scn"]
+source_file="res://assets/meshes/guns/BulletTrail.glb"
+dest_files=["res://.godot/imported/BulletTrail.glb-44d36f2c03d720f6510710b08f1e538c.scn"]
 
 [params]
 
