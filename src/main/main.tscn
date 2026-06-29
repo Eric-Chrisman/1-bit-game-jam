@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://5xpqwljrssdp" path="res://src/hud/options_menu/Options.tscn" id="1_3eh75"]
 [ext_resource type="Script" uid="uid://clfwvbfauwd1k" path="res://src/main/main.gd" id="1_ab7mr"]
+[ext_resource type="Theme" uid="uid://cwwsc3m73obx5" path="res://assets/theme/global.tres" id="2_ab7mr"]
 
 [node name="Main" type="Node" unique_id=1887580302]
 script = ExtResource("1_ab7mr")
@@ -35,6 +36,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_ab7mr")
 
 [node name="MarginContainer" type="MarginContainer" parent="Title_Layer/TitleScreen/PanelContainer" unique_id=1065365963]
 layout_mode = 2

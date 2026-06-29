@@ -79,20 +79,24 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_sxryx"]
+size = Vector3(0.5029297, 3.2036133, 1.9453125)
+
 [node name="Enemy" type="CharacterBody3D" unique_id=18225702 groups=["enemy"]]
 collision_layer = 0
 platform_floor_layers = 4278190080
 script = ExtResource("1_u00lo")
-MAX_HEALTH = 2
-SHOOT_FREQUENCY = 1.0
+MAX_HEALTH = 3
+SHOOT_FREQUENCY = 0.5
 BULLET_SCENE = ExtResource("2_k77bc")
+IS_TWIN_SHOOTER = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=640587325]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62269, 0)
 shape = SubResource("CapsuleShape3D_h4y1u")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=760616169]
-collision_layer = 0
+collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1216125216]
@@ -121,6 +125,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0380597, -0.89371234)
 
 [node name="Marker3D2" type="Marker3D" parent="." unique_id=1765625873]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2485926, 0.9119468)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1357667246]
+collision_layer = 524288
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1822061897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24853516, 1.5690918, -0.036865234)
+shape = SubResource("BoxShape3D_sxryx")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="timeout" from="reload_timer" to="." method="_on_timer_timeout"]

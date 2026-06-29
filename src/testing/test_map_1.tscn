@@ -169,7 +169,7 @@ transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, 0, 0, 1, 2.2865295, 2.3841
 mesh = SubResource("QuadMesh_ll62f")
 
 [node name="sun" type="MeshInstance3D" parent="Entity_Layer/Player/Camera3D" unique_id=864786745]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.5687883e-05, -2.23522, -358.89694)
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, -1.506094e-05, 67.665665, -344.55414)
 mesh = SubResource("SphereMesh_ll62f")
 
 [node name="Enemy" parent="Entity_Layer" unique_id=18225702 instance=ExtResource("14_qnd5k")]

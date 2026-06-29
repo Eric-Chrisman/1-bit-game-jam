@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dngrw48tvnl34"]
 
 [ext_resource type="MeshLibrary" uid="uid://bn2r112kkx0kq" path="res://src/map_objects/tile_set/western.tres" id="1_l7dqn"]
+[ext_resource type="PackedScene" uid="uid://by066lv2r4048" path="res://src/wave_camera_system/wave_system.tscn" id="3_l7dqn"]
 [ext_resource type="PackedScene" uid="uid://4lenhu1t7xpe" path="res://src/player/player_scene/player.tscn" id="12_17k0e"]
 [ext_resource type="Shader" uid="uid://btdjq403kta0j" path="res://assets/shader_defintions/dithering_bi_color.gdshader" id="13_4dqhq"]
 
@@ -23,6 +24,12 @@ uv1_triplanar = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yt76s"]
 transparency = 1
 
+[sub_resource type="BoxMesh" id="BoxMesh_ll62f"]
+size = Vector3(1, 1, 1198.0027)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kwsmb"]
+size = Vector3(1, 15.659302, 1)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_utos0"]
 render_priority = 0
 shader = ExtResource("13_4dqhq")
@@ -40,14 +47,10 @@ shader_parameter/color_a = Color(0, 0, 0, 1)
 shader_parameter/color_b = Color(1, 0.6431373, 0.39607844, 1)
 shader_parameter/bayer_mode = 4
 
-[sub_resource type="QuadMesh" id="QuadMesh_ll62f"]
+[sub_resource type="QuadMesh" id="QuadMesh_kc6vr"]
 material = SubResource("ShaderMaterial_utos0")
 flip_faces = true
 size = Vector2(1000, 1000)
-
-[sub_resource type="SphereMesh" id="SphereMesh_ll62f"]
-radius = 30.0
-height = 60.0
 
 [node name="Map" type="Node3D" unique_id=525126436]
 
@@ -89,16 +92,34 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 [node name="Entity_Layer" type="Node3D" parent="." unique_id=2017307884]
 
 [node name="Player" parent="Entity_Layer" unique_id=433991171 instance=ExtResource("12_17k0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4381733, -1.590604, -21.672558)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4381733, -1.590604, -0.2048378)
 
-[node name="Camera3D" type="Camera3D" parent="Entity_Layer/Player" unique_id=1935130898]
-transform = Transform3D(-4.2819295e-08, 0.20100006, -0.97959125, 8.7859915e-09, 0.97959125, 0.20100006, 1, 0, -4.371139e-08, -11.244652, 4.751248, 0)
+[node name="debug_ref_line" type="MeshInstance3D" parent="Entity_Layer" unique_id=1391996591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2713687, 0, -8.055542)
+mesh = SubResource("BoxMesh_ll62f")
 
-[node name="shader" type="MeshInstance3D" parent="Entity_Layer/Player/Camera3D" unique_id=1995119356]
+[node name="WaveSystem" parent="." unique_id=843558868 instance=ExtResource("3_l7dqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2882903, 0, -0.49528646)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WaveSystem" unique_id=1683387137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.370129)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WaveSystem/StaticBody3D" unique_id=538181981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.94781494, 0)
+shape = SubResource("BoxShape3D_kwsmb")
+debug_color = Color(0, 0.6, 0.69803923, 0.7647059)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="WaveSystem" unique_id=591647852]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.1307063)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WaveSystem/StaticBody3D2" unique_id=218590290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.94781494, 7.967119)
+shape = SubResource("BoxShape3D_kwsmb")
+debug_color = Color(0, 0.6, 0.69803923, 0.7647059)
+
+[node name="Camera3D" type="Camera3D" parent="WaveSystem" unique_id=1338994893]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.850464, 2.4018545, 0)
+
+[node name="shader" type="MeshInstance3D" parent="WaveSystem/Camera3D" unique_id=2029262317]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, 0, 0, 1, 2.2865295, 2.3841858e-07, -1.2471008)
-visible = false
-mesh = SubResource("QuadMesh_ll62f")
-
-[node name="sun" type="MeshInstance3D" parent="Entity_Layer/Player/Camera3D" unique_id=864786745]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.5687883e-05, -2.23522, -358.89694)
-mesh = SubResource("SphereMesh_ll62f")
+mesh = SubResource("QuadMesh_kc6vr")

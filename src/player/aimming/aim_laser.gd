@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 	var ray_query = PhysicsRayQueryParameters3D.new()
 	ray_query.from = from
 	ray_query.to = to
+	ray_query.collision_mask = (1 << 0) | (1 << 19)
 	var result = space.intersect_ray(ray_query)
 	
 	if result:

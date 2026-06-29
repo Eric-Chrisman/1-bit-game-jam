@@ -12,11 +12,12 @@ enum ENEMY_STATES {
 @export var BULLET_BURST: int = 1
 @export var BULLET_SCENE: PackedScene
 @export var HURT_DURATION: float = 0.15  # How long to show the hurt frame
+@export var IS_TWIN_SHOOTER: bool = false
 
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 @onready var reload_timer: Timer = $reload_timer
 @onready var bullet_origin_1: Marker3D = $Marker3D
-@onready var bullet_origin_2: Marker3D = $Marker3D2
+var bullet_origin_2: Marker3D
 var current_gun_to_shoot: Marker3D
 
 var patrol_point: Marker3D
@@ -75,8 +76,8 @@ func shoot() -> void:
 	new_bullet.global_position = current_gun_to_shoot.global_position
 	new_bullet.set_direction((target.global_position - current_gun_to_shoot.global_position).normalized())
 	new_bullet.set_team(false)
-	if bullet_origin_2 and bullet_origin_1 == current_gun_to_shoot:
-		current_gun_to_shoot = bullet_origin_2
+	if IS_TWIN_SHOOTER and bullet_origin_1 == current_gun_to_shoot:
+		current_gun_to_shoot = $Marker3D2
 	else:
 		current_gun_to_shoot = bullet_origin_1
 

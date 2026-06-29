@@ -4509,7 +4509,7 @@ script = ExtResource("2_rxibo")
 
 [node name="AimLaser" type="RayCast3D" parent="LaserPointer" unique_id=1627616505]
 target_position = Vector3(0, 10000, 0)
-collision_mask = 5
+collision_mask = 524293
 script = ExtResource("3_mf2ua")
 
 [node name="laser_mesh" type="MeshInstance3D" parent="LaserPointer/AimLaser" unique_id=100896352]

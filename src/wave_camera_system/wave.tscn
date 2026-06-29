@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bmw36p6h8egwx"]
+
+[ext_resource type="Script" uid="uid://kkjol3f741oa" path="res://src/wave_camera_system/wave.gd" id="1_3yd10"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ll62f"]
+
+[node name="Wave" type="Area3D" unique_id=556699725]
+script = ExtResource("1_3yd10")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1556169454]
+shape = SubResource("BoxShape3D_ll62f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

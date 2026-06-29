@@ -37,13 +37,15 @@ folder_colors={
 "res://src/map_objects/covers/": "yellow",
 "res://src/player/": "purple",
 "res://src/player/weapons/bullets/": "purple",
-"res://src/player/weapons/guns/": "purple"
+"res://src/player/weapons/guns/": "purple",
+"res://src/wave_camera_system/": "blue"
 }
 
 [global_group]
 
 enemy="use this group to change enemy color"
 player=""
+modulates=""
 
 [input]
 

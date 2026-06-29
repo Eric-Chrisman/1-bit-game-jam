@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://by066lv2r4048"]
+
+[ext_resource type="Script" uid="uid://bwq16ljblykk8" path="res://src/wave_camera_system/wave_system.gd" id="1_ieml2"]
+
+[node name="WaveSystem" type="Node3D" unique_id=843558868]
+script = ExtResource("1_ieml2")
