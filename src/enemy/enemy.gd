@@ -92,13 +92,10 @@ func shoot() -> void:
 	new_bullet.set_team(false)
 	if IS_TWIN_SHOOTER and bullet_origin_1 == current_gun_to_shoot:
 		current_gun_to_shoot = $Marker3D2
-	else:
-	if bullet_origin_2 and bullet_origin_1 == current_gun_to_shoot:
-		current_gun_to_shoot = bullet_origin_2
 		if muzzle_flash:
 			muzzle_flash.visible = true
 			muzzle_flash_timer.start()
-	elif bullet_origin_2:
+	elif IS_TWIN_SHOOTER:
 		current_gun_to_shoot = bullet_origin_1
 		if muzzle_flash2:
 			muzzle_flash2.visible = true
