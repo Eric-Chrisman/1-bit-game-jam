@@ -13,12 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://cjh2ikjg1aoat" path="res://assets/meshes/buildings/Building11.glb" id="11_8x5by"]
 [ext_resource type="PackedScene" uid="uid://4lenhu1t7xpe" path="res://src/player/player_scene/player.tscn" id="12_msc86"]
 [ext_resource type="Shader" uid="uid://btdjq403kta0j" path="res://assets/shader_defintions/dithering_bi_color.gdshader" id="13_8poaq"]
-[ext_resource type="PackedScene" uid="uid://cxcwyxai8ex3p" path="res://src/enemy/basic/double_elite_2.tscn" id="14_b2oys"]
 [ext_resource type="PackedScene" uid="uid://cchtqcjgjkai4" path="res://src/enemy/basic/basic_1.tscn" id="14_fioq7"]
 [ext_resource type="PackedScene" uid="uid://c71gglf5p4kuh" path="res://src/enemy/basic/elite_1.tscn" id="15_f85jt"]
-[ext_resource type="PackedScene" uid="uid://cd5rpwxm5g2p1" path="res://src/enemy/basic/elite_2.tscn" id="16_7eijf"]
 [ext_resource type="PackedScene" uid="uid://dns3h27rcsmvk" path="res://src/enemy/basic/double_elite_1.tscn" id="16_wunm1"]
-[ext_resource type="PackedScene" uid="uid://c5xgknj1q32p6" path="res://src/enemy/basic/elite_3.tscn" id="17_0gth0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wugxv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -162,30 +159,12 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.0
 
 [node name="Entity_Layer" type="Node3D" parent="." unique_id=2017307884]
 
-[node name="Enemy10" parent="Entity_Layer" unique_id=18225702 instance=ExtResource("14_fioq7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.54665, 0, -28.198013)
-
-[node name="Enemy11" parent="Entity_Layer" unique_id=876217466 instance=ExtResource("16_wunm1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.54665, 0, -32.94148)
-
-[node name="Enemy12" parent="Entity_Layer" unique_id=504496897 instance=ExtResource("14_b2oys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.54665, 0, -21.159668)
-
-[node name="Enemy13" parent="Entity_Layer" unique_id=1537051257 instance=ExtResource("15_f85jt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.54665, 0, -37.64824)
-
-[node name="Enemy14" parent="Entity_Layer" unique_id=1799841029 instance=ExtResource("16_7eijf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.54665, 0, -41.37)
-
-[node name="Enemy15" parent="Entity_Layer" unique_id=234155628 instance=ExtResource("17_0gth0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.46357, 0, -24.870514)
-
 [node name="Player" parent="Entity_Layer" unique_id=433991171 instance=ExtResource("12_msc86")]
 
 [node name="Camera3D" type="Camera3D" parent="Entity_Layer/Player" unique_id=1935130898]
 transform = Transform3D(-4.2819295e-08, 0.20100006, -0.97959125, 8.7859915e-09, 0.97959125, 0.20100006, 1, 0, -4.371139e-08, -11.244652, 4.751248, 0)
 
-[node name="shader" type="MeshInstance3D" parent="Entity_Layer/Player/Camera3D" unique_id=1995119356]
+[node name="shader" type="MeshInstance3D" parent="Entity_Layer/Player/Camera3D" unique_id=1995119356 groups=["shader"]]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, 0, 0, 1, 2.2865295, 2.3841858e-07, -1.2471008)
 mesh = SubResource("QuadMesh_ll62f")
 
