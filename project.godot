@@ -46,6 +46,10 @@ player=""
 modulates=""
 player_ui=""
 
+[gui]
+
+theme/custom_font="uid://b0kunk8h84yyf"
+
 [input]
 
 move_left={
