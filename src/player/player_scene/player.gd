@@ -30,7 +30,7 @@ var can_move: bool
 
 signal on_gameover
 
-func _on_ready() -> void:
+func _ready() -> void:
 	ui = get_tree().get_first_node_in_group("player_ui")
 
 func _physics_process(delta: float) -> void:
@@ -111,8 +111,6 @@ func _enter_dodge(direction: float) -> void:
 func shoot_bullet() -> void:
 	bullet_sounds.play()
 	inventory.fire_weapon(bullet_origin.global_position, (aimer.get_target_position() - bullet_origin.global_position).normalized())
-	if ui:
-		ui.update_ammo(inventory.current_gun.current_ammo_mag)
 
 func shoot_done() -> void:
 	if queued_shot and inventory.can_fire_weapon():
@@ -137,8 +135,8 @@ func get_target() -> Marker3D:
 	return get_node("where_enemies_aim")
 
 func _on_hitbox_area_entered(area: Area3D) -> void:
+	
 	health = clamp(health - 1, 0, MAX_HEALTH)
-	print("HIT")
 	if health <= 0:
 		var main = get_tree().get_first_node_in_group("main")
 		main.on_gameover()

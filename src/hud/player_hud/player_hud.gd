@@ -2,6 +2,7 @@ extends Control
 class_name PlayerHUD
 
 func on_health_update(health: int) -> void:
+	print("HEALTH: ", health)
 	match health:
 		3:
 			$HBoxContainer/TextureRect.visible = true

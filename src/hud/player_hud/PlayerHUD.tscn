@@ -12,14 +12,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_28xmt")
 
-[node name="Label" type="Label" parent="." unique_id=1999405529]
-layout_mode = 0
-offset_left = 1388.0
-offset_top = 3.0
-offset_right = 1441.0
-offset_bottom = 129.0
-theme_override_font_sizes/font_size = 92
-
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1804191566]
 layout_mode = 1
 anchors_preset = -1
