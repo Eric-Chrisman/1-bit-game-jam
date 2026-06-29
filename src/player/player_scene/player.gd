@@ -135,9 +135,9 @@ func get_target() -> Marker3D:
 	return get_node("where_enemies_aim")
 
 func _on_hitbox_area_entered(area: Area3D) -> void:
-	
 	health = clamp(health - 1, 0, MAX_HEALTH)
 	if health <= 0:
+		can_move = false
 		var main = get_tree().get_first_node_in_group("main")
 		main.on_gameover()
 	if ui:
