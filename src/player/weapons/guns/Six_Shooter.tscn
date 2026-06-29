@@ -5,6 +5,5 @@
 
 [node name="SixShooter" type="Node" unique_id=1479410111]
 script = ExtResource("1_0qm44")
-MAX_MAG_SIZE = 6
 BULLET_SCENE = ExtResource("2_0qm44")
 metadata/_custom_type_script = "uid://tj0gy8oqeaqt"
