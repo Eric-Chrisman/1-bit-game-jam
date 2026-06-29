@@ -50,6 +50,7 @@ enemy="use this group to change enemy color"
 player=""
 modulates=""
 player_ui=""
+main=""
 shader=""
 
 [gui]

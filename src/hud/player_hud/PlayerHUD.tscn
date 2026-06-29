@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://djmtcefljcvui"]
 
-[ext_resource type="Texture2D" uid="uid://lafkj2ps830g" path="res://assets/sprites/misc_placeholder/icon.svg" id="1_2j3j3"]
 [ext_resource type="Script" uid="uid://bn5uvu1y5hyf7" path="res://src/hud/player_hud/player_hud.gd" id="1_28xmt"]
+[ext_resource type="Texture2D" uid="uid://c5qay2715erd8" path="res://assets/sprites/player_health/SpurHealth.png" id="2_ggdpe"]
 
 [node name="PlayerHud" type="Control" unique_id=792558402]
 layout_mode = 3
@@ -14,33 +14,34 @@ script = ExtResource("1_28xmt")
 
 [node name="Label" type="Label" parent="." unique_id=1999405529]
 layout_mode = 0
-offset_left = 1273.0
-offset_top = 1.0
-offset_right = 1326.0
-offset_bottom = 127.0
+offset_left = 1388.0
+offset_top = 3.0
+offset_right = 1441.0
+offset_bottom = 129.0
 theme_override_font_sizes/font_size = 92
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1804191566]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.71900004
+anchor_left = 0.70600003
 anchor_right = 1.0
-anchor_bottom = 0.132
-offset_left = -3.4801025
-offset_bottom = 6.4400024
+anchor_bottom = 0.12900001
+offset_left = 11.47998
+offset_right = 0.00012207031
+offset_bottom = -0.32000732
 grow_horizontal = 0
 size_flags_horizontal = 8
 size_flags_vertical = 0
-alignment = 1
+alignment = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer" unique_id=2080586403]
-position = Vector2(74, 65)
-texture = ExtResource("1_2j3j3")
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=24392769]
+layout_mode = 2
+texture = ExtResource("2_ggdpe")
 
-[node name="Sprite2D2" type="Sprite2D" parent="HBoxContainer" unique_id=1384731651]
-position = Vector2(425, 66)
-texture = ExtResource("1_2j3j3")
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer" unique_id=69948871]
+layout_mode = 2
+texture = ExtResource("2_ggdpe")
 
-[node name="Sprite2D3" type="Sprite2D" parent="HBoxContainer" unique_id=483297627]
-position = Vector2(251, 66)
-texture = ExtResource("1_2j3j3")
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer" unique_id=1151097698]
+layout_mode = 2
+texture = ExtResource("2_ggdpe")
