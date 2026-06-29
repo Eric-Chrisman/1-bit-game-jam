@@ -5,7 +5,6 @@ class_name Bullet
 
 @onready var hitbox: Area3D = $Area3D
 
-
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 

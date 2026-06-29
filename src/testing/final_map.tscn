@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dngrw48tvnl34"]
 
 [ext_resource type="MeshLibrary" uid="uid://bn2r112kkx0kq" path="res://src/map_objects/tile_set/western.tres" id="1_l7dqn"]
-[ext_resource type="PackedScene" uid="uid://ok8laqhp0yp6" path="res://assets/meshes/buildings/Building2.glb" id="2_kwsmb"]
 [ext_resource type="PackedScene" uid="uid://4lenhu1t7xpe" path="res://src/player/player_scene/player.tscn" id="12_17k0e"]
 [ext_resource type="Shader" uid="uid://btdjq403kta0j" path="res://assets/shader_defintions/dithering_bi_color.gdshader" id="13_4dqhq"]
 
@@ -87,13 +86,10 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="Building22" parent="Map_Layer" unique_id=1404058285 instance=ExtResource("2_kwsmb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18656349, -1.4852138, -13.038309)
-
 [node name="Entity_Layer" type="Node3D" parent="." unique_id=2017307884]
 
 [node name="Player" parent="Entity_Layer" unique_id=433991171 instance=ExtResource("12_17k0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.590604, -21.672558)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4381733, -1.590604, -21.672558)
 
 [node name="Camera3D" type="Camera3D" parent="Entity_Layer/Player" unique_id=1935130898]
 transform = Transform3D(-4.2819295e-08, 0.20100006, -0.97959125, 8.7859915e-09, 0.97959125, 0.20100006, 1, 0, -4.371139e-08, -11.244652, 4.751248, 0)
