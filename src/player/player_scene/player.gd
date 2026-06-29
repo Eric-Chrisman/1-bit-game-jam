@@ -22,11 +22,16 @@ var ui: PlayerHUD
 var state: State = State.FREE
 var dodge_dir: int = 0
 var queued_shot: bool = false
+var can_move: bool
+
+signal on_gameover
 
 func _on_ready() -> void:
 	ui = get_tree().get_first_node_in_group("player_ui")
 
 func _physics_process(delta: float) -> void:
+	if !can_move:
+		return
 	#print(State.find_key(state))
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -124,6 +129,9 @@ func get_target() -> Marker3D:
 
 func _on_hitbox_area_entered(area: Area3D) -> void:
 	health = clamp(health - 1, 0, MAX_HEALTH)
+	print("HIT")
+	if health <= 0:
+		var main = get_tree().get_first_node_in_group("main")
+		main.on_gameover()
 	if ui:
 		ui.on_health_update(health)
-	

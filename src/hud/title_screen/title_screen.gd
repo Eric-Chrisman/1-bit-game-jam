@@ -1,11 +1,15 @@
 extends Control
 
+signal start_pressed
+signal options_pressed
+signal quit_pressed
+
 
 func _on_start_pressed() -> void:
-	pass # Replace with function body.
+	emit_signal("start_pressed")
 
 func _on_options_pressed() -> void:
-	pass # Replace with function body.
+	emit_signal("options_pressed")
 
 func _on_quit_pressed() -> void:
-	pass # Replace with function body.
+	emit_signal("quit_pressed")

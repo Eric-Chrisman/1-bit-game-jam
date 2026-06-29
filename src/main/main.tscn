@@ -3,14 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://5xpqwljrssdp" path="res://src/hud/options_menu/Options.tscn" id="1_3eh75"]
 [ext_resource type="Script" uid="uid://clfwvbfauwd1k" path="res://src/main/main.gd" id="1_ab7mr"]
 [ext_resource type="PackedScene" uid="uid://ciyeyolgx6g6y" path="res://src/hud/title_screen/TitleScreen.tscn" id="2_ab7mr"]
+[ext_resource type="PackedScene" uid="uid://dngrw48tvnl34" path="res://src/testing/final_map.tscn" id="2_jqarl"]
 [ext_resource type="PackedScene" uid="uid://djmtcefljcvui" path="res://src/hud/player_hud/PlayerHUD.tscn" id="4_djufw"]
+[ext_resource type="PackedScene" uid="uid://b8klji3d43vk" path="res://src/hud/gameover_screen/gameover_screen.tscn" id="5_jkpqq"]
 
-[node name="Main" type="Node" unique_id=1887580302]
+[node name="Main" type="Node" unique_id=1887580302 groups=["main"]]
+process_mode = 3
 script = ExtResource("1_ab7mr")
 
-[node name="Game_Systems" type="Node" parent="." unique_id=1537546366]
-
-[node name="Game_World" type="Node3D" parent="Game_Systems" unique_id=1008465927]
+[node name="Map" parent="." unique_id=525126436 instance=ExtResource("2_jqarl")]
+process_mode = 1
 
 [node name="Title_Layer" type="CanvasLayer" parent="." unique_id=111069876]
 
@@ -18,8 +20,9 @@ script = ExtResource("1_ab7mr")
 
 [node name="Pause_Layer" type="CanvasLayer" parent="." unique_id=910609983]
 layer = 100
+visible = false
 
-[node name="PauseMenu" type="Control" parent="Pause_Layer" unique_id=1891244163]
+[node name="PauseMenu" type="Control" parent="Pause_Layer" unique_id=1891244163 groups=["modulates"]]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -29,8 +32,15 @@ offset_bottom = 40.0
 layer = 200
 visible = false
 
-[node name="OptionsMenu" parent="Options_Layer" unique_id=676573629 instance=ExtResource("1_3eh75")]
+[node name="OptionsMenu" parent="Options_Layer" unique_id=676573629 groups=["modulates"] instance=ExtResource("1_3eh75")]
 
 [node name="Player_HUD" type="CanvasLayer" parent="." unique_id=336609663]
+visible = false
 
-[node name="PlayerHud" parent="Player_HUD" unique_id=792558402 groups=["player_ui"] instance=ExtResource("4_djufw")]
+[node name="PlayerHud" parent="Player_HUD" unique_id=792558402 groups=["modulates", "player_ui"] instance=ExtResource("4_djufw")]
+
+[node name="GameoverLayer" type="CanvasLayer" parent="." unique_id=1887554106]
+visible = false
+
+[node name="GameoverScreen" parent="GameoverLayer" unique_id=453116337 groups=["modulates"] instance=ExtResource("5_jkpqq")]
+process_mode = 2

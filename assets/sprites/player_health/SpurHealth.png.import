@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6yulp2rnmdog"
-path.s3tc="res://.godot/imported/Building11_StrangerTexture.png-6643368ab7407f9203044c78ff0ffc74.s3tc.ctex"
+uid="uid://c5qay2715erd8"
+path="res://.godot/imported/SpurHealth.png-9e006bdb9a1037fccbdd1c7374709409.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "51023bd5b591206923bf91a60c5f3431"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/meshes/buildings/Building11_StrangerTexture.png"
-dest_files=["res://.godot/imported/Building11_StrangerTexture.png-6643368ab7407f9203044c78ff0ffc74.s3tc.ctex"]
+source_file="res://assets/sprites/player_health/SpurHealth.png"
+dest_files=["res://.godot/imported/SpurHealth.png-9e006bdb9a1037fccbdd1c7374709409.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -41,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

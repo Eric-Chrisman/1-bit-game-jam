@@ -100,6 +100,7 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 [node name="Entity_Layer" type="Node3D" parent="." unique_id=2017307884]
 
 [node name="Player" parent="Entity_Layer" unique_id=433991171 instance=ExtResource("12_17k0e")]
+process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4381733, -1.590604, 2.8475628)
 collision_layer = 1024
 
