@@ -36,6 +36,7 @@ func _on_ready() -> void:
 func _physics_process(delta: float) -> void:
 	if !can_move:
 		return
+	$LaserPointer.visible = true
 	#print(State.find_key(state))
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -63,7 +64,7 @@ func _handle_free(_delta: float) -> void:
 	elif Input.is_action_just_pressed("fire"):
 		if inventory.can_fire_weapon():
 			_enter_shooting()
-	elif Input.is_action_just_pressed("reload") and inventory.bullets_left_in_reserve() > 0:
+	elif Input.is_action_just_pressed("reload") and !inventory.is_mag_full():
 			_enter_reload()
 	
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hxdajvmpi4lj"]
 
 [ext_resource type="Script" uid="uid://cgsw4rgrutjhl" path="res://src/dynamic_sound_effects/bullet/bullet_sound.gd" id="1_2tiae"]
-[ext_resource type="AudioStream" uid="uid://cudf75tof3f0r" path="res://assets/sfx/DoDGe RoLL.wav" id="2_pcxpo"]
+[ext_resource type="AudioStream" uid="uid://bxp6b6fixmup4" path="res://assets/sfx/DoDGe RoLL.mp3" id="2_pcxpo"]
 
 [node name="Dodge" type="Node3D" unique_id=2007194039]
 script = ExtResource("1_2tiae")

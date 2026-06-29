@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://8ga3e31fqbas"]
 
+[ext_resource type="AudioStream" uid="uid://bn6nakauvf867" path="res://assets/sfx/when the stranger comes to town v7 iSNTRuMeNTaL ~ PRoD DJ KiNTUK.mp3" id="1_0g3xi"]
 [ext_resource type="Script" uid="uid://b3mgd234mg758" path="res://src/dynamic_sound_effects/music/music.gd" id="1_xjpnd"]
 
 [node name="Music" type="AudioStreamPlayer3D" unique_id=1785695038]
+stream = ExtResource("1_0g3xi")
 volume_db = -11.034
 autoplay = true
 script = ExtResource("1_xjpnd")

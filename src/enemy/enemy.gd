@@ -63,7 +63,6 @@ func _physics_process(delta: float) -> void:
 	
 	match current_state:
 		ENEMY_STATES.STARTING:
-			# If a patrol point was given, walk there first; otherwise go straight to FIRE
 			if patrol_point:
 				current_state = ENEMY_STATES.WALKING
 			else:
@@ -71,16 +70,15 @@ func _physics_process(delta: float) -> void:
 	
 		ENEMY_STATES.WALKING:
 			if patrol_point:
-				var flat_self := Vector3(global_position.x, 0.0, global_position.z)
-				var flat_dest := Vector3(patrol_point.global_position.x, 0.0, patrol_point.global_position.z)
-				var diff := flat_dest - flat_self
+				var flat_self = Vector3(global_position.x, 0.0, global_position.z)
+				var flat_dest = Vector3(patrol_point.global_position.x, 0.0, patrol_point.global_position.z)
+				var diff = flat_dest - flat_self
 				if diff.length() <= WALK_ARRIVE_DISTANCE:
-					# Arrived — stop and start shooting
 					velocity.x = 0.0
 					velocity.z = 0.0
 					current_state = ENEMY_STATES.FIRE
 				else:
-					var dir := diff.normalized()
+					var dir = diff.normalized()
 					velocity.x = dir.x * WALK_SPEED
 					velocity.z = dir.z * WALK_SPEED
 			else:
@@ -105,7 +103,7 @@ func _physics_process(delta: float) -> void:
 		ENEMY_STATES.DEAD:
 			velocity.x = 0.0
 			velocity.z = 0.0
-
+	visible = true
 	move_and_slide()
 
 func shoot() -> void:

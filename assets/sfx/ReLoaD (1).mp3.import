@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfib0mw60jicd"
+path="res://.godot/imported/ReLoaD (1).mp3-48a154e1875b782d2f6e55534be6f619.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/ReLoaD (1).mp3"
+dest_files=["res://.godot/imported/ReLoaD (1).mp3-48a154e1875b782d2f6e55534be6f619.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

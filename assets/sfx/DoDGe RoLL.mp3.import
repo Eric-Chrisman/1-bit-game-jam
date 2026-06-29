@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxp6b6fixmup4"
+path="res://.godot/imported/DoDGe RoLL.mp3-6888758ceec85ad68eda698e004800cd.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/DoDGe RoLL.mp3"
+dest_files=["res://.godot/imported/DoDGe RoLL.mp3-6888758ceec85ad68eda698e004800cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

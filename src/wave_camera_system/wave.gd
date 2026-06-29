@@ -66,6 +66,7 @@ func _spawn_enemy(entry: SpawnEntry) -> void:
 		return
 	var enemy: Node3D = entry.enemy_scene.instantiate()
 	get_parent().add_child(enemy)
+	enemy.visible = false
 	enemy.global_position = entry.global_position
 
 	# Pass the patrol point if the SpawnEntry has a Marker3D child

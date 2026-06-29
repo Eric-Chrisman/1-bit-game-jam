@@ -86,6 +86,7 @@ animations = [{
 size = Vector3(0.5029297, 3.2036133, 1.9453125)
 
 [node name="Enemy" type="CharacterBody3D" unique_id=18225702 groups=["enemy"]]
+visible = false
 collision_layer = 0
 platform_floor_layers = 4278190080
 script = ExtResource("1_6j2al")

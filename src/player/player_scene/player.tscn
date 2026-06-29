@@ -4531,6 +4531,7 @@ shape = SubResource("CapsuleShape3D_rxibo")
 
 [node name="LaserPointer" type="Node3D" parent="." unique_id=2014633532]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1580932, 0)
+visible = false
 script = ExtResource("2_rxibo")
 
 [node name="AimLaser" type="RayCast3D" parent="LaserPointer" unique_id=1627616505]

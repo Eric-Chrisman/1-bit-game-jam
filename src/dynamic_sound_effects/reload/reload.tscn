@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://c3ixixyqrlnhk"]
 
 [ext_resource type="Script" uid="uid://cgsw4rgrutjhl" path="res://src/dynamic_sound_effects/bullet/bullet_sound.gd" id="1_x6s12"]
-[ext_resource type="AudioStream" uid="uid://eojdym6n1n5c" path="res://assets/sfx/ReLoaD (1).wav" id="2_i4k3h"]
-[ext_resource type="AudioStream" uid="uid://bl4pqhrvm81v7" path="res://assets/sfx/ReLoaD (2).wav" id="3_ctdcn"]
-[ext_resource type="AudioStream" uid="uid://danfag2eftdc1" path="res://assets/sfx/ReLoaD (3).wav" id="4_ejhjq"]
+[ext_resource type="AudioStream" uid="uid://dfib0mw60jicd" path="res://assets/sfx/ReLoaD (1).mp3" id="2_fy3lt"]
+[ext_resource type="AudioStream" uid="uid://drpsrhebymn" path="res://assets/sfx/ReLoaD (3).mp3" id="3_i4k3h"]
 
 [node name="Reload" type="Node3D" unique_id=2121649975]
 script = ExtResource("1_x6s12")
-possible_sounds = Array[AudioStream]([ExtResource("2_i4k3h"), ExtResource("3_ctdcn"), ExtResource("4_ejhjq")])
+possible_sounds = Array[AudioStream]([ExtResource("2_fy3lt"), ExtResource("3_i4k3h")])
 metadata/_custom_type_script = "uid://cgsw4rgrutjhl"

@@ -44,7 +44,7 @@ _subresources={
 "StrangerTexture": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://assets/meshes/player/new_standard_material_3d.tres",
-"use_external/path": "uid://dy21r8oke2fi1"
+"use_external/path": "uid://bb8w0oxtb1btr"
 }
 }
 }

@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://br8rf1satv7bv" path="res://src/map_objects/covers/cover_72.tscn" id="17_kqjuw"]
 [ext_resource type="PackedScene" uid="uid://d0bicqi7nh08t" path="res://src/map_objects/covers/cover_82.tscn" id="18_74xu8"]
 [ext_resource type="PackedScene" uid="uid://b6f2311he3vbs" path="res://src/enemy/boss/boss.tscn" id="23_vjicd"]
+[ext_resource type="PackedScene" uid="uid://8ga3e31fqbas" path="res://src/dynamic_sound_effects/music/music.tscn" id="25_8yilc"]
 [ext_resource type="PackedScene" uid="uid://dns3h27rcsmvk" path="res://src/enemy/basic/double_elite_1.tscn" id="30_gm11o"]
 [ext_resource type="PackedScene" uid="uid://cd5rpwxm5g2p1" path="res://src/enemy/basic/elite_2.tscn" id="31_8yilc"]
 
@@ -250,10 +251,8 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.6
 [node name="Entity_Layer" type="Node3D" parent="." unique_id=2017307884]
 
 [node name="Player" parent="Entity_Layer" unique_id=433991171 instance=ExtResource("12_17k0e")]
-
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4381733, -1.590604, 2.8475628)
-
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4381733, -2.5906038, -70.338936)
 collision_layer = 1024
 
 [node name="debug_ref_line" type="MeshInstance3D" parent="Entity_Layer" unique_id=1391996591]
@@ -262,7 +261,7 @@ visible = false
 mesh = SubResource("BoxMesh_ll62f")
 
 [node name="WaveSystem" parent="." unique_id=843558868 instance=ExtResource("3_l7dqn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2882903, 0, -68.45541)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2882903, 0, -67.914734)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WaveSystem" unique_id=1683387137]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.370129)
@@ -290,6 +289,8 @@ mesh = SubResource("QuadMesh_kc6vr")
 [node name="sun" type="MeshInstance3D" parent="WaveSystem/Camera3D" unique_id=113385898]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -313.58228, -122.53409, -1333.0383)
 mesh = SubResource("SphereMesh_d2r56")
+
+[node name="Music" parent="WaveSystem/Camera3D" unique_id=1785695038 instance=ExtResource("25_8yilc")]
 
 [node name="Waves" type="Node3D" parent="." unique_id=820136394]
 

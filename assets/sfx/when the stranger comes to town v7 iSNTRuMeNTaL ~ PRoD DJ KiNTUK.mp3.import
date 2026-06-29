@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bn6nakauvf867"
+path="res://.godot/imported/when the stranger comes to town v7 iSNTRuMeNTaL ~ PRoD DJ KiNTUK.mp3-8ebe10cae0576f7ac2d457856fc714ba.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/when the stranger comes to town v7 iSNTRuMeNTaL ~ PRoD DJ KiNTUK.mp3"
+dest_files=["res://.godot/imported/when the stranger comes to town v7 iSNTRuMeNTaL ~ PRoD DJ KiNTUK.mp3-8ebe10cae0576f7ac2d457856fc714ba.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

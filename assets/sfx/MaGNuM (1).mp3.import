@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bo1jmdjubu1nw"
+path="res://.godot/imported/MaGNuM (1).mp3-8547e1d236da7c9c28fc4b52ec488cd7.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/MaGNuM (1).mp3"
+dest_files=["res://.godot/imported/MaGNuM (1).mp3-8547e1d236da7c9c28fc4b52ec488cd7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

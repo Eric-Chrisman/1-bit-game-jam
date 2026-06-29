@@ -14,7 +14,6 @@ config/name="1-bit-game-jam"
 run/main_scene="uid://bqrgww0c2d84m"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-config/icon="res://assets/sprites/misc_placeholder/icon.svg"
 
 [autoload]
 

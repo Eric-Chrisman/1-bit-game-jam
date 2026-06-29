@@ -22,6 +22,7 @@ func _ready() -> void:
 func on_start_pressed() -> void:
 	title_layer.visible = false
 	$Map/Entity_Layer/Player.can_move = true
+	$Player_HUD.visible = true
 	get_tree().paused = false
 	
 #func on_options_pressed() -> void:
@@ -49,7 +50,7 @@ func on_retry_pressed() -> void:
 func on_gameover() -> void:
 	get_tree().paused = true
 	gameover_layer.visible = true
-
+	$Player_HUD.visible = false
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	place_circle()

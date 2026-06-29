@@ -17,12 +17,14 @@ process_mode = 1
 [node name="Title_Layer" type="CanvasLayer" parent="." unique_id=111069876]
 
 [node name="TitleScreen" parent="Title_Layer" unique_id=686917227 instance=ExtResource("2_ab7mr")]
+modulate = Color(1, 0.6431373, 0.39607844, 1)
 
 [node name="Pause_Layer" type="CanvasLayer" parent="." unique_id=910609983]
 layer = 100
 visible = false
 
 [node name="PauseMenu" type="Control" parent="Pause_Layer" unique_id=1891244163 groups=["modulates"]]
+modulate = Color(1, 0.6431373, 0.39607844, 1)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -33,14 +35,17 @@ layer = 200
 visible = false
 
 [node name="OptionsMenu" parent="Options_Layer" unique_id=676573629 groups=["modulates"] instance=ExtResource("1_3eh75")]
+modulate = Color(1, 0.6431373, 0.39607844, 1)
 
 [node name="Player_HUD" type="CanvasLayer" parent="." unique_id=336609663]
 visible = false
 
-[node name="PlayerHud" parent="Player_HUD" unique_id=792558402 groups=["modulates", "player_ui"] instance=ExtResource("4_djufw")]
+[node name="PlayerHud" parent="Player_HUD" unique_id=792558402 groups=["player_ui"] instance=ExtResource("4_djufw")]
+modulate = Color(0, 0, 0, 1)
 
 [node name="GameoverLayer" type="CanvasLayer" parent="." unique_id=1887554106]
 visible = false
 
 [node name="GameoverScreen" parent="GameoverLayer" unique_id=453116337 groups=["modulates"] instance=ExtResource("5_jkpqq")]
 process_mode = 2
+modulate = Color(1, 0.6431373, 0.39607844, 1)

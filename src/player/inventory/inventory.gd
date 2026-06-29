@@ -31,3 +31,6 @@ func can_fire_weapon() -> bool:
 
 func bullets_left_in_reserve() -> int:
 	return current_gun.current_ammo_reserve
+
+func is_mag_full() -> bool:
+	return current_gun.current_ammo_mag == current_gun.MAX_MAG_SIZE
