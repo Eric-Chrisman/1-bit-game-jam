@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cfglp2he3yebq"]
+
+[ext_resource type="Script" uid="uid://cgsw4rgrutjhl" path="res://src/dynamic_sound_effects/bullet/bullet_sound.gd" id="1_iy7ab"]
+[ext_resource type="AudioStream" uid="uid://b4eq7tlioly5e" path="res://assets/sfx/500 S_W Magnum (Close-Up ) - Part_1 (consolidated)_2.wav" id="2_6d3b4"]
+[ext_resource type="AudioStream" uid="uid://c4lm5nompdg3o" path="res://assets/sfx/CHuNKY SHoT (1).wav" id="3_kl43p"]
+[ext_resource type="AudioStream" uid="uid://dgs67jmvdhg8s" path="res://assets/sfx/CHuNKY SHoT (2).wav" id="4_1j6me"]
+[ext_resource type="AudioStream" uid="uid://pl41ydffdrtf" path="res://assets/sfx/CHuNKY SHoT (3).wav" id="5_crrim"]
+[ext_resource type="AudioStream" uid="uid://83de7d3t56l" path="res://assets/sfx/CHuNKY SHoT (4).wav" id="6_gfyow"]
+[ext_resource type="AudioStream" uid="uid://ck017ikf5rmou" path="res://assets/sfx/CHuNKY SHoT (5).wav" id="7_fhqlb"]
+[ext_resource type="AudioStream" uid="uid://cw1s7ln4kkus3" path="res://assets/sfx/MaGNuM (1).wav" id="8_msxyi"]
+[ext_resource type="AudioStream" uid="uid://bvquskvwv5epb" path="res://assets/sfx/MaGNuM (2).wav" id="9_etbcl"]
+[ext_resource type="AudioStream" uid="uid://do7vrhxg0qcwu" path="res://assets/sfx/MaGNuM (3).wav" id="10_nxohi"]
+[ext_resource type="AudioStream" uid="uid://2n25p23uke87" path="res://assets/sfx/MaGNuM (4).wav" id="11_r2fcq"]
+[ext_resource type="AudioStream" uid="uid://cewrh5f1u4jto" path="res://assets/sfx/MaGNuM (5).wav" id="12_ol6np"]
+
+[node name="BulletSound" type="Node3D" unique_id=38960642]
+script = ExtResource("1_iy7ab")
+possible_sounds = Array[AudioStream]([ExtResource("2_6d3b4"), ExtResource("3_kl43p"), ExtResource("4_1j6me"), ExtResource("5_crrim"), ExtResource("6_gfyow"), ExtResource("7_fhqlb"), ExtResource("8_msxyi"), ExtResource("9_etbcl"), ExtResource("10_nxohi"), ExtResource("11_r2fcq"), ExtResource("12_ol6np")])

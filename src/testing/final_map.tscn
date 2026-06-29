@@ -3,7 +3,9 @@
 [ext_resource type="MeshLibrary" uid="uid://bn2r112kkx0kq" path="res://src/map_objects/tile_set/western.tres" id="1_l7dqn"]
 [ext_resource type="PackedScene" uid="uid://by066lv2r4048" path="res://src/wave_camera_system/wave_system.tscn" id="3_l7dqn"]
 [ext_resource type="PackedScene" uid="uid://bmw36p6h8egwx" path="res://src/wave_camera_system/wave.tscn" id="5_d2r56"]
+[ext_resource type="PackedScene" uid="uid://8ga3e31fqbas" path="res://src/dynamic_sound_effects/music/music.tscn" id="5_v86oh"]
 [ext_resource type="PackedScene" uid="uid://bhsqr1wjifnf8" path="res://src/wave_camera_system/spawn_entity_data.tscn" id="6_5w5s3"]
+[ext_resource type="AudioStream" uid="uid://b0s566o30xsta" path="res://assets/sfx/when the stranger comes to town v6 instrumental ~ PRoD DJ KiNTUK.wav" id="6_lnfwy"]
 [ext_resource type="PackedScene" uid="uid://cchtqcjgjkai4" path="res://src/enemy/basic/basic_1.tscn" id="7_v86oh"]
 [ext_resource type="PackedScene" uid="uid://c71gglf5p4kuh" path="res://src/enemy/basic/elite_1.tscn" id="8_lnfwy"]
 [ext_resource type="PackedScene" uid="uid://4lenhu1t7xpe" path="res://src/player/player_scene/player.tscn" id="12_17k0e"]
@@ -127,7 +129,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.94781494, 7.967119)
 shape = SubResource("BoxShape3D_kwsmb")
 debug_color = Color(0, 0.6, 0.69803923, 0.7647059)
 
-[node name="Camera3D" type="Camera3D" parent="WaveSystem" unique_id=1338994893]
+[node name="Camera3D" type="Camera3D" parent="WaveSystem" unique_id=1338994893 groups=["shader"]]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.850464, 2.4018545, 0)
 
 [node name="shader" type="MeshInstance3D" parent="WaveSystem/Camera3D" unique_id=2029262317]
@@ -138,6 +140,10 @@ mesh = SubResource("QuadMesh_kc6vr")
 [node name="sun" type="MeshInstance3D" parent="WaveSystem/Camera3D" unique_id=113385898]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -313.58228, -122.53409, -1333.0383)
 mesh = SubResource("SphereMesh_d2r56")
+
+[node name="Music" parent="WaveSystem/Camera3D" unique_id=1785695038 instance=ExtResource("5_v86oh")]
+stream = ExtResource("6_lnfwy")
+volume_db = -10.0
 
 [node name="Waves" type="Node3D" parent="." unique_id=820136394]
 

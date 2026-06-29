@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://assets/sprites/misc_placeholder/icon.svg"
 
+[autoload]
+
+Colors="*uid://d0elywvbhcrxk"
+
 [display]
 
 window/size/viewport_width=1920
@@ -27,6 +31,7 @@ folder_colors={
 "res://addons/": "gray",
 "res://assets/": "green",
 "res://src/": "gray",
+"res://src/dynamic_sound_effects/": "blue",
 "res://src/enemy/": "red",
 "res://src/hud/": "green",
 "res://src/main/": "orange",
@@ -45,6 +50,7 @@ enemy="use this group to change enemy color"
 player=""
 modulates=""
 player_ui=""
+shader=""
 
 [input]
 

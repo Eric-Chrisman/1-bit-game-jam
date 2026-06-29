@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://pomrcaw7ysu0" path="res://src/player/weapons/bullets/pistol_round/pistol_round.tscn" id="2_araqa"]
 [ext_resource type="Texture2D" uid="uid://bmkmavlyato0e" path="res://assets/sprites/Enemy sprites/Boss_Sheet.png" id="3_d3pwp"]
 [ext_resource type="PackedScene" uid="uid://tj74100fo4hc" path="res://assets/meshes/guns/MuzzleFlare.glb" id="4_bngun"]
+[ext_resource type="PackedScene" uid="uid://cfglp2he3yebq" path="res://src/dynamic_sound_effects/bullet/bullet_sound.tscn" id="5_n8a2o"]
+[ext_resource type="PackedScene" uid="uid://dk7kiui1cvamo" path="res://src/dynamic_sound_effects/enemy_grunt_pain/enemy_grunts.tscn" id="6_6q12v"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h4y1u"]
 height = 3.2454224
@@ -159,6 +161,10 @@ shape = SubResource("BoxShape3D_d3pwp")
 
 [node name="MuzzleFlare2" parent="." unique_id=41405490 instance=ExtResource("4_bngun")]
 transform = Transform3D(1.6763806e-08, 0, -0.11999999, 0, 0.11999999, 0, 0.11999999, 0, 1.6763806e-08, -0.33350003, 1.750932, 0.09053004)
+
+[node name="BulletSound" parent="." unique_id=38960642 instance=ExtResource("5_n8a2o")]
+
+[node name="EnemyGrunts" parent="." unique_id=1273581956 instance=ExtResource("6_6q12v")]
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="timeout" from="reload_timer" to="." method="_on_timer_timeout"]

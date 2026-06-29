@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://mhnj0cgcinxs"
+path="res://.godot/imported/Walking on a dirt road in NH (3).wav-b4ee721841dda3a3908ba1c1bdf06384.sample"
+
+[deps]
+
+source_file="res://assets/sfx/Walking on a dirt road in NH (3).wav"
+dest_files=["res://.godot/imported/Walking on a dirt road in NH (3).wav-b4ee721841dda3a3908ba1c1bdf06384.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
