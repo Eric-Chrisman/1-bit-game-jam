@@ -1,9 +1,10 @@
 extends CharacterBody3D
-class_name Enemy
+class_name Bullet
 
-@export var bullet_speed: float = 5
+@export var bullet_speed: float = 20
 
 @onready var hitbox: Area3D = $Area3D
+
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()
@@ -21,6 +22,9 @@ func kill_bullet() -> void:
 
 func set_direction(direction: Vector3) -> void:
 	velocity = direction.normalized() * bullet_speed
+	look_at(-direction)
+	print("Direction: ", direction)
+	print("Forward:", -global_basis.z)
 
 func set_team(is_player: bool) -> void:
 	if is_player:
