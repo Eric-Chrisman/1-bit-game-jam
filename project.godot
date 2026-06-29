@@ -45,6 +45,7 @@ folder_colors={
 enemy="use this group to change enemy color"
 player=""
 modulates=""
+player_ui=""
 
 [input]
 
