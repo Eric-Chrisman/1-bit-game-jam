@@ -128,6 +128,7 @@ collision_mask = 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1080473881]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24853516, 1.5690918, -0.036865234)
 shape = SubResource("BoxShape3D_k2hno")
+
 [node name="MuzzleFlare" parent="." unique_id=41405490 instance=ExtResource("4_ceb82")]
 transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, -0.21035087, 2.0363047, -0.8657767)
 visible = false

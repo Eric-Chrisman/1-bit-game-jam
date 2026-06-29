@@ -26,45 +26,66 @@
 [node name="Node3D" type="Node3D" unique_id=699544454]
 
 [node name="Building82" parent="." unique_id=1079244705 instance=ExtResource("1_x7rsr")]
+visible = false
 
 [node name="Building92" parent="." unique_id=116891039 instance=ExtResource("2_yuijg")]
+visible = false
 
 [node name="Building102" parent="." unique_id=1519045028 instance=ExtResource("3_ebjrc")]
+visible = false
 
 [node name="Building112" parent="." unique_id=1519438678 instance=ExtResource("4_7ojdo")]
+visible = false
 
 [node name="Building12" parent="." unique_id=1274108042 instance=ExtResource("22_x7rsr")]
+visible = false
 
 [node name="Building22" parent="." unique_id=1038603734 instance=ExtResource("6_8hqjg")]
+visible = false
 
 [node name="Building32" parent="." unique_id=1944861257 instance=ExtResource("7_wrinw")]
+visible = false
 
 [node name="Building42" parent="." unique_id=1455296331 instance=ExtResource("8_mbnux")]
+visible = false
 
 [node name="Building52" parent="." unique_id=1692599744 instance=ExtResource("9_lmrw1")]
+visible = false
 
 [node name="Building62" parent="." unique_id=258125119 instance=ExtResource("10_dckei")]
+visible = false
 
 [node name="Building72" parent="." unique_id=1302233461 instance=ExtResource("11_hnbwo")]
+visible = false
 
 [node name="Building122" parent="." unique_id=1303234950 instance=ExtResource("12_3x26x")]
+visible = false
 
 [node name="BuildingBoss2" parent="." unique_id=269826793 instance=ExtResource("13_u4l5o")]
+visible = false
 
 [node name="Cover6 (1)" parent="." unique_id=66849981 instance=ExtResource("14_r2h1o")]
+visible = false
 
 [node name="Cover12" parent="." unique_id=1286257694 instance=ExtResource("15_noye6")]
+visible = false
 
 [node name="Cover22" parent="." unique_id=1753798735 instance=ExtResource("16_io8mb")]
+visible = false
 
 [node name="Cover32" parent="." unique_id=1561430346 instance=ExtResource("17_3dgtn")]
+visible = false
 
 [node name="Cover42" parent="." unique_id=1609209403 instance=ExtResource("18_ax5ya")]
+visible = false
 
 [node name="Cover52" parent="." unique_id=1583077957 instance=ExtResource("19_rcc0y")]
 
 [node name="Cover62" parent="." unique_id=1457510056 instance=ExtResource("20_dx1lq")]
+visible = false
 
 [node name="Cover72" parent="." unique_id=18217902 instance=ExtResource("21_hilqp")]
+visible = false
 
 [node name="Cover82" parent="." unique_id=210118005 instance=ExtResource("22_62qe0")]
+visible = false

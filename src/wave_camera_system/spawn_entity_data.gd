@@ -10,3 +10,10 @@ enum SpawnTrigger {
 @export var trigger: SpawnTrigger = SpawnTrigger.TIMED
 @export var delay: float = 1.0
 @export var deaths_required: int = 1
+
+var where_to_move: Marker3D
+
+func _ready():
+	for child in get_children():
+		if child is Marker3D:
+			where_to_move = child
