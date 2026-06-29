@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6e5yexmx3nfc"
-path.s3tc="res://.godot/imported/MuzzleFlare_StrangerTexture.png-e0aaf3f58472375f1a864a980186b037.s3tc.ctex"
+uid="uid://dh51epa2pddx5"
+path.s3tc="res://.godot/imported/Building8_StrangerTexture.png-7fc8ffa8870440794ef497b14f9afaf8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/meshes/guns/MuzzleFlare_StrangerTexture.png"
-dest_files=["res://.godot/imported/MuzzleFlare_StrangerTexture.png-e0aaf3f58472375f1a864a980186b037.s3tc.ctex"]
+source_file="res://assets/meshes/buildings/Building8_StrangerTexture.png"
+dest_files=["res://.godot/imported/Building8_StrangerTexture.png-7fc8ffa8870440794ef497b14f9afaf8.s3tc.ctex"]
 
 [params]
 

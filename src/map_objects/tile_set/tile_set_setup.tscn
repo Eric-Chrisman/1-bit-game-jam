@@ -80,6 +80,7 @@ visible = false
 visible = false
 
 [node name="Cover52" parent="." unique_id=1583077957 instance=ExtResource("19_rcc0y")]
+visible = false
 
 [node name="Cover62" parent="." unique_id=1457510056 instance=ExtResource("20_dx1lq")]
 visible = false

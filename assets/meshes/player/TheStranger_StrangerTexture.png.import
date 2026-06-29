@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6e5yexmx3nfc"
-path.s3tc="res://.godot/imported/MuzzleFlare_StrangerTexture.png-e0aaf3f58472375f1a864a980186b037.s3tc.ctex"
+uid="uid://cj38iqqeauhxv"
+path.s3tc="res://.godot/imported/TheStranger_StrangerTexture.png-63eff8e7480d0aff7ba13a5781e8aa31.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "51023bd5b591206923bf91a60c5f3431"
+"md5": "c0e6b26069062f66cea16e5229c12040"
 }
 
 [deps]
 
-source_file="res://assets/meshes/guns/MuzzleFlare_StrangerTexture.png"
-dest_files=["res://.godot/imported/MuzzleFlare_StrangerTexture.png-e0aaf3f58472375f1a864a980186b037.s3tc.ctex"]
+source_file="res://assets/meshes/player/TheStranger_StrangerTexture.png"
+dest_files=["res://.godot/imported/TheStranger_StrangerTexture.png-63eff8e7480d0aff7ba13a5781e8aa31.s3tc.ctex"]
 
 [params]
 
