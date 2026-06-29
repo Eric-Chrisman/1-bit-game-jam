@@ -14,6 +14,10 @@ enum State {
 @onready var bullet_origin: Marker3D = $TheStranger/StrangerArmature/Skeleton3D/StrangerBoneHandIndexRoot_L/Pistol/Marker3D
 @onready var aimer: Node3D = $LaserPointer
 @onready var model: Node3D = $TheStranger
+@onready var bullet_sounds: global_sounds = $BulletSound
+@onready var walk_sounds: global_sounds = $WalkSound
+@onready var reload_sounds: global_sounds = $Reload
+@onready var dodge_sounds: global_sounds = $Dodge
 
 @export var MAX_HEALTH: int = 3
 @onready var health: int = MAX_HEALTH
@@ -75,11 +79,13 @@ func _enter_reload() -> void:
 	velocity.z = move_toward(velocity.z, 0, SPEED)
 	state = State.RELOADING
 	model.reload()
+	reload_sounds.play()
 
 func continue_reload() -> void:
 	inventory.reload_weapon()
 	if inventory.current_gun.current_ammo_mag < inventory.current_gun.MAX_MAG_SIZE:
 		model.reload()
+		reload_sounds.play()
 	else:
 		state = State.FREE
 
@@ -99,8 +105,10 @@ func _enter_dodge(direction: float) -> void:
 	state = State.DODGE_AIR
 	velocity.z = direction * SPEED * 2
 	model.dodge()
+	dodge_sounds.play()
 
 func shoot_bullet() -> void:
+	bullet_sounds.play()
 	inventory.fire_weapon(bullet_origin.global_position, (aimer.get_target_position() - bullet_origin.global_position).normalized())
 	if ui:
 		ui.update_ammo(inventory.current_gun.current_ammo_mag)
@@ -135,3 +143,7 @@ func _on_hitbox_area_entered(area: Area3D) -> void:
 		main.on_gameover()
 	if ui:
 		ui.on_health_update(health)
+	
+
+func play_walk_sound():
+	walk_sounds.play()

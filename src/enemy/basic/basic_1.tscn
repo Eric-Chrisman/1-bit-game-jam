@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dcyei7iy8l05k" path="res://assets/sprites/Enemy sprites/Enemy1 Sheet.png" id="2_ig63i"]
 [ext_resource type="PackedScene" uid="uid://pomrcaw7ysu0" path="res://src/player/weapons/bullets/pistol_round/pistol_round.tscn" id="2_xso4u"]
 [ext_resource type="PackedScene" uid="uid://tj74100fo4hc" path="res://assets/meshes/guns/MuzzleFlare.glb" id="4_ceb82"]
+[ext_resource type="PackedScene" uid="uid://cfglp2he3yebq" path="res://src/dynamic_sound_effects/bullet/bullet_sound.tscn" id="5_jkvg7"]
+[ext_resource type="PackedScene" uid="uid://dk7kiui1cvamo" path="res://src/dynamic_sound_effects/enemy_grunt_pain/enemy_grunts.tscn" id="6_3vlyl"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h4y1u"]
 height = 3.2454224
@@ -112,7 +114,7 @@ shape = SubResource("BoxShape3D_xyqds")
 [node name="reload_timer" type="Timer" parent="." unique_id=405161148]
 one_shot = true
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=269151746 groups=["enemy"]]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=269151746 groups=["enemy", "modulates"]]
 transform = Transform3D(-8.805239e-09, 0, -0.29999998, 0, 0.19606279, 0, 0.2014404, 0, -1.3113416e-08, 0, 2.0462677, 0.027405739)
 render_priority = 100
 sprite_frames = SubResource("SpriteFrames_ll62f")
@@ -132,6 +134,10 @@ shape = SubResource("BoxShape3D_k2hno")
 [node name="MuzzleFlare" parent="." unique_id=41405490 instance=ExtResource("4_ceb82")]
 transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, -0.21035087, 2.0363047, -0.8657767)
 visible = false
+
+[node name="BulletSound" parent="." unique_id=38960642 instance=ExtResource("5_jkvg7")]
+
+[node name="EnemyGrunts" parent="." unique_id=1273581956 instance=ExtResource("6_3vlyl")]
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="timeout" from="reload_timer" to="." method="_on_timer_timeout"]

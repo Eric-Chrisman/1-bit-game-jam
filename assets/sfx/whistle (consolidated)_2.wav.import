@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b6csh2mw7x3yb"
+path="res://.godot/imported/whistle (consolidated)_2.wav-2f06caa1ddbbd92c14ffd8957ec60235.sample"
+
+[deps]
+
+source_file="res://assets/sfx/whistle (consolidated)_2.wav"
+dest_files=["res://.godot/imported/whistle (consolidated)_2.wav-2f06caa1ddbbd92c14ffd8957ec60235.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

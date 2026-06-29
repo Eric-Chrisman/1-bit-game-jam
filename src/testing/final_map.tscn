@@ -1,13 +1,38 @@
 [gd_scene format=3 uid="uid://dngrw48tvnl34"]
 
-[ext_resource type="MeshLibrary" uid="uid://bn2r112kkx0kq" path="res://src/map_objects/tile_set/western.tres" id="1_l7dqn"]
+[ext_resource type="PackedScene" uid="uid://deqdi16xbhsct" path="res://src/map_objects/buildings/building_10.tscn" id="1_364mj"]
+[ext_resource type="PackedScene" uid="uid://ctldp8ydbnbu5" path="res://src/map_objects/buildings/building_11.tscn" id="2_gm11o"]
+[ext_resource type="PackedScene" uid="uid://bpxm10hejdvmo" path="res://src/map_objects/buildings/building_12.tscn" id="3_8yilc"]
 [ext_resource type="PackedScene" uid="uid://by066lv2r4048" path="res://src/wave_camera_system/wave_system.tscn" id="3_l7dqn"]
+[ext_resource type="PackedScene" uid="uid://ty6qijd0gjp0" path="res://src/map_objects/buildings/building_22.tscn" id="4_tocyp"]
 [ext_resource type="PackedScene" uid="uid://bmw36p6h8egwx" path="res://src/wave_camera_system/wave.tscn" id="5_d2r56"]
+[ext_resource type="PackedScene" uid="uid://cs8jnn78grym8" path="res://src/map_objects/buildings/building_32.tscn" id="5_vjicd"]
 [ext_resource type="PackedScene" uid="uid://bhsqr1wjifnf8" path="res://src/wave_camera_system/spawn_entity_data.tscn" id="6_5w5s3"]
+[ext_resource type="PackedScene" uid="uid://ckhgn5etoypto" path="res://src/map_objects/buildings/building_42.tscn" id="6_ewyw1"]
+[ext_resource type="PackedScene" uid="uid://cocvtc5w3py41" path="res://src/map_objects/buildings/building_52.tscn" id="7_fl7oi"]
 [ext_resource type="PackedScene" uid="uid://cchtqcjgjkai4" path="res://src/enemy/basic/basic_1.tscn" id="7_v86oh"]
+[ext_resource type="PackedScene" uid="uid://bhyk021jfohaa" path="res://src/map_objects/buildings/building_62.tscn" id="8_coo8s"]
 [ext_resource type="PackedScene" uid="uid://c71gglf5p4kuh" path="res://src/enemy/basic/elite_1.tscn" id="8_lnfwy"]
+[ext_resource type="PackedScene" uid="uid://swf33l4fwmfy" path="res://src/map_objects/buildings/building_8.tscn" id="8_v3sbu"]
+[ext_resource type="PackedScene" uid="uid://bdvosbuh2mtbc" path="res://src/map_objects/buildings/building_9.tscn" id="9_0ksom"]
+[ext_resource type="PackedScene" uid="uid://dx4vqmqa7dq5v" path="res://src/map_objects/buildings/building_72.tscn" id="9_wdfnc"]
+[ext_resource type="PackedScene" uid="uid://dr05yvnaqxkba" path="res://src/map_objects/covers/cover_6_(1).tscn" id="10_2drja"]
+[ext_resource type="PackedScene" uid="uid://q41yiwtq6i84" path="res://src/map_objects/buildings/building_122.tscn" id="10_e8mjr"]
+[ext_resource type="PackedScene" uid="uid://bo4rbc0voe3iw" path="res://src/map_objects/covers/cover_12.tscn" id="11_5ksal"]
+[ext_resource type="PackedScene" uid="uid://dpt5sfc8d3c61" path="res://src/map_objects/buildings/building_boss.tscn" id="11_sfjaa"]
 [ext_resource type="PackedScene" uid="uid://4lenhu1t7xpe" path="res://src/player/player_scene/player.tscn" id="12_17k0e"]
+[ext_resource type="PackedScene" uid="uid://be8phqe1rw3cc" path="res://src/map_objects/covers/cover_22.tscn" id="12_da1x2"]
+[ext_resource type="PackedScene" uid="uid://lcmkih3ftn1t" path="res://src/map_objects/covers/cover_32.tscn" id="13_4bgyr"]
 [ext_resource type="Shader" uid="uid://btdjq403kta0j" path="res://assets/shader_defintions/dithering_bi_color.gdshader" id="13_4dqhq"]
+[ext_resource type="PackedScene" uid="uid://df7arsu06r4ww" path="res://src/map_objects/covers/cover_42.tscn" id="14_mvudn"]
+[ext_resource type="PackedScene" uid="uid://dc84acirobloh" path="res://src/map_objects/covers/cover_52.tscn" id="15_17k0e"]
+[ext_resource type="PackedScene" uid="uid://br8rf1satv7bv" path="res://src/map_objects/covers/cover_72.tscn" id="17_kqjuw"]
+[ext_resource type="PackedScene" uid="uid://d0bicqi7nh08t" path="res://src/map_objects/covers/cover_82.tscn" id="18_74xu8"]
+[ext_resource type="PackedScene" uid="uid://b6f2311he3vbs" path="res://src/enemy/boss/boss.tscn" id="23_vjicd"]
+[ext_resource type="PackedScene" uid="uid://c5xgknj1q32p6" path="res://src/enemy/basic/elite_3.tscn" id="29_gm11o"]
+[ext_resource type="PackedScene" uid="uid://cxcwyxai8ex3p" path="res://src/enemy/basic/double_elite_2.tscn" id="30_8yilc"]
+[ext_resource type="PackedScene" uid="uid://dns3h27rcsmvk" path="res://src/enemy/basic/double_elite_1.tscn" id="30_gm11o"]
+[ext_resource type="PackedScene" uid="uid://cd5rpwxm5g2p1" path="res://src/enemy/basic/elite_2.tscn" id="31_8yilc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wugxv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,8 +50,8 @@ shading_mode = 0
 albedo_color = Color(0, 0, 0, 1)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yt76s"]
-transparency = 1
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gm11o"]
+albedo_color = Color(0.30200368, 0.3020039, 0.30200374, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ll62f"]
 size = Vector3(1, 1, 1198.0027)
@@ -77,25 +102,144 @@ sky_mode = 1
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Map_Layer/world" unique_id=240592017]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1658.7009, -2, -125.58887)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1658.0934, -2.9941406, -126.71832)
+cast_shadow = 0
+size = Vector3(3350.4019, 1, 3784.6504)
+material = SubResource("StandardMaterial3D_rvqeh")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map_Layer/world" unique_id=444833413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1658.0934, -2.9941406, -126.71832)
 cast_shadow = 0
 size = Vector3(3350.4019, 1, 3784.6504)
 material = SubResource("StandardMaterial3D_rvqeh")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Map_Layer/world" unique_id=2132760935]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1776.4591, 80.79993, -125.58887)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2406.607, 499.14014, -125.58887)
 cast_shadow = 0
-size = Vector3(3114.8855, 649.68823, 3784.6504)
-material = SubResource("StandardMaterial3D_yt76s")
+size = Vector3(3114.8855, 1486.3687, 3784.6504)
+material = SubResource("StandardMaterial3D_gm11o")
 
-[node name="GridMap" type="GridMap" parent="Map_Layer" unique_id=1781902649]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.09, 0)
-mesh_library = ExtResource("1_l7dqn")
-cell_size = Vector3(1, 1, 1)
-data = {
-"cells": PackedInt32Array(4, 65533, 15, 4, 7, 17, 4, 20, 14, 35, 65535, 1441803, 36, 65528, 1441808, 65535, 65506, 0, 31, 5, 655374, 15, 65510, 655378, 6, 65509, 655375, 10, 65510, 1441807, 17, 65527, 1441808, 19, 4, 655375, 12, 12, 655375, 28, 14, 655376, 17, 40, 1441801, 36, 19, 1441796, 36, 34, 1441796)
-}
-metadata/_editor_floor_ = Vector3(0, 0, 0)
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map_Layer/world" unique_id=2085093451]
+transform = Transform3D(0.99276984, -0.120033704, 0, 0.120033704, 0.99276984, 0, 0, 0, 1, 164.28156, 10.887619, -88.188965)
+size = Vector3(1615.7312, 0.25439453, 3907.9143)
+material = SubResource("StandardMaterial3D_rvqeh")
+
+[node name="Building82" parent="Map_Layer" unique_id=1079244705 instance=ExtResource("8_v3sbu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 36.86415, -2.4904904, 3.5880919)
+
+[node name="Building92" parent="Map_Layer" unique_id=116891039 instance=ExtResource("9_0ksom")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 32.82486, -2.4748683, -10.659216)
+
+[node name="Cover6 (1)" parent="Map_Layer" unique_id=66849981 instance=ExtResource("10_2drja")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 29.55643, -2.494049, -4.6656246)
+
+[node name="Cover12" parent="Map_Layer" unique_id=1286257694 instance=ExtResource("11_5ksal")]
+transform = Transform3D(3.7855173e-08, 0.8660254, 0.50000006, 1, -4.371139e-08, 0, 2.1855696e-08, 0.50000006, -0.8660254, 17.862995, -1.2322993, 7.390974)
+
+[node name="Cover6 (1)2" parent="Map_Layer" unique_id=1625206190 instance=ExtResource("10_2drja")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 19.15792, -2.43559, 371.3702)
+
+[node name="Cover13" parent="Map_Layer" unique_id=1679208015 instance=ExtResource("11_5ksal")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 18.264183, -2.43559, 356.7709)
+
+[node name="Cover14" parent="Map_Layer" unique_id=882485965 instance=ExtResource("11_5ksal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.319945, -2.43559, 81.24903)
+
+[node name="Cover15" parent="Map_Layer" unique_id=96580134 instance=ExtResource("11_5ksal")]
+transform = Transform3D(4.222196e-08, 0.9659258, -0.25881913, 1, -4.371139e-08, 0, -1.1313344e-08, -0.25881913, -0.9659258, 6.0945654, -1.1782304, 158.95665)
+
+[node name="Cover22" parent="Map_Layer" unique_id=1753798735 instance=ExtResource("12_da1x2")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 22.473593, -2.43559, 325.48636)
+
+[node name="Cover23" parent="Map_Layer" unique_id=1298150286 instance=ExtResource("12_da1x2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.573257, -2.43559, 164.43896)
+
+[node name="Cover24" parent="Map_Layer" unique_id=1291359246 instance=ExtResource("12_da1x2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5847034, -2.43559, -73.23787)
+
+[node name="Cover32" parent="Map_Layer" unique_id=1561430346 instance=ExtResource("13_4bgyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.293392, -2.43559, -1.8913014)
+
+[node name="Cover34" parent="Map_Layer" unique_id=1861555801 instance=ExtResource("13_4bgyr")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 11.293392, -2.43559, 7.771123)
+
+[node name="Cover35" parent="Map_Layer" unique_id=1077083893 instance=ExtResource("13_4bgyr")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 19.608047, -2.43559, -3.009859)
+
+[node name="Cover38" parent="Map_Layer" unique_id=1727778726 instance=ExtResource("13_4bgyr")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 18.77974, -2.43559, 257.7138)
+
+[node name="Cover33" parent="Map_Layer" unique_id=50601841 instance=ExtResource("13_4bgyr")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12.698801, -2.43559, 321.7538)
+
+[node name="Cover37" parent="Map_Layer" unique_id=167360144 instance=ExtResource("13_4bgyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.169866, -2.43559, 137.56018)
+
+[node name="Cover36" parent="Map_Layer" unique_id=62462685 instance=ExtResource("13_4bgyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.698864, -2.43559, 77.85055)
+
+[node name="Cover42" parent="Map_Layer" unique_id=1609209403 instance=ExtResource("14_mvudn")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 15.401554, -2.435592, 372.58148)
+
+[node name="Cover43" parent="Map_Layer" unique_id=148352227 instance=ExtResource("14_mvudn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.917149, -2.435592, 148.04773)
+
+[node name="Cover52" parent="Map_Layer" unique_id=1583077957 instance=ExtResource("15_17k0e")]
+transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, -2.1579533, -2.43559, -19.67709)
+
+[node name="Cover53" parent="Map_Layer" unique_id=559502746 instance=ExtResource("15_17k0e")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 13.020107, -2.43559, 352.97903)
+
+[node name="Cover72" parent="Map_Layer" unique_id=18217902 instance=ExtResource("17_kqjuw")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.7390776, -2.43559, 330.5359)
+
+[node name="Cover74" parent="Map_Layer" unique_id=571281892 instance=ExtResource("17_kqjuw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.795624, -2.43559, 132.67123)
+
+[node name="Cover75" parent="Map_Layer" unique_id=1279638034 instance=ExtResource("17_kqjuw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.354023, -2.43559, 253.47379)
+
+[node name="Cover73" parent="Map_Layer" unique_id=88595323 instance=ExtResource("17_kqjuw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.962505, -2.4355938, 61.706802)
+
+[node name="Cover82" parent="Map_Layer" unique_id=210118005 instance=ExtResource("18_74xu8")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6.2244663, -2.43559, 347.7065)
+
+[node name="Cover84" parent="Map_Layer" unique_id=1550934462 instance=ExtResource("18_74xu8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.029926, -2.43559, 270.78925)
+
+[node name="Cover85" parent="Map_Layer" unique_id=994367810 instance=ExtResource("18_74xu8")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.217024, -2.43559, 246.23898)
+
+[node name="Cover83" parent="Map_Layer" unique_id=1184345636 instance=ExtResource("18_74xu8")]
+transform = Transform3D(0.80515724, 0, 0.59306145, 0, 1, 0, -0.59306145, 0, 0.80515724, 9.145866, -2.43559, -31.55475)
+
+[node name="Building102" parent="Map_Layer" unique_id=1519045028 instance=ExtResource("1_364mj")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31.62162, -2.4508493, 141.01122)
+
+[node name="Building12" parent="Map_Layer" unique_id=1274108042 instance=ExtResource("3_8yilc")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 26.631489, -2.4508493, 262.58884)
+
+[node name="Building22" parent="Map_Layer" unique_id=1038603734 instance=ExtResource("4_tocyp")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 38.85197, -2.8248422, 61.366173)
+
+[node name="Building32" parent="Map_Layer" unique_id=1944861257 instance=ExtResource("5_vjicd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 23.539272, -2.4508493, 364.46515)
+
+[node name="Building42" parent="Map_Layer" unique_id=1455296331 instance=ExtResource("6_ewyw1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 33.885265, -2.4508493, 244.21057)
+
+[node name="Building52" parent="Map_Layer" unique_id=1692599744 instance=ExtResource("7_fl7oi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 27.707348, -2.4508493, 70.716835)
+
+[node name="Building72" parent="Map_Layer" unique_id=1302233461 instance=ExtResource("9_wdfnc")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 39.219585, -2.4508493, 156.11716)
+
+[node name="Building122" parent="Map_Layer" unique_id=1303234950 instance=ExtResource("10_e8mjr")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 39.155994, -2.4508493, 289.0298)
+
+[node name="BuildingBoss2" parent="Map_Layer" unique_id=269826793 instance=ExtResource("11_sfjaa")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 28.039013, -2.4508493, 340.7769)
 
 [node name="Entity_Layer" type="Node3D" parent="." unique_id=2017307884]
 
@@ -110,7 +254,7 @@ visible = false
 mesh = SubResource("BoxMesh_ll62f")
 
 [node name="WaveSystem" parent="." unique_id=843558868 instance=ExtResource("3_l7dqn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2882903, 0, 3.3655262)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2882903, 0, -65.466354)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WaveSystem" unique_id=1683387137]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.370129)
@@ -131,7 +275,7 @@ debug_color = Color(0, 0.6, 0.69803923, 0.7647059)
 [node name="Camera3D" type="Camera3D" parent="WaveSystem" unique_id=1338994893]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.850464, 2.4018545, 0)
 
-[node name="shader" type="MeshInstance3D" parent="WaveSystem/Camera3D" unique_id=2029262317]
+[node name="shader" type="MeshInstance3D" parent="WaveSystem/Camera3D" unique_id=2029262317 groups=["shader"]]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, 0, 0, 1, 2.2865295, 2.3841858e-07, -1.2471008)
 visible = false
 mesh = SubResource("QuadMesh_kc6vr")
@@ -140,67 +284,322 @@ mesh = SubResource("QuadMesh_kc6vr")
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -313.58228, -122.53409, -1333.0383)
 mesh = SubResource("SphereMesh_d2r56")
 
+[node name="Enemy" parent="WaveSystem/Camera3D" unique_id=18225702 instance=ExtResource("23_vjicd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.591568, -4.7858467, -24.405516)
+
 [node name="Waves" type="Node3D" parent="." unique_id=820136394]
 
-[node name="Wave" parent="Waves" unique_id=556699725 instance=ExtResource("5_d2r56")]
+[node name="Wave" parent="Waves" unique_id=1035319296 instance=ExtResource("5_d2r56")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.359869, 0, 12.75116)
 
 [node name="SpawnEntityData" parent="Waves/Wave" unique_id=1912747186 instance=ExtResource("6_5w5s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.062253, -0.99915975, -1.0127802)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.806277, -0.99915975, -5.3762655)
 enemy_scene = ExtResource("7_v86oh")
 delay = 0.0
 
 [node name="Marker3D" type="Marker3D" parent="Waves/Wave/SpawnEntityData" unique_id=1846502251]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.0853004)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.62681293, 0, 7.464446)
 
 [node name="SpawnEntityData2" parent="Waves/Wave" unique_id=1643586104 instance=ExtResource("6_5w5s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.253208, -0.98213077, -8.60617)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.502165, -0.98213077, -14.583084)
 enemy_scene = ExtResource("7_v86oh")
 delay = 0.0
 
 [node name="Marker3D2" type="Marker3D" parent="Waves/Wave/SpawnEntityData2" unique_id=1309045879]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0250645, 0.47320652, -6.550662)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.66838074, 0.47320652, -7.527212)
 
 [node name="SpawnEntityData3" parent="Waves/Wave" unique_id=915350905 instance=ExtResource("6_5w5s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.711426, 0, -28.660675)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.711426, 0, -16.640278)
 enemy_scene = ExtResource("7_v86oh")
 trigger = 2
 deaths_required = 2
 
 [node name="Marker3D3" type="Marker3D" parent="Waves/Wave/SpawnEntityData3" unique_id=924256278]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.376837)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.174946)
 
 [node name="SpawnEntityData4" parent="Waves/Wave" unique_id=638850435 instance=ExtResource("6_5w5s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.970325, 0, -0.7981911)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.970325, 0, -5.5202074)
 enemy_scene = ExtResource("7_v86oh")
 delay = 0.0
 
 [node name="Marker3D4" type="Marker3D" parent="Waves/Wave/SpawnEntityData4" unique_id=2004830479]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.346781)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.8196707)
 
 [node name="SpawnEntityData5" parent="Waves/Wave" unique_id=1736648377 instance=ExtResource("6_5w5s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.970325, 0, -25.925735)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.970325, 0, -14.221891)
 enemy_scene = ExtResource("7_v86oh")
 delay = 0.0
 
 [node name="Marker3D5" type="Marker3D" parent="Waves/Wave/SpawnEntityData5" unique_id=66824268]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.015135)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.146561)
 
 [node name="SpawnEntityData6" parent="Waves/Wave" unique_id=505040709 instance=ExtResource("6_5w5s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.68211, -2.2966094, -8.729887)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.736187, -2.2966094, -2.9739246)
 enemy_scene = ExtResource("8_lnfwy")
 trigger = 2
 deaths_required = 2
 
 [node name="Marker3D6" type="Marker3D" parent="Waves/Wave/SpawnEntityData6" unique_id=207819598]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23993683, 0, 4.9050674)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1833763, 0, 5.2072134)
 
 [node name="Wave2" parent="Waves" unique_id=445218206 instance=ExtResource("5_d2r56")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2343216, 0, 40.49936)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2343216, 0, 78.338684)
 
 [node name="SpawnEntityData" parent="Waves/Wave2" unique_id=151990837 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.805292, -1.9743152, -5.658943)
+enemy_scene = ExtResource("7_v86oh")
 
 [node name="Marker3D" type="Marker3D" parent="Waves/Wave2/SpawnEntityData" unique_id=2012942728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7261753, 0.10543895, 2.2817993)
+
+[node name="SpawnEntityData2" parent="Waves/Wave2" unique_id=178547756 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.560715, -1.9208784, -9.470757)
+enemy_scene = ExtResource("7_v86oh")
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave2/SpawnEntityData2" unique_id=1410203088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.8612442)
+
+[node name="SpawnEntityData3" parent="Waves/Wave2" unique_id=561478268 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.77333, -1.9339066, -16.486012)
+enemy_scene = ExtResource("30_gm11o")
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave2/SpawnEntityData3" unique_id=104288150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.809738)
+
+[node name="SpawnEntityData4" parent="Waves/Wave2" unique_id=1646425991 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.810253, -2.4940486, -16.34539)
+deaths_required = 3
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave2/SpawnEntityData4" unique_id=857976780]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="SpawnEntityData5" parent="Waves/Wave2" unique_id=1338126645 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.505629, -2.494049, 1.1224518)
+delay = 0.0
+deaths_required = 3
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave2/SpawnEntityData5" unique_id=1378862350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="SpawnEntityData6" parent="Waves/Wave2" unique_id=1634308268 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, -2.2917483, 0.7212601)
+deaths_required = 3
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave2/SpawnEntityData6" unique_id=1683664971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.795227)
+
+[node name="Wave3" parent="Waves" unique_id=556699725 instance=ExtResource("5_d2r56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7390826, -1.0132116, 160.01437)
+
+[node name="SpawnEntityData" parent="Waves/Wave3" unique_id=969108777 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.480661, -1.4808413, -21.902542)
+enemy_scene = ExtResource("7_v86oh")
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave3/SpawnEntityData" unique_id=1515534187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+
+[node name="SpawnEntityData2" parent="Waves/Wave3" unique_id=421640780 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.330017, 3.0967584, -18.533386)
+enemy_scene = ExtResource("30_gm11o")
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave3/SpawnEntityData2" unique_id=343056649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5056)
+
+[node name="SpawnEntityData3" parent="Waves/Wave3" unique_id=806408 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.532646, -1.4331659, -21.275772)
+enemy_scene = ExtResource("8_lnfwy")
+trigger = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave3/SpawnEntityData3" unique_id=1318087018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.929535)
+
+[node name="SpawnEntityData4" parent="Waves/Wave3" unique_id=1757152797 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.095173, 3.8367205, -3.2703552)
+enemy_scene = ExtResource("7_v86oh")
+trigger = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave3/SpawnEntityData4" unique_id=197967310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.14595032)
+
+[node name="SpawnEntityData5" parent="Waves/Wave3" unique_id=279338952 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.294476, 3.8535914, 0.6357727)
+enemy_scene = ExtResource("7_v86oh")
+trigger = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave3/SpawnEntityData5" unique_id=1035668188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1133728)
+
+[node name="SpawnEntityData6" parent="Waves/Wave3" unique_id=1117724082 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.78051, -0.9831039, -5.683304)
+enemy_scene = ExtResource("7_v86oh")
+trigger = 2
+deaths_required = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave3/SpawnEntityData6" unique_id=1247389059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.427887)
+
+[node name="SpawnEntityData7" parent="Waves/Wave3" unique_id=617398884 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.881794, -1.4808394, 4.2155914)
+enemy_scene = ExtResource("30_gm11o")
+trigger = 2
+deaths_required = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave3/SpawnEntityData7" unique_id=1016238523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.3133087)
+
+[node name="Wave4" parent="Waves" unique_id=99711421 instance=ExtResource("5_d2r56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2132616, 0, 267.12854)
+
+[node name="SpawnEntityData" parent="Waves/Wave4" unique_id=270208678 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.669048, -2.494053, -20.085815)
+enemy_scene = ExtResource("7_v86oh")
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave4/SpawnEntityData" unique_id=1584496229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="SpawnEntityData2" parent="Waves/Wave4" unique_id=447419576 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.617252, -2.494049, 3.5121765)
+enemy_scene = ExtResource("7_v86oh")
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave4/SpawnEntityData2" unique_id=335626884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.4690857)
+
+[node name="SpawnEntityData3" parent="Waves/Wave4" unique_id=1942897568 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.604134, -2.494053, -15.450928)
+enemy_scene = ExtResource("8_lnfwy")
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave4/SpawnEntityData3" unique_id=1783661586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.943619)
+
+[node name="SpawnEntityData4" parent="Waves/Wave4" unique_id=2114397510 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.371437, -2.494053, -8.658173)
+enemy_scene = ExtResource("31_8yilc")
+delay = 3.0
+deaths_required = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave4/SpawnEntityData4" unique_id=784338971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="SpawnEntityData6" parent="Waves/Wave4" unique_id=1557723296 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.098606, 2.7048187, -4.8852234)
+enemy_scene = ExtResource("7_v86oh")
+delay = 3.0
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave4/SpawnEntityData6" unique_id=968967420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.687683)
+
+[node name="SpawnEntityData7" parent="Waves/Wave4" unique_id=1436601922 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.760845, -1.7297653, -4.6596985)
+enemy_scene = ExtResource("30_gm11o")
+delay = 3.0
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave4/SpawnEntityData7" unique_id=1763170659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2690487, 0, 0.06820679)
+
+[node name="SpawnEntityData8" parent="Waves/Wave4" unique_id=173628750 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.198921, -1.8418609, -22.828644)
+enemy_scene = ExtResource("30_gm11o")
+delay = 3.0
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave4/SpawnEntityData8" unique_id=1046732474]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="Wave5" parent="Waves" unique_id=1370354539 instance=ExtResource("5_d2r56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2111931, -2.494049, 350.84998)
+
+[node name="SpawnEntityData" parent="Waves/Wave5" unique_id=484192607 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.419146, 0.34623194, -3.3453064)
+enemy_scene = ExtResource("7_v86oh")
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave5/SpawnEntityData" unique_id=1081637178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="SpawnEntityData2" parent="Waves/Wave5" unique_id=86176025 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.585154, 0.39277077, -20.49768)
+enemy_scene = ExtResource("7_v86oh")
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave5/SpawnEntityData2" unique_id=1887642828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.36911)
+
+[node name="SpawnEntityData3" parent="Waves/Wave5" unique_id=726448794 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.998978, 0.93777585, -29.556305)
+enemy_scene = ExtResource("7_v86oh")
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave5/SpawnEntityData3" unique_id=212549419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+
+[node name="SpawnEntityData4" parent="Waves/Wave5" unique_id=1709429650 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.120697, 0.58320093, 5.9296875)
+enemy_scene = ExtResource("31_8yilc")
+trigger = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave5/SpawnEntityData4" unique_id=130443720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
+
+[node name="SpawnEntityData5" parent="Waves/Wave5" unique_id=1227015302 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.391388, 5.3498416, 9.927185)
+enemy_scene = ExtResource("29_gm11o")
+trigger = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave5/SpawnEntityData5" unique_id=1866508192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.0125732)
+
+[node name="SpawnEntityData6" parent="Waves/Wave5" unique_id=1887077559 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.382782, 5.203476, 17.919556)
+enemy_scene = ExtResource("30_gm11o")
+trigger = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave5/SpawnEntityData6" unique_id=912650591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.8178406)
+
+[node name="Building62" parent="Waves/Wave5/SpawnEntityData6" unique_id=258125119 instance=ExtResource("8_coo8s")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 26.324833, -5.2002964, -186.54184)
+
+[node name="Building112" parent="Waves/Wave5/SpawnEntityData6" unique_id=1519438678 instance=ExtResource("2_gm11o")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.198154, -5.1846685, -269.83624)
+
+[node name="Building32" parent="Waves/Wave5/SpawnEntityData6" unique_id=949460333 instance=ExtResource("5_vjicd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.029736, -5.200289, -157.81569)
+
+[node name="SpawnEntityData7" parent="Waves/Wave5" unique_id=1952959229 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.09217, 5.426359, -4.9088135)
+enemy_scene = ExtResource("30_8yilc")
+trigger = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave5/SpawnEntityData7" unique_id=1979652771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="SpawnEntityData8" parent="Waves/Wave5" unique_id=1450109305 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.01095, 5.4442453, -16.788818)
+enemy_scene = ExtResource("8_lnfwy")
+trigger = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave5/SpawnEntityData8" unique_id=1328626954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="SpawnEntityData9" parent="Waves/Wave5" unique_id=1925933057 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.140232, 0.698931, -15.632294)
+enemy_scene = ExtResource("31_8yilc")
+trigger = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave5/SpawnEntityData9" unique_id=25300989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="SpawnEntityData10" parent="Waves/Wave5" unique_id=429634917 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.263432, 0.70578027, -1.2187805)
+enemy_scene = ExtResource("29_gm11o")
+trigger = 2
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave5/SpawnEntityData10" unique_id=794076773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 
 [connection signal="triggered" from="Waves/Wave" to="WaveSystem" method="_on_wave_triggered"]
 [connection signal="wave_complete" from="Waves/Wave" to="WaveSystem" method="_on_wave_wave_complete"]
+[connection signal="triggered" from="Waves/Wave2" to="WaveSystem" method="_on_wave_triggered"]
+[connection signal="wave_complete" from="Waves/Wave2" to="WaveSystem" method="_on_wave_wave_complete"]
+[connection signal="triggered" from="Waves/Wave3" to="WaveSystem" method="_on_wave_triggered"]
+[connection signal="wave_complete" from="Waves/Wave3" to="WaveSystem" method="_on_wave_wave_complete"]
+[connection signal="triggered" from="Waves/Wave4" to="WaveSystem" method="_on_wave_triggered"]
+[connection signal="wave_complete" from="Waves/Wave4" to="WaveSystem" method="_on_wave_wave_complete"]
+[connection signal="triggered" from="Waves/Wave5" to="WaveSystem" method="_on_wave_triggered"]
+[connection signal="wave_complete" from="Waves/Wave5" to="WaveSystem" method="_on_wave_wave_complete"]

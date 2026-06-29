@@ -17,11 +17,12 @@ enum ENEMY_STATES {
 @export var WALK_SPEED: float = 3.0
 @export var WALK_ARRIVE_DISTANCE: float = 0.5  # How close before considered "arrived"
 
-
+@onready var bullet_sounds: global_sounds = $BulletSound
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 @onready var reload_timer: Timer = $reload_timer
 @onready var bullet_origin_1: Marker3D = $Marker3D
 @onready var muzzle_flash: Node3D = $MuzzleFlare
+@onready var enemy_grunt_death_sounds: global_sounds = $EnemyGrunts
 
 var bullet_origin_2: Marker3D
 var muzzle_flash2: Node3D
@@ -59,7 +60,7 @@ func get_player_node() -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
 	match current_state:
 		ENEMY_STATES.STARTING:
 			# If a patrol point was given, walk there first; otherwise go straight to FIRE
@@ -67,7 +68,7 @@ func _physics_process(delta: float) -> void:
 				current_state = ENEMY_STATES.WALKING
 			else:
 				current_state = ENEMY_STATES.FIRE
-
+	
 		ENEMY_STATES.WALKING:
 			if patrol_point:
 				var flat_self := Vector3(global_position.x, 0.0, global_position.z)
@@ -84,7 +85,7 @@ func _physics_process(delta: float) -> void:
 					velocity.z = dir.z * WALK_SPEED
 			else:
 				current_state = ENEMY_STATES.FIRE
-
+	
 		ENEMY_STATES.FIRE:
 			velocity.x = 0.0
 			velocity.z = 0.0
@@ -94,13 +95,13 @@ func _physics_process(delta: float) -> void:
 					reload_timer.start(SHOOT_FREQUENCY * randf_range(0.8, 1.2))
 				else:
 					get_player_node()
-
+	
 		ENEMY_STATES.HURT:
 			_hurt_timer -= delta
 			if _hurt_timer <= 0.0:
 				current_state = ENEMY_STATES.FIRE
 				sprite.play("Walk")
-
+	
 		ENEMY_STATES.DEAD:
 			velocity.x = 0.0
 			velocity.z = 0.0
@@ -115,7 +116,7 @@ func shoot() -> void:
 	new_bullet.global_position = current_gun_to_shoot.global_position
 	new_bullet.set_direction((target.global_position - current_gun_to_shoot.global_position).normalized())
 	new_bullet.set_team(false)
-
+	
 	if IS_TWIN_SHOOTER and bullet_origin_1 == current_gun_to_shoot:
 		current_gun_to_shoot = $Marker3D2
 		if muzzle_flash:
@@ -131,6 +132,7 @@ func shoot() -> void:
 		if muzzle_flash:
 			muzzle_flash.visible = true
 			muzzle_flash_timer.start()
+	bullet_sounds.play()
 
 func take_damage(amount: int = 1) -> void:
 	if current_state == ENEMY_STATES.DEAD:
@@ -146,6 +148,7 @@ func take_damage(amount: int = 1) -> void:
 func die() -> void:
 	current_state = ENEMY_STATES.DEAD
 	sprite.play("Dying")
+	enemy_grunt_death_sounds.play()
 
 func _on_area_3d_area_entered(_area: Area3D) -> void:
 	take_damage(1)
