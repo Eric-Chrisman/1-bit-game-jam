@@ -97,7 +97,8 @@ func _enter_dodge(direction: float) -> void:
 
 func shoot_bullet() -> void:
 	inventory.fire_weapon(bullet_origin.global_position, (aimer.get_target_position() - bullet_origin.global_position).normalized())
-	ui.update_ammo(inventory.current_gun.current_ammo_mag)
+	if ui:
+		ui.update_ammo(inventory.current_gun.current_ammo_mag)
 
 func shoot_done() -> void:
 	if queued_shot and inventory.can_fire_weapon():
