@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://k727epb3044y" path="res://src/enemy/enemy.gd" id="1_u00lo"]
 [ext_resource type="PackedScene" uid="uid://pomrcaw7ysu0" path="res://src/player/weapons/bullets/pistol_round/pistol_round.tscn" id="2_k77bc"]
 [ext_resource type="Texture2D" uid="uid://dhneveyq0i0ou" path="res://assets/sprites/Enemy sprites/Enemy5 Sheet.png" id="3_lia5t"]
+[ext_resource type="PackedScene" uid="uid://tj74100fo4hc" path="res://assets/meshes/guns/MuzzleFlare.glb" id="4_7u70r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h4y1u"]
 height = 3.2454224
@@ -133,6 +134,13 @@ collision_mask = 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1822061897]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24853516, 1.5690918, -0.036865234)
 shape = SubResource("BoxShape3D_sxryx")
+[node name="MuzzleFlare" parent="." unique_id=41405490 instance=ExtResource("4_7u70r")]
+transform = Transform3D(1.8626451e-09, 0, 0.08, 0, 0.08, 0, -0.08, 0, 1.8626451e-09, 0.18950069, 2.258957, 0.9097023)
+visible = false
+
+[node name="MuzzleFlare2" parent="." unique_id=1992977231 instance=ExtResource("4_7u70r")]
+transform = Transform3D(-3.496911e-09, 0, 0.08, 0, 0.08, 0, -0.08, 0, -3.496911e-09, 0.19281209, 2.0297408, -0.86855066)
+visible = false
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="timeout" from="reload_timer" to="." method="_on_timer_timeout"]

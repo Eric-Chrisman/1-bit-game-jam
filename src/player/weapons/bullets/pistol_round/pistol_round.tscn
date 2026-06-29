@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://pomrcaw7ysu0"]
 
 [ext_resource type="Script" uid="uid://drjxlxptfgl4" path="res://src/player/weapons/bullets/pistol_round/pistol_round.gd" id="1_r55t0"]
-[ext_resource type="PackedScene" uid="uid://3pdwvreqkngy" path="res://BulletTrail.glb" id="2_a3cuk"]
+[ext_resource type="PackedScene" uid="uid://3pdwvreqkngy" path="res://assets/meshes/guns/BulletTrail.glb" id="2_a3cuk"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ll62f"]
 radius = 0.0677906
