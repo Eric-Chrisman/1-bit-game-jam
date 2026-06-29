@@ -17,6 +17,7 @@ enum ENEMY_STATES {
 @export var WALK_SPEED: float = 3.0
 @export var WALK_ARRIVE_DISTANCE: float = 0.5  # How close before considered "arrived"
 
+
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 @onready var reload_timer: Timer = $reload_timer
 @onready var bullet_origin_1: Marker3D = $Marker3D

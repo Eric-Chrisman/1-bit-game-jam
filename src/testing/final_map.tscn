@@ -56,6 +56,10 @@ material = SubResource("ShaderMaterial_utos0")
 flip_faces = true
 size = Vector2(1000, 1000)
 
+[sub_resource type="SphereMesh" id="SphereMesh_d2r56"]
+radius = 30.0
+height = 60.0
+
 [node name="Map" type="Node3D" unique_id=525126436]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=911973121]
@@ -89,14 +93,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.09, 0)
 mesh_library = ExtResource("1_l7dqn")
 cell_size = Vector3(1, 1, 1)
 data = {
-"cells": PackedInt32Array(4, 65533, 15, 4, 7, 17, 4, 20, 14, 22, 65510, 1, 35, 65535, 1441803, 36, 65528, 1441808, 65535, 65506, 0, 41, 65509, 4, 57, 65509, 5, 31, 5, 655374, 15, 65510, 655378, 6, 65509, 655375, 10, 65510, 1441807, 53, 65529, 655367, 74, 65525, 1441804, 17, 65527, 1441808, 19, 4, 655375, 12, 12, 655375, 28, 14, 655376, 17, 40, 1441801)
+"cells": PackedInt32Array(4, 65533, 15, 4, 7, 17, 4, 20, 14, 35, 65535, 1441803, 36, 65528, 1441808, 65535, 65506, 0, 31, 5, 655374, 15, 65510, 655378, 6, 65509, 655375, 10, 65510, 1441807, 17, 65527, 1441808, 19, 4, 655375, 12, 12, 655375, 28, 14, 655376, 17, 40, 1441801, 36, 19, 1441796, 36, 34, 1441796)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Entity_Layer" type="Node3D" parent="." unique_id=2017307884]
 
 [node name="Player" parent="Entity_Layer" unique_id=433991171 instance=ExtResource("12_17k0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4381733, -1.590604, -23.145584)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4381733, -1.590604, 2.8475628)
 collision_layer = 1024
 
 [node name="debug_ref_line" type="MeshInstance3D" parent="Entity_Layer" unique_id=1391996591]
@@ -105,7 +109,7 @@ visible = false
 mesh = SubResource("BoxMesh_ll62f")
 
 [node name="WaveSystem" parent="." unique_id=843558868 instance=ExtResource("3_l7dqn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2882903, 0, -22.62762)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2882903, 0, 3.3655262)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WaveSystem" unique_id=1683387137]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.370129)
@@ -128,7 +132,12 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.
 
 [node name="shader" type="MeshInstance3D" parent="WaveSystem/Camera3D" unique_id=2029262317]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, 0, 0, 1, 2.2865295, 2.3841858e-07, -1.2471008)
+visible = false
 mesh = SubResource("QuadMesh_kc6vr")
+
+[node name="sun" type="MeshInstance3D" parent="WaveSystem/Camera3D" unique_id=113385898]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -313.58228, -122.53409, -1333.0383)
+mesh = SubResource("SphereMesh_d2r56")
 
 [node name="Waves" type="Node3D" parent="." unique_id=820136394]
 
@@ -136,7 +145,7 @@ mesh = SubResource("QuadMesh_kc6vr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.359869, 0, 12.75116)
 
 [node name="SpawnEntityData" parent="Waves/Wave" unique_id=1912747186 instance=ExtResource("6_5w5s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.062253, -0.43629867, -1.0127802)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.062253, -0.99915975, -1.0127802)
 enemy_scene = ExtResource("7_v86oh")
 delay = 0.0
 
@@ -144,7 +153,7 @@ delay = 0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.0853004)
 
 [node name="SpawnEntityData2" parent="Waves/Wave" unique_id=1643586104 instance=ExtResource("6_5w5s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.98359, 0, -8.60617)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.253208, -0.98213077, -8.60617)
 enemy_scene = ExtResource("7_v86oh")
 delay = 0.0
 
@@ -177,11 +186,20 @@ delay = 0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.015135)
 
 [node name="SpawnEntityData6" parent="Waves/Wave" unique_id=505040709 instance=ExtResource("6_5w5s3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.34371, 0, -8.729887)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.68211, -2.2966094, -8.729887)
 enemy_scene = ExtResource("8_lnfwy")
+trigger = 2
+deaths_required = 2
 
 [node name="Marker3D6" type="Marker3D" parent="Waves/Wave/SpawnEntityData6" unique_id=207819598]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23993683, 0, 4.9050674)
+
+[node name="Wave2" parent="Waves" unique_id=445218206 instance=ExtResource("5_d2r56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2343216, 0, 40.49936)
+
+[node name="SpawnEntityData" parent="Waves/Wave2" unique_id=151990837 instance=ExtResource("6_5w5s3")]
+
+[node name="Marker3D" type="Marker3D" parent="Waves/Wave2/SpawnEntityData" unique_id=2012942728]
 
 [connection signal="triggered" from="Waves/Wave" to="WaveSystem" method="_on_wave_triggered"]
 [connection signal="wave_complete" from="Waves/Wave" to="WaveSystem" method="_on_wave_wave_complete"]
