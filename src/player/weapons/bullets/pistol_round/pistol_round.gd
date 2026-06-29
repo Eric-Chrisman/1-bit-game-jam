@@ -5,14 +5,14 @@ class_name Bullet
 
 @onready var hitbox: Area3D = $Area3D
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
-func _on_area_3d_area_entered(area: Area3D) -> void:
+func _on_area_3d_area_entered(_area: Area3D) -> void:
 	#print("hit area: ", area.get_parent())
 	kill_bullet()
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
+func _on_area_3d_body_entered(_body: Node3D) -> void:
 	#print("hit body: ", body)
 	kill_bullet()
 

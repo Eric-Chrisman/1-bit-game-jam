@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _handle_free(_delta: float) -> void:
-	var direction: int = Input.get_axis("move_left", "move_right")
+	var direction: float = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.z = direction * SPEED
 	else:
@@ -82,8 +82,8 @@ func _enter_shooting() -> void:
 		queued_shot = false
 		model.shoot(aimer.get_direction())
 
-func _enter_dodge(direction: int) -> void:
-	dodge_dir = direction
+func _enter_dodge(direction: float) -> void:
+	dodge_dir = int(direction)
 	state = State.DODGE_AIR
 	velocity.z = direction * SPEED * 2
 	model.dodge()

@@ -5,11 +5,11 @@ extends Node3D
 @export var muzzle_flash_timeout: float = 0.1
 
 var muzzle_flash_timer: Timer
-var char: CharacterBody3D
+var chara: CharacterBody3D
 
 
 func _ready() -> void:
-	char = get_parent()
+	chara = get_parent()
 	animation_node.play("Idle1")
 	
 	muzzle_flash.visible = false
@@ -21,11 +21,11 @@ func _ready() -> void:
 	
 
 func _process(_delta: float) -> void:
-	match char.state:
-		char.State.SHOOTING, char.State.DODGE_AIR, char.State.DODGE_LAG, char.State.RELOADING:
+	match chara.state:
+		chara.State.SHOOTING, chara.State.DODGE_AIR, chara.State.DODGE_LAG, chara.State.RELOADING:
 			return
 	
-	var moving: bool = abs(char.velocity.z) > 0.1
+	var moving: bool = abs(chara.velocity.z) > 0.1
 	var current: StringName = animation_node.current_animation
 	
 	if moving and current != "RunCycle":
@@ -33,9 +33,9 @@ func _process(_delta: float) -> void:
 	elif not moving and (current == "RunCycle" or current == ""):
 		animation_node.play("Idle1")
 	
-	if char.velocity.z < 0:
+	if chara.velocity.z < 0:
 		rotation.y = PI
-	elif char.velocity.z > 0:
+	elif chara.velocity.z > 0:
 		rotation.y = 0
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:

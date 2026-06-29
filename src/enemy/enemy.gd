@@ -26,7 +26,7 @@ var current_health: int
 var target: Marker3D
 
 @onready var muzzle_flash: Node3D = $MuzzleFlare
-@onready var muzzle_flash2: Node3D = $MuzzleFlare2
+var muzzle_flash2: Node3D
 @export var muzzle_flash_timeout: float = 0.15
 var muzzle_flash_timer: Timer
 
@@ -97,6 +97,7 @@ func shoot() -> void:
 			muzzle_flash_timer.start()
 	elif IS_TWIN_SHOOTER:
 		current_gun_to_shoot = bullet_origin_1
+		muzzle_flash2 = $MuzzleFlare2
 		if muzzle_flash2:
 			muzzle_flash2.visible = true
 			muzzle_flash_timer.start()
@@ -121,7 +122,7 @@ func die() -> void:
 	current_state = ENEMY_STATES.DEAD
 	sprite.play("Dying")
 
-func _on_area_3d_area_entered(area: Area3D) -> void:
+func _on_area_3d_area_entered(_area: Area3D) -> void:
 	take_damage(1)
 
 func _on_animated_sprite_3d_animation_finished() -> void:

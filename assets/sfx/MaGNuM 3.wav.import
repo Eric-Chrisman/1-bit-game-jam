@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d4m6i0mubbiba"
+path="res://.godot/imported/MaGNuM 3.wav-f655b7ef0054a9ee99e8f33bb94df7cb.sample"
+
+[deps]
+
+source_file="res://assets/sfx/MaGNuM 3.wav"
+dest_files=["res://.godot/imported/MaGNuM 3.wav-f655b7ef0054a9ee99e8f33bb94df7cb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bhsqr1wjifnf8"]
+
+[ext_resource type="Script" uid="uid://bldpl5dq33tva" path="res://src/wave_camera_system/spawn_entity_data.gd" id="1_ivfy0"]
+
+[node name="SpawnEntityData" type="Node3D" unique_id=1912747186]
+script = ExtResource("1_ivfy0")

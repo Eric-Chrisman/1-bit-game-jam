@@ -2,6 +2,10 @@
 
 [ext_resource type="MeshLibrary" uid="uid://bn2r112kkx0kq" path="res://src/map_objects/tile_set/western.tres" id="1_l7dqn"]
 [ext_resource type="PackedScene" uid="uid://by066lv2r4048" path="res://src/wave_camera_system/wave_system.tscn" id="3_l7dqn"]
+[ext_resource type="PackedScene" uid="uid://bmw36p6h8egwx" path="res://src/wave_camera_system/wave.tscn" id="5_d2r56"]
+[ext_resource type="PackedScene" uid="uid://bhsqr1wjifnf8" path="res://src/wave_camera_system/spawn_entity_data.tscn" id="6_5w5s3"]
+[ext_resource type="PackedScene" uid="uid://cchtqcjgjkai4" path="res://src/enemy/basic/basic_1.tscn" id="7_v86oh"]
+[ext_resource type="PackedScene" uid="uid://c71gglf5p4kuh" path="res://src/enemy/basic/elite_1.tscn" id="8_lnfwy"]
 [ext_resource type="PackedScene" uid="uid://4lenhu1t7xpe" path="res://src/player/player_scene/player.tscn" id="12_17k0e"]
 [ext_resource type="Shader" uid="uid://btdjq403kta0j" path="res://assets/shader_defintions/dithering_bi_color.gdshader" id="13_4dqhq"]
 
@@ -92,14 +96,16 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 [node name="Entity_Layer" type="Node3D" parent="." unique_id=2017307884]
 
 [node name="Player" parent="Entity_Layer" unique_id=433991171 instance=ExtResource("12_17k0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4381733, -1.590604, -0.2048378)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4381733, -1.590604, -24.373814)
+collision_layer = 1024
 
 [node name="debug_ref_line" type="MeshInstance3D" parent="Entity_Layer" unique_id=1391996591]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2713687, 0, -8.055542)
+visible = false
 mesh = SubResource("BoxMesh_ll62f")
 
 [node name="WaveSystem" parent="." unique_id=843558868 instance=ExtResource("3_l7dqn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2882903, 0, -0.49528646)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2882903, 0, -23.85585)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WaveSystem" unique_id=1683387137]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.370129)
@@ -123,3 +129,41 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.
 [node name="shader" type="MeshInstance3D" parent="WaveSystem/Camera3D" unique_id=2029262317]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, 0, 0, 1, 2.2865295, 2.3841858e-07, -1.2471008)
 mesh = SubResource("QuadMesh_kc6vr")
+
+[node name="Waves" type="Node3D" parent="." unique_id=820136394]
+
+[node name="Wave" parent="Waves" unique_id=556699725 instance=ExtResource("5_d2r56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.359869, 0, 12.75116)
+
+[node name="SpawnEntityData" parent="Waves/Wave" unique_id=1912747186 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.970325, 0, -10.456946)
+enemy_scene = ExtResource("7_v86oh")
+delay = 0.0
+
+[node name="SpawnEntityData2" parent="Waves/Wave" unique_id=1643586104 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.970325, 0, -7.1658373)
+enemy_scene = ExtResource("7_v86oh")
+delay = 0.0
+
+[node name="SpawnEntityData3" parent="Waves/Wave" unique_id=915350905 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.970325, 0, -8.729887)
+enemy_scene = ExtResource("7_v86oh")
+trigger = 2
+deaths_required = 2
+
+[node name="SpawnEntityData4" parent="Waves/Wave" unique_id=638850435 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.970325, 0, -13.428068)
+enemy_scene = ExtResource("7_v86oh")
+delay = 0.0
+
+[node name="SpawnEntityData5" parent="Waves/Wave" unique_id=1736648377 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.970325, 0, -3.6611824)
+enemy_scene = ExtResource("7_v86oh")
+delay = 0.0
+
+[node name="SpawnEntityData6" parent="Waves/Wave" unique_id=505040709 instance=ExtResource("6_5w5s3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.237541, 0, -8.729887)
+enemy_scene = ExtResource("8_lnfwy")
+
+[connection signal="triggered" from="Waves/Wave" to="WaveSystem" method="_on_wave_triggered"]
+[connection signal="wave_complete" from="Waves/Wave" to="WaveSystem" method="_on_wave_wave_complete"]

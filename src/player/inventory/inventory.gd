@@ -14,9 +14,6 @@ func _ready() -> void:
 	gun_slots[0] = all_guns_data["SixShooter"]
 	current_gun = gun_slots[0]
 
-func picked_up_gun(string_id: String):
-	pass
-
 func weapon_switch_by_number(slot_id: int):
 	if gun_slots[slot_id]:
 		current_gun = gun_slots[slot_id]

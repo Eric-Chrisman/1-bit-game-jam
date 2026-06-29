@@ -11,7 +11,7 @@ enum AIM_TYPES {
 
 var target_point: Vector3 = Vector3.ZERO
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var mouse_pos = get_viewport().get_mouse_position()
 	var ray_length = 100000
 	var camera = get_tree().root.get_camera_3d()

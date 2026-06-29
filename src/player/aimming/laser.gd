@@ -2,7 +2,7 @@ extends RayCast3D
 
 @onready var beam_mesh: MeshInstance3D = $laser_mesh
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	force_raycast_update()
 	var cast_point: Vector3
 	if is_colliding():

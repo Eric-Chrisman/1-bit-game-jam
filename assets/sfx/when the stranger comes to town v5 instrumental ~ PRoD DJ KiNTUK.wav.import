@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://pvj5elq2ojc8"
+path="res://.godot/imported/when the stranger comes to town v5 instrumental ~ PRoD DJ KiNTUK.wav-c114edf8adc609a3a20d93656b618bfd.sample"
+
+[deps]
+
+source_file="res://assets/sfx/when the stranger comes to town v5 instrumental ~ PRoD DJ KiNTUK.wav"
+dest_files=["res://.godot/imported/when the stranger comes to town v5 instrumental ~ PRoD DJ KiNTUK.wav-c114edf8adc609a3a20d93656b618bfd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
