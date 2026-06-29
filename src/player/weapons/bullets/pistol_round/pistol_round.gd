@@ -4,6 +4,17 @@ class_name Bullet
 @export var bullet_speed: float = 20
 
 @onready var hitbox: Area3D = $Area3D
+@onready var trail_start_timer: Timer
+@onready var bullet_trail: Node3D = $BulletTrail
+
+func _ready() -> void:
+	bullet_trail.visible = false
+	trail_start_timer = Timer.new()
+	add_child(trail_start_timer)
+	trail_start_timer.one_shot = true
+	trail_start_timer.wait_time = 0.15
+	trail_start_timer.timeout.connect(_on_trail_start)
+	trail_start_timer.start()
 
 func _physics_process(_delta: float) -> void:
 	move_and_slide()
@@ -37,3 +48,7 @@ func set_team(is_player: bool) -> void:
 func _on_timer_timeout() -> void:
 	#print("bullet died of time out")
 	kill_bullet()
+
+func _on_trail_start() -> void:
+	if bullet_trail:
+		bullet_trail.visible = true

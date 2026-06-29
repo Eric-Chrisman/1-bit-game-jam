@@ -50,6 +50,7 @@ autostart = true
 
 [node name="BulletTrail" parent="." unique_id=79764711 instance=ExtResource("2_a3cuk")]
 transform = Transform3D(0.19999997, 0, 0, 0, 0.19999999, 0, 0, 0, 1, 0, 0, 0.55022305)
+visible = false
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
