@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ciyeyolgx6g6y"]
 
+[ext_resource type="Script" uid="uid://b2gbjs4wx1oce" path="res://src/hud/title_screen/title_screen.gd" id="1_lynhr"]
+
 [node name="TitleScreen" type="Control" unique_id=686917227]
 layout_mode = 3
 anchors_preset = 8
@@ -9,6 +11,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lynhr")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=698678384]
 layout_mode = 1
@@ -56,3 +59,7 @@ text = "Options
 [node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=926067353]
 layout_mode = 2
 text = "Quit"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -15,9 +15,16 @@ enum State {
 @onready var aimer: Node3D = $LaserPointer
 @onready var model: Node3D = $TheStranger
 
+@export var MAX_HEALTH: int = 3
+@onready var health: int = MAX_HEALTH
+var ui: PlayerHUD
+
 var state: State = State.FREE
 var dodge_dir: int = 0
 var queued_shot: bool = false
+
+func _on_ready() -> void:
+	ui = get_tree().get_first_node_in_group("player_ui")
 
 func _physics_process(delta: float) -> void:
 	#print(State.find_key(state))
@@ -90,6 +97,7 @@ func _enter_dodge(direction: int) -> void:
 
 func shoot_bullet() -> void:
 	inventory.fire_weapon(bullet_origin.global_position, (aimer.get_target_position() - bullet_origin.global_position).normalized())
+	ui.update_ammo(inventory.current_gun.current_ammo_mag)
 
 func shoot_done() -> void:
 	if queued_shot and inventory.can_fire_weapon():
@@ -112,3 +120,9 @@ func is_dodge_immune() -> bool:
 
 func get_target() -> Marker3D:
 	return get_node("where_enemies_aim")
+
+func _on_hitbox_area_entered(area: Area3D) -> void:
+	health = clamp(health - 1, 0, MAX_HEALTH)
+	if ui:
+		ui.on_health_update(health)
+	
