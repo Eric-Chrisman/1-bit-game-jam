@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://5xpqwljrssdp" path="res://src/hud/options_menu/Options.tscn" id="1_3eh75"]
 [ext_resource type="Script" uid="uid://clfwvbfauwd1k" path="res://src/main/main.gd" id="1_ab7mr"]
-[ext_resource type="Theme" uid="uid://cwwsc3m73obx5" path="res://assets/theme/global.tres" id="2_ab7mr"]
+[ext_resource type="PackedScene" uid="uid://ciyeyolgx6g6y" path="res://src/hud/title_screen/TitleScreen.tscn" id="2_ab7mr"]
+[ext_resource type="PackedScene" uid="uid://djmtcefljcvui" path="res://src/hud/player_hud/PlayerHUD.tscn" id="4_djufw"]
 
 [node name="Main" type="Node" unique_id=1887580302]
 script = ExtResource("1_ab7mr")
@@ -13,63 +14,12 @@ script = ExtResource("1_ab7mr")
 
 [node name="Title_Layer" type="CanvasLayer" parent="." unique_id=111069876]
 
-[node name="TitleScreen" type="Control" parent="Title_Layer" unique_id=686917227]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="Title_Layer/TitleScreen" unique_id=698678384]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("2_ab7mr")
-
-[node name="MarginContainer" type="MarginContainer" parent="Title_Layer/TitleScreen/PanelContainer" unique_id=1065365963]
-layout_mode = 2
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_bottom = 25
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Title_Layer/TitleScreen/PanelContainer/MarginContainer" unique_id=1047115549]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Title_Layer/TitleScreen/PanelContainer/MarginContainer/VBoxContainer" unique_id=1931603935]
-layout_mode = 2
-theme_override_font_sizes/font_size = 54
-text = "Sample Title"
-
-[node name="Start" type="Button" parent="Title_Layer/TitleScreen/PanelContainer/MarginContainer/VBoxContainer" unique_id=1118663348]
-layout_mode = 2
-text = "Start"
-
-[node name="Options" type="Button" parent="Title_Layer/TitleScreen/PanelContainer/MarginContainer/VBoxContainer" unique_id=1785755433]
-layout_mode = 2
-text = "Options
-"
-
-[node name="Quit" type="Button" parent="Title_Layer/TitleScreen/PanelContainer/MarginContainer/VBoxContainer" unique_id=926067353]
-layout_mode = 2
-text = "Quit"
+[node name="TitleScreen" parent="Title_Layer" unique_id=686917227 instance=ExtResource("2_ab7mr")]
 
 [node name="Pause_Layer" type="CanvasLayer" parent="." unique_id=910609983]
 layer = 100
 
-[node name="Control" type="Control" parent="Pause_Layer" unique_id=1891244163]
+[node name="PauseMenu" type="Control" parent="Pause_Layer" unique_id=1891244163]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -79,7 +29,8 @@ offset_bottom = 40.0
 layer = 200
 visible = false
 
-[node name="Options_Menu" parent="Options_Layer" unique_id=676573629 instance=ExtResource("1_3eh75")]
+[node name="OptionsMenu" parent="Options_Layer" unique_id=676573629 instance=ExtResource("1_3eh75")]
 
-[connection signal="pressed" from="Title_Layer/TitleScreen/PanelContainer/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Title_Layer/TitleScreen/PanelContainer/MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[node name="Player_HUD" type="CanvasLayer" parent="." unique_id=336609663]
+
+[node name="PlayerHud" parent="Player_HUD" unique_id=792558402 groups=["player_ui"] instance=ExtResource("4_djufw")]
