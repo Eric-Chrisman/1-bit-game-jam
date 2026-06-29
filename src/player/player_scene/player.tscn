@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bxlmdtxwb7q6g" path="res://src/player/animation_handler/the_stranger_animations.gd" id="3_0eq6l"]
 [ext_resource type="Script" uid="uid://cg6d8b4iuxulb" path="res://src/player/aimming/laser.gd" id="3_mf2ua"]
 [ext_resource type="Material" uid="uid://dy21r8oke2fi1" path="res://assets/meshes/player/new_standard_material_3d.tres" id="3_psirh"]
+[ext_resource type="PackedScene" uid="uid://tj74100fo4hc" path="res://MuzzleFlare.glb" id="4_psirh"]
 [ext_resource type="PackedScene" uid="uid://dvahtikg41v18" path="res://src/player/inventory/Inventory.tscn" id="5_alqwc"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_m2qhk"]
@@ -4450,6 +4451,10 @@ mesh = SubResource("ArrayMesh_smlio")
 
 [node name="Marker3D" type="Marker3D" parent="TheStranger/StrangerArmature/Skeleton3D/StrangerBoneHandIndexRoot_L/Pistol" unique_id=463206175]
 transform = Transform3D(-10.028447, 0.21466526, -0.48208067, 0.20890154, 10.03937, 0.12475447, 0.48460567, 0.11455128, -10.029959, -1.3923583, 3.1914854, 9.203217)
+
+[node name="MuzzleFlare" parent="TheStranger/StrangerArmature/Skeleton3D/StrangerBoneHandIndexRoot_L/Pistol" unique_id=41405490 instance=ExtResource("4_psirh")]
+transform = Transform3D(1, -1.3387762e-09, 1.1175871e-08, -1.7462298e-09, 1, 9.313226e-10, -1.1175871e-07, 2.6077032e-08, 0.9999998, -1.313232, 2.9063692, 11.798916)
+visible = false
 
 [node name="StrangerArmL" type="MeshInstance3D" parent="TheStranger/StrangerArmature/Skeleton3D" unique_id=1912882542]
 mesh = SubResource("ArrayMesh_hyt0g")

@@ -2,12 +2,8 @@
 
 [ext_resource type="Script" uid="uid://tj0gy8oqeaqt" path="res://src/player/weapons/Gun.gd" id="1_0qm44"]
 [ext_resource type="PackedScene" uid="uid://pomrcaw7ysu0" path="res://src/player/weapons/bullets/pistol_round/pistol_round.tscn" id="2_0qm44"]
-[ext_resource type="PackedScene" uid="uid://tj74100fo4hc" path="res://MuzzleFlare.glb" id="3_qal88"]
 
 [node name="SixShooter" type="Node" unique_id=1479410111]
 script = ExtResource("1_0qm44")
 BULLET_SCENE = ExtResource("2_0qm44")
 metadata/_custom_type_script = "uid://tj0gy8oqeaqt"
-
-[node name="MuzzleFlare" parent="." unique_id=41405490 instance=ExtResource("3_qal88")]
-visible = false

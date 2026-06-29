@@ -9,11 +9,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
-	print("hit area: ", area.get_parent())
+	#print("hit area: ", area.get_parent())
 	kill_bullet()
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	print("hit body: ", body)
+	#print("hit body: ", body)
 	kill_bullet()
 
 func kill_bullet() -> void:
@@ -22,9 +22,9 @@ func kill_bullet() -> void:
 func set_direction(direction: Vector3) -> void:
 	velocity = direction.normalized() * bullet_speed
 	look_at(global_position + velocity, Vector3.UP)
-	print("Parent: ", get_parent().get_class())
-	print("Direction: ", direction)
-	print("Forward:", -global_basis.z)
+	#print("Parent: ", get_parent().get_class())
+	#print("Direction: ", direction)
+	#print("Forward:", -global_basis.z)
 
 func set_team(is_player: bool) -> void:
 	if is_player:
@@ -35,5 +35,5 @@ func set_team(is_player: bool) -> void:
 		hitbox.set_collision_mask_value(5, true)
 
 func _on_timer_timeout() -> void:
-	print("bullet died of time out")
+	#print("bullet died of time out")
 	kill_bullet()

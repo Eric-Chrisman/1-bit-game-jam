@@ -25,6 +25,10 @@ var current_state: ENEMY_STATES = ENEMY_STATES.STARTING
 var current_health: int
 var target: Marker3D
 
+@onready var muzzle_flash: Node3D = $MuzzleFlare
+@export var muzzle_flash_timeout: float = 0.1
+var muzzle_flash_timer: Timer
+
 # Internal timer so we don't need an extra Timer node for hurt flash
 var _hurt_timer: float = 0.0
 
@@ -34,6 +38,13 @@ func _ready() -> void:
 	sprite.play("Walk", randf_range(0.8, 1.2))
 	reload_timer.wait_time = SHOOT_FREQUENCY
 	get_player_node()
+	
+	muzzle_flash.visible = false
+	muzzle_flash_timer = Timer.new()
+	add_child(muzzle_flash_timer)
+	muzzle_flash_timer.one_shot = true
+	muzzle_flash_timer.wait_time = muzzle_flash_timeout
+	muzzle_flash_timer.timeout.connect(muzzle_flash_end)
 
 func get_player_node() -> void:
 	var result = get_tree().get_nodes_in_group("player")
@@ -80,6 +91,10 @@ func shoot() -> void:
 		current_gun_to_shoot = $Marker3D2
 	else:
 		current_gun_to_shoot = bullet_origin_1
+	if muzzle_flash:
+		muzzle_flash.visible = true
+		muzzle_flash_timer.start()
+	
 
 func take_damage(amount: int = 1) -> void:
 	if current_state == ENEMY_STATES.DEAD:
@@ -103,3 +118,6 @@ func _on_animated_sprite_3d_animation_finished() -> void:
 	match current_state:
 		ENEMY_STATES.DEAD:
 			queue_free()
+
+func muzzle_flush_end() -> void:
+	muzzle_flash.visible = false
